@@ -1,15 +1,9 @@
 const express = require('express');
 const app = express();
+const router = express.Router();
+const path = require("path");
 
-console.log("server file");
+app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-    res.send('testing from server')
-});
-
-
-const PORT = 3000;
-
-app.listen(PORT, () => {
-    console.log(`Listening on Port ${PORT}`)
-})
+const PORT = process.env.port || 3000;
+app.listen(PORT, () => {console.log(`Listening on Port ${PORT}`)})
