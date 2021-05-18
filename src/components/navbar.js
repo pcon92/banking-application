@@ -12,21 +12,21 @@ const Navbar = () => {
     return (
         <div>
             <ul style={styles}>
-                <img src="ttps://picsum.photos/50/50" alt="logo"></img>
+                <img alt="logo"></img>
                 <li>
-                    <Link to="/home">Home</Link>
+                    <Link to="/home-page">Home</Link>
                 </li>
                 <li>
-                    <Link to="/messages">Messages</Link>
+                    <Link to="/messages-page">Messages</Link>
                 </li>
                 <li>
-                    <Link to="/accounts">View Accounts</Link>
+                    <Link to="/accounts-page">View Accounts</Link>
                 </li>
                 <li>
-                    <Link to="/transfers">Transfers</Link>
+                    <Link to="/transfers-page">Transfers</Link>
                 </li>
                 <li>
-                    <Link to="/settings">Settings</Link>
+                    <Link to="/settings-page">Settings</Link>
                 </li>
                 <li>
                     <Link to="/">Logout</Link>

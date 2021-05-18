@@ -18,11 +18,11 @@ const Login = () => {
                     <input type="password" id="password" placeholder="Enter password here"/>
                     <br/>
                     <button value="Login">Login</button>
-                    <Link to="/home">Login</Link>
+                    <Link to="/home-page">Login</Link>
                 </div>
                 <li>
                     <h6>Don't have an account?
-                        <Link to="/register">Register</Link>
+                        <Link to="/register-page">Register</Link>
                         here</h6>
 
                 </li>

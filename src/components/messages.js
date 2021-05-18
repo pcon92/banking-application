@@ -2,7 +2,7 @@ import React from 'react';
 import {loremIpsum} from "lorem-ipsum";
 
 // import components
-import Navbar from './navbar';
+import Navbar from './Navbar';
 
 const Messages = () => {
 

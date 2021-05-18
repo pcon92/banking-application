@@ -1,36 +1,40 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import React, {useState} from 'react';
 
 // Import components
-import Login from './components/login';
-import Register from './components/register';
-import Home from './components/home';
-import Messages from './components/messages';
-import Accounts from './components/accounts';
-import Transfers from './components/transfers';
-import Settings from './components/settings';
+import Login from './components/Login';
+import Register from './components/Register';
+import Home from './components/Home';
+import Messages from './components/Messages';
+import Accounts from './components/Accounts';
+import Transfers from './components/Transfers';
+import Settings from './components/Settings';
 
 function App() {
+
+    const [primaryAccVal, setPrimaryAccVal] = useState(1000);
+
     return (
         <Router>
             <div className="App">
                 <Switch>
-                    <Route path="/home">
-                        <Home/>
+                    <Route path="/home-page">
+                        <Home primaryAccVal={primaryAccVal}/>
                     </Route>
-                    <Route path="/messages">
+                    <Route path="/messages-page">
                         <Messages/>
                     </Route>
-                    <Route path="/accounts">
+                    <Route path="/accounts-page">
                         <Accounts/>
                     </Route>
-                    <Route path="/transfers">
+                    <Route path="/transfers-page">
                         <Transfers/>
                     </Route>
-                    <Route path="/settings">
+                    <Route path="/settings-page">
                         <Settings/>
                     </Route>
-                    <Route path="/register">
+                    <Route path="/register-page">
                         <Register/>
                     </Route>
                     <Route path="/">
