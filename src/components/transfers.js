@@ -8,12 +8,19 @@ import TransferForm from './TransferForm';
 const Transfers = () => {
 
     const [transferTo, setTransferTo] = useState('');
+    const [transferAmount, setTransferAmount] = useState(0);
+
 
     return (
         <div>
             <Navbar/>
-            <AddressBook setTransferTo={setTransferTo}/>
-            <TransferForm transferTo={transferTo}/>
+            <AddressBook setTransferTo={setTransferTo}
+                transferTo={transferTo}
+                transferAmount={transferAmount}
+                setTransferAmount={setTransferAmount}/>
+            <TransferForm transferTo={transferTo}
+                setTransferTo={setTransferTo}
+                setTransferAmount={setTransferAmount}/>
         </div>
     )
 };

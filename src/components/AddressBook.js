@@ -1,15 +1,18 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 // import components
 import AddressBookContact from './AddressBookContact';
 
-const AddressBook = ({setTransferTo}) => {
+const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
 
-    const [contact, setContact] = useState('');
-
-
-    const testUsers = [
+    const [contacts, setContact] = useState([
         {
+            id: 1,
+            name: 'My Account',
+            accountNum: '1111-1111',
+            BSB: '111-111',
+            total: 1000
+        }, {
             id: 2,
             name: 'Bob Smith',
             accountNum: '2222-3333',
@@ -22,28 +25,47 @@ const AddressBook = ({setTransferTo}) => {
             BSB: '555-666',
             total: 2000
         }
-    ];
+    ]);
 
+    const checkID = () => {
+        if (parseInt(transferTo) === 2) {
+            contacts[1].total += parseInt(transferAmount)
+            setContact([...contacts])
+        }
+        if (parseInt(transferTo) === 3) {
+            contacts[2].total += parseInt(transferAmount)
+            setContact([...contacts])
+        }
+    }
+
+    useEffect(() => {
+        checkID()
+    }, [transferAmount]);
+
+    useEffect(() => {
+        setTransferTo('');
+        setTransferAmount(0);
+    }, [contacts]);
 
     return (
         <div>
             <h1>Address Book</h1>
             {
-            testUsers.map(user => <AddressBookContact setTransferTo={setTransferTo}
-                id={
-                    user.id
+            contacts.map(contact => <AddressBookContact setTransferTo={setTransferTo}
+                key={
+                    contact.id
                 }
                 name={
-                    user.name
+                    contact.name
                 }
                 accountNum={
-                    user.accountNum
+                    contact.accountNum
                 }
                 BSB={
-                    user.BSB
+                    contact.BSB
                 }
                 total={
-                    user.total
+                    contact.total
                 }/>)
         } </div>
     )
