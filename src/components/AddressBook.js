@@ -27,15 +27,19 @@ const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmou
         }
     ]);
 
+
     const checkID = () => {
+
         if (parseInt(transferTo) === 2) {
             contacts[1].total += parseInt(transferAmount)
+            contacts[0].total -= parseInt(transferAmount)
             setContact([...contacts])
-        }
-        if (parseInt(transferTo) === 3) {
+        } else if (parseInt(transferTo) === 3) {
             contacts[2].total += parseInt(transferAmount)
+            contacts[0].total -= parseInt(transferAmount)
             setContact([...contacts])
         }
+
     }
 
     useEffect(() => {
@@ -53,6 +57,9 @@ const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmou
             {
             contacts.map(contact => <AddressBookContact setTransferTo={setTransferTo}
                 key={
+                    contact.id
+                }
+                id={
                     contact.id
                 }
                 name={

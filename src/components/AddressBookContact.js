@@ -3,7 +3,7 @@ import React from 'react';
 
 const AddressBookContact = ({
     setTransferTo,
-    key,
+    id,
     name,
     accountNum,
     BSB,
@@ -11,7 +11,7 @@ const AddressBookContact = ({
 }) => {
 
     const chooseTransfer = () => {
-        setTransferTo(key)
+        setTransferTo(id)
     };
 
     return (

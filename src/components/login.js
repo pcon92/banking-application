@@ -7,12 +7,12 @@ const Login = () => {
         <div>
             <ul>
                 <div>
-                    <label for="email">
+                    <label htmlFor="email">
                         Email Address
                     </label>
                     <input type="text" id="email" placeholder="Enter email here"/>
                     <br/>
-                    <label for="password">
+                    <label htmlFor="password">
                         Password
                     </label>
                     <input type="password" id="password" placeholder="Enter password here"/>
