@@ -19,7 +19,6 @@ const Transfers = () => {
                 transferAmount={transferAmount}
                 setTransferAmount={setTransferAmount}/>
             <TransferForm transferTo={transferTo}
-                setTransferTo={setTransferTo}
                 setTransferAmount={setTransferAmount}/>
         </div>
     )

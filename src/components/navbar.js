@@ -1,13 +1,10 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const Navbar = () => {
 
-    const styles = {
-        display: "flex",
-        justifyContent: "space-evenly",
-        width: "100%"
-    }
+import colors from '../config/defaultStyles';
+
+const Navbar = () => {
 
     return (
         <div>
@@ -35,5 +32,12 @@ const Navbar = () => {
         </div>
     )
 };
+
+const styles = {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: "100%",
+    backgroundColor: colors.lightgreyLowAlpha
+}
 
 export default Navbar;

@@ -1,8 +1,8 @@
 import React from 'react';
 
-
 // import components
 import Navbar from './Navbar';
+import colors from '../config/defaultStyles';
 
 const Home = ({primaryAccVal}) => {
 
@@ -15,7 +15,7 @@ const Home = ({primaryAccVal}) => {
     };
 
     return (
-        <div>
+        <div style={backgroundStyles}>
             <Navbar/>
             <h3>Welcome {
                 dummyUserInfo.name
@@ -29,5 +29,14 @@ const Home = ({primaryAccVal}) => {
         </div>
     )
 };
+
+const backgroundStyles = {
+    backgroundColor: colors.yellow,
+    display: "flex",
+    flexDirection: "column",
+    height: "100vh",
+    width: "100%",
+}
+
 
 export default Home;

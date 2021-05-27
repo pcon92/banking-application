@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
 
 
-const TransferForm = ({transferTo, setTransferAmount, setTransferTo}) => {
+const TransferForm = ({transferTo, setTransferAmount}) => {
 
     const [noVal, setNoVal] = useState({color: "red", visibility: "hidden"});
     const [noContact, setNoContact] = useState({color: "red", visibility: "hidden"});
 
     const submitTransferAmount = () => {
+
         const INPUT_AMOUNT = document.getElementById('amount');
+
         if (INPUT_AMOUNT.value === '') {
             setNoVal({color: "red", visibility: "visible"})
         } else {
@@ -24,9 +26,9 @@ const TransferForm = ({transferTo, setTransferAmount, setTransferTo}) => {
 
     };
 
+
     return (
         <div>
-
             <h3>To: {transferTo}</h3>
             <p style={noContact}>Error: No contact selected to transfer to</p>
             <label htmlFor="amount">Amount</label>

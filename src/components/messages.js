@@ -1,24 +1,28 @@
-import React from 'react';
-import {loremIpsum} from "lorem-ipsum";
+import React, {useState} from 'react';
 
 // import components
 import Navbar from './Navbar';
+import SingleMessage from './SingleMessage';
 
 const Messages = () => {
 
-    const dummyMessages = [
-        loremIpsum(),
-        loremIpsum(),
-        loremIpsum(),
-        loremIpsum(),
-        loremIpsum()
-    ];
+    const [messages, setMessages] = useState([
+        {
+            id: 1
+        }, {
+            id: 2
+        }, {
+            id: 3
+        },
+    ]);
 
     return (
         <div>
             <Navbar/> {
-            dummyMessages.map(message => <li key={message}>
-                {message}</li>)
+            messages.map(message => <li key={
+                message.id
+            }>
+                <SingleMessage id={message.id}/></li>)
         } </div>
     )
 };
