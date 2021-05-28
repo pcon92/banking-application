@@ -34,6 +34,7 @@ const Navbar = () => {
 };
 
 const styles = {
+    position: "absolute",
     display: "flex",
     justifyContent: "space-evenly",
     width: "100%",
