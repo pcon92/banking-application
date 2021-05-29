@@ -8,25 +8,27 @@ const Navbar = () => {
 
     return (
         <div>
-            <ul style={styles}>
+            <ul style={styles.navList}>
+                <li style={styles.logoList}>
                 <img alt="logo"></img>
-                <li>
-                    <Link to="/home-page">Home</Link>
                 </li>
-                <li>
-                    <Link to="/messages-page">Messages</Link>
+                <li style={styles.linkList}>
+                    <Link to="/home-page" style={styles.transferLink}>Home</Link>
                 </li>
-                <li>
-                    <Link to="/accounts-page">View Accounts</Link>
+                <li style={styles.linkList}>
+                    <Link to="/messages-page" style={styles.transferLink}>Messages</Link>
                 </li>
-                <li>
-                    <Link to="/transfers-page">Transfers</Link>
+                <li style={styles.linkList}>
+                    <Link to="/accounts-page" style={styles.transferLink}>View Accounts</Link>
                 </li>
-                <li>
-                    <Link to="/settings-page">Settings</Link>
+                <li style={styles.linkList}>
+                    <Link to="/transfers-page" style={styles.transferLink}>Transfers</Link>
                 </li>
-                <li>
-                    <Link to="/">Logout</Link>
+                <li style={styles.linkList}>
+                    <Link to="/settings-page" style={styles.transferLink}>Settings</Link>
+                </li>
+                <li style={styles.linkList}>
+                    <Link to="/" style={styles.transferLink}>Logout</Link>
                 </li>
             </ul>
         </div>
@@ -34,11 +36,30 @@ const Navbar = () => {
 };
 
 const styles = {
-    position: "absolute",
-    display: "flex",
-    justifyContent: "space-evenly",
-    width: "100%",
-    backgroundColor: colors.lightgreyLowAlpha
+    navList: {
+        position: "absolute",
+        display: "flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+        height: "5%",
+        width: "100%",
+        backgroundColor: colors.lightgreyLowAlpha,
+        listStyle: "none"
+    },
+    logoList: {
+
+    },
+    linkList: {
+        fontSize: 16,    
+        textDecoration: "none",
+        color: colors.black,
+        borderLeft: "1px solid black",
+        paddingLeft: 10,
+        height: "100%",
+        width: "10%",
+        display: "flex",
+        alignItems: "center"
+    },
 }
 
 export default Navbar;

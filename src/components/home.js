@@ -85,7 +85,7 @@ const stylesHome = {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "70%",
+        width: "80%",
     },
     accountName: {
         fontSize: "1.2rem",
@@ -98,7 +98,7 @@ const stylesHome = {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "70%",
+        width: "80%",
     },
     accountTotal: {
         display: "flex",
