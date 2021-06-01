@@ -33,12 +33,16 @@ const Messages = () => {
 
 
     const handleRead = (pickedId) => {
+        const allMessages = [...messages];
+        allMessages[pickedId].read = !allMessages[pickedId].read;
+        setMessages(allMessages);
 
     };
 
     const handleFavourite = (pickedId) => {
-        const isSelected = messages.findIndex(messages => messages.id === pickedId)
-        console.log(isSelected);
+        const allMessages = [...messages];
+        allMessages[pickedId].favourite = !allMessages[pickedId].favourite;
+        setMessages(allMessages);
     };
 
     const handleDelete = (pickedId) => {
