@@ -46,13 +46,8 @@ const styles = {
         backgroundColor: colors.lightgreyLowAlpha,
         listStyle: "none"
     },
-    logoList: {
-
-    },
     linkList: {
         fontSize: 16,    
-        textDecoration: "none",
-        color: colors.black,
         borderLeft: "1px solid black",
         paddingLeft: 10,
         height: "100%",
@@ -60,6 +55,10 @@ const styles = {
         display: "flex",
         alignItems: "center"
     },
+    transferLink: {
+        textDecoration: "none",
+        color: colors.black
+    }
 }
 
 export default Navbar;
