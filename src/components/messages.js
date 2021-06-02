@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {loremIpsum} from "lorem-ipsum";
 
 // import components
 import Navbar from './Navbar';
@@ -11,38 +12,44 @@ const Messages = () => {
         {
             id: 0,
             read: false,
-            favourite: false
+            favourite: false,
+            message: loremIpsum()
         }, {
             id: 1,
             read: false,
-            favourite: false
+            favourite: false,
+            message: loremIpsum()
         }, {
             id: 2,
             read: false,
-            favourite: false
+            favourite: false,
+            message: loremIpsum()
         }, {
             id: 3,
             read: false,
-            favourite: false
+            favourite: false,
+            message: loremIpsum()
         }, {
             id: 4,
             read: false,
-            favourite: false
+            favourite: false,
+            message: loremIpsum()
         }
     ]);
 
 
     const handleRead = (pickedId) => {
-        const allMessages = [...messages];
-        allMessages[pickedId].read = !allMessages[pickedId].read;
-        setMessages(allMessages);
-
+        const isSelected = messages.findIndex(messages => messages.id === pickedId);
+        const messagesCopy = [...messages];
+        messagesCopy[isSelected].read = !messagesCopy[isSelected].read;
+        setMessages(messagesCopy);
     };
 
     const handleFavourite = (pickedId) => {
-        const allMessages = [...messages];
-        allMessages[pickedId].favourite = !allMessages[pickedId].favourite;
-        setMessages(allMessages);
+        const isSelected = messages.findIndex(messages => messages.id === pickedId);
+        const messagesCopy = [...messages];
+        messagesCopy[isSelected].favourite = !messagesCopy[isSelected].favourite;
+        setMessages(messagesCopy);
     };
 
     const handleDelete = (pickedId) => {
@@ -64,6 +71,7 @@ const Messages = () => {
                         handleRead={handleRead} 
                         handleFavourite={handleFavourite} 
                         handleDelete={handleDelete} 
+                        messages={messages}
                         id={message.id}/>
                     </li>
                     )} 
