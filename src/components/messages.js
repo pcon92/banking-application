@@ -54,6 +54,7 @@ const Messages = () => {
 
     const handleDelete = (pickedId) => {
         setMessages(messages.filter(messages => messages.id !== pickedId));
+        console.log(messages)
     };
 
 
@@ -71,8 +72,10 @@ const Messages = () => {
                         handleRead={handleRead} 
                         handleFavourite={handleFavourite} 
                         handleDelete={handleDelete} 
-                        messages={messages}
-                        id={message.id}/>
+                        message={message.message}
+                        id={message.id}
+                        read={message.read}
+                        favourite={message.favourite}/>
                     </li>
                     )} 
                 </ul>
