@@ -52,30 +52,27 @@ const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmou
     }, [contacts]);
 
     return (
-        <div>
-            <h1>Address Book</h1>
-            {
-            contacts.map(contact => <AddressBookContact setTransferTo={setTransferTo}
-                key={
-                    contact.id
-                }
-                id={
-                    contact.id
-                }
-                name={
-                    contact.name
-                }
-                accountNum={
-                    contact.accountNum
-                }
-                BSB={
-                    contact.BSB
-                }
-                total={
-                    contact.total
-                }/>)
-        } </div>
+        <>
+            <div>
+                <h1>Address Book</h1>
+                    <div>
+                        {contacts.map(contact => 
+                            <AddressBookContact 
+                                setTransferTo={setTransferTo}
+                                key={contact.id}
+                                id={contact.id}
+                                name={contact.name}
+                                accountNum={contact.accountNum}
+                                BSB={contact.BSB}
+                                total={contact.total}
+                            />)} 
+                    </div>
+            </div>
+        </>
     )
+};
+
+const stylesAddressBook = {
 };
 
 export default AddressBook;

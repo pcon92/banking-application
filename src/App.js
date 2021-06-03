@@ -13,20 +13,36 @@ import Settings from './components/Settings';
 
 function App() {
 
-    const [primaryAccVal, setPrimaryAccVal] = useState(1000);
+    const [accounts, setAccounts] = useState([
+        {
+            id: 0,
+            name: "Primary Account",
+            accountNumber: 123456,
+            BSB: 123456,
+            total: 1000
+        }, {
+            id: 1,
+            name: "Savings Account",
+            accountNumber: 234567,
+            BSB: 234567,
+            total: 10000
+        }
+    ]);
 
     return (
         <Router>
             <div className="App">
                 <Switch>
                     <Route path="/home-page">
-                        <Home primaryAccVal={primaryAccVal}/>
+                        <Home 
+                            accounts={accounts}/>
                     </Route>
                     <Route path="/messages-page">
                         <Messages/>
                     </Route>
                     <Route path="/accounts-page">
-                        <Accounts/>
+                        <Accounts 
+                            accounts={accounts}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers/>

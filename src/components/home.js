@@ -4,14 +4,10 @@ import React from 'react';
 import Navbar from './Navbar';
 import colors from '../config/defaultStyles';
 
-const Home = ({primaryAccVal}) => {
+const Home = ({accounts}) => {
 
     const dummyUserInfo = {
         name: 'User 1',
-        primaryAccName: 'Savings Account',
-        accountNo: '1234-5678',
-        BSB: '123-456',
-        accountTotal: primaryAccVal
     };
 
     return (
@@ -25,11 +21,11 @@ const Home = ({primaryAccVal}) => {
                     <div style={stylesHome.accountInfoBox}>
                         <div style={stylesHome.accountNameDiv}>
                             <div style={stylesHome.accountName}>Account Name:</div> 
-                            <div style={stylesHome.accountNameValue}>{dummyUserInfo.primaryAccName}</div>
+                            <div style={stylesHome.accountNameValue}>{accounts[0].name}</div>
                         </div>
                         <div style={stylesHome.accountTotalDiv}>
                             <div style={stylesHome.accountTotal}>Total:</div> 
-                            <div style={stylesHome.accountTotalValue}>{dummyUserInfo.accountTotal}</div>
+                            <div style={stylesHome.accountTotalValue}>{accounts[0].total}</div>
                         </div>
                     </div>
                 </div>
