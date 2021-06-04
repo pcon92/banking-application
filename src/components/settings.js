@@ -11,8 +11,24 @@ const Settings = () => {
             <Navbar/>
             <div style={stylesSettings.background}>
                 <div style={stylesSettings.settingsBox}>
-                    <h4>Font Size:</h4>
+                    <div style={stylesSettings.fontSizeContainer}>
+                        <h4>Font Size:</h4>
+                        <label for="small"> Small </label>
+                        <input type="radio" id="small" value="small" name="fontSize" />
+                        <label for="medium"> Medium </label>
+                        <input type="radio" id="medium" value="medium" name="fontSize" defaultChecked />
+                        <label for="large"> Large </label>
+                        <input type="radio" id="large" value="large" name="fontSize" />
+                    </div>
+                    <div style={stylesSettings.themeContainer}>
                     <h4>Theme:</h4>
+                        <label for="yellow"> Yellow </label>
+                        <input type="radio" id="yellow" value="yellow" name="theme" defaultChecked />
+                        <label for="orange"> Orange </label>
+                        <input type="radio" id="orange" value="orange" name="theme" />
+                        <label for="blue"> Blue </label>
+                        <input type="radio" id="blue" value="blue" name="theme" />
+                    </div>
                 </div>
             </div>
         </>
@@ -35,8 +51,20 @@ const stylesSettings = {
         width: "50vw",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
+        justifyContent: "space-evenly",
         padding: 10
+    },
+    fontSizeContainer: {
+        display: "flex",
+        justifyContent: "space-evenly",
+        padding: 5,
+        border: "1px solid black"
+    },
+    themeContainer: {
+        display: "flex",
+        justifyContent: "space-evenly",
+        padding: 5,
+        border: "1px solid black"
     },
 };
 
