@@ -29,7 +29,7 @@ function App() {
         }
     ]);
 
-    const [theme, setTheme] = useState('yellow');
+    const [theme, setTheme] = useState(['yellow0', 'yellow1', 'yellow2']);
 
     return (
         <Router>
@@ -37,6 +37,7 @@ function App() {
                 <Switch>
                     <Route path="/home-page">
                         <Home 
+                            theme={theme}
                             accounts={accounts}/>
                     </Route>
                     <Route path="/messages-page">
