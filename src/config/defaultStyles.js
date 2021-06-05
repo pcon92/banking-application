@@ -6,6 +6,7 @@ const colors = {
     shadow: "rgba(0, 0, 0, 0.2)",
     black: "rgb(0, 0, 0)",
     favouriteFlag: "rgba(247, 202, 24, 1)", // ripe lemon from above site
+    blue: "rgba(19, 93, 216, 1)", // police blue from https://colorcodes.io/blue/
 }
 
 export default colors;

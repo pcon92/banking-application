@@ -29,6 +29,8 @@ function App() {
         }
     ]);
 
+    const [theme, setTheme] = useState('yellow');
+
     return (
         <Router>
             <div className="App">
@@ -48,7 +50,9 @@ function App() {
                         <Transfers/>
                     </Route>
                     <Route path="/settings-page">
-                        <Settings/>
+                        <Settings
+                        theme={theme}
+                        setTheme={setTheme}/>
                     </Route>
                     <Route path="/register-page">
                         <Register/>

@@ -1,0 +1,46 @@
+
+.background {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.blue {
+    background-color:blue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+.settingsBox {
+    background-color: lightgrey;
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10;
+}
+
+.fontSizeContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5;
+    border: 1px solid black;
+}
+
+.themeContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5;
+    border: 1px solid black;
+}
+

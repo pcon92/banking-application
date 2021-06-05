@@ -4,14 +4,26 @@ import React from 'react';
 import Navbar from './Navbar';
 import colors from '../config/defaultStyles';
 
-const Settings = () => {
+import styles from '../styles/settings.module.css';
+
+const Settings = ( {theme, setTheme}) => {
+
+    const onChangeFontSize = (e) => {
+        console.log('changed font size', e.target.value)
+    };
+    
+    const onChangeTheme = (e) => {
+        console.log('changed theme', e.target.value)
+        setTheme(e.target.value)
+    };
 
     return (
         <>
             <Navbar/>
-            <div style={stylesSettings.background}>
-                <div style={stylesSettings.settingsBox}>
-                    <div style={stylesSettings.fontSizeContainer}>
+            <div className={`${styles.background} ${styles[theme]}`}>
+                <div className={styles.settingsBox}>
+                    <div className={styles.fontSizeContainer}
+                    onChange={onChangeFontSize}>
                         <h4>Font Size:</h4>
                         <label for="small"> Small </label>
                         <input type="radio" id="small" value="small" name="fontSize" />
@@ -20,7 +32,8 @@ const Settings = () => {
                         <label for="large"> Large </label>
                         <input type="radio" id="large" value="large" name="fontSize" />
                     </div>
-                    <div style={stylesSettings.themeContainer}>
+                    <div className={styles.themeContainer}
+                    onChange={onChangeTheme}>
                     <h4>Theme:</h4>
                         <label for="yellow"> Yellow </label>
                         <input type="radio" id="yellow" value="yellow" name="theme" defaultChecked />
@@ -33,39 +46,6 @@ const Settings = () => {
             </div>
         </>
     )
-};
-
-const stylesSettings = {
-    background: {
-        alignItems: "center",
-        backgroundColor: colors.yellow,
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
-        justifyContent: "center",
-        width: "100vw"
-    },
-    settingsBox: {
-        backgroundColor: colors.lightgreyLowAlpha,
-        height: "50vh",
-        width: "50vw",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-        padding: 10
-    },
-    fontSizeContainer: {
-        display: "flex",
-        justifyContent: "space-evenly",
-        padding: 5,
-        border: "1px solid black"
-    },
-    themeContainer: {
-        display: "flex",
-        justifyContent: "space-evenly",
-        padding: 5,
-        border: "1px solid black"
-    },
 };
 
 export default Settings;
