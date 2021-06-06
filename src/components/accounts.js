@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // import components
 import Navbar from './Navbar';
 import SingleAccount from './SingleAccount';
-import colors from '../config/defaultStyles';
 
-const Accounts = ( {accounts}) => {
+import styles from '../styles/accounts.module.css';
+import themedStyles from '../styles/themes.module.css';
+
+const Accounts = ( {theme, accounts}) => {
 
     return (
         <>
             <Navbar/>
-            <div style={stylesAccounts.background}>
-                <ul style={stylesAccounts.accountsList}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+                <ul className={`${styles.accountsList} ${themedStyles[theme[2]]}`}>
                 {accounts.map(account => 
                     <li 
-                        style={stylesAccounts.listItem}
+                    className={styles.listItem}
                         key={account.id}
                     >
                     <SingleAccount 
@@ -30,28 +32,5 @@ const Accounts = ( {accounts}) => {
         </>
     )
 };
-
-const stylesAccounts = {
-    background: {
-        backgroundColor: colors.yellow,
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "100vh",
-        width: "100vw"
-    }, 
-    accountsList: {
-        backgroundColor: colors.lightgreyLowAlpha,
-        height: "50vh",
-        width: "50vw",
-        padding: 30,
-        overflowY: "auto"
-    }, 
-    listItem: {
-        listStyle: "none",
-        marginBottom: "10vh"
-    },
-}
 
 export default Accounts;

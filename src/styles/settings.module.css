@@ -1,42 +1,4 @@
 
-@import "../styles/colors.css";
-
-/* For different themes as selected in settings */
-.yellow0 {
-    background-color: var(--yellow);
-}
-
-.yellow1 {
-    background-color: var(--lightYellow);
-}
-
-.yellow2 {
-    background-color: var(--lightgreyLowAlpha);
-}
-
-.blue0 {
-    background-color:var(--blue);
-}
-
-.blue1 {
-    background-color:var(--lightBlue);
-}
-
-.blue2 {
-    background-color:var(--greyBlue);
-}
-
-.orange0 {
-    background-color: var(--orange);
-}
-.orange1 {
-    background-color: var(--lightOrange);
-}
-.orange2 {
-    background-color: var(--greyOrange);
-}
-
-
 .background {
     align-items: center;
     display: flex;
@@ -47,7 +9,6 @@
 }
 
 .settingsBox {
-    background-color: lightgrey;
     height: 50vh;
     width: 50vw;
     display: flex;

@@ -3,8 +3,8 @@ import React from 'react';
 // import components
 import Navbar from './Navbar';
 
+import themedStyles from '../styles/themes.module.css';
 import styles from '../styles/settings.module.css';
-
 
 const Settings = ( {theme, setTheme}) => {
 
@@ -19,8 +19,8 @@ const Settings = ( {theme, setTheme}) => {
     return (
         <>
             <Navbar/>
-            <div className={`${styles.background} ${styles[theme[0]]}`}>
-                <div className={styles.settingsBox}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+                <div className={`${styles.settingsBox} ${themedStyles[theme[2]]}`}>
                     <div className={styles.fontSizeContainer}
                     onChange={onChangeFontSize}>
                         <h4>Font Size:</h4>

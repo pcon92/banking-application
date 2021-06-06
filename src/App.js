@@ -41,14 +41,17 @@ function App() {
                             accounts={accounts}/>
                     </Route>
                     <Route path="/messages-page">
-                        <Messages/>
+                        <Messages
+                            theme={theme}/>
                     </Route>
                     <Route path="/accounts-page">
                         <Accounts 
+                            theme={theme}
                             accounts={accounts}/>
                     </Route>
                     <Route path="/transfers-page">
-                        <Transfers/>
+                        <Transfers
+                            theme={theme}/>
                     </Route>
                     <Route path="/settings-page">
                         <Settings

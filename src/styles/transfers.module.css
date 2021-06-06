@@ -1,0 +1,15 @@
+
+.background {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+
+.innerContainer {
+    height: 50vh;
+    width: 50vw;
+    padding: 10;
+}

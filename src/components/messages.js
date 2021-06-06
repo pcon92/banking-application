@@ -4,9 +4,11 @@ import {loremIpsum} from "lorem-ipsum";
 // import components
 import Navbar from './Navbar';
 import SingleMessage from './SingleMessage';
-import colors from '../config/defaultStyles';
 
-const Messages = () => {
+import themedStyles from '../styles/themes.module.css'
+import styles from '../styles/messages.module.css';
+
+const Messages = ({theme}) => {
 
     const [messages, setMessages] = useState([
         {
@@ -61,14 +63,15 @@ const Messages = () => {
     return (
         <>
             <Navbar/> 
-            <div style={stylesMessages.background}>
-                <ul style={stylesMessages.messageList}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+                <ul className={`${styles.messageList} ${themedStyles[theme[1]]}`}>
                 {messages.map(message => 
                     <li 
                         key={message.id}
-                        style={stylesMessages.messageContainer}
+                        className={`${styles.messageContainer} ${themedStyles[theme[2]]}`}
                     >
                     <SingleMessage 
+                        theme={theme}
                         handleRead={handleRead} 
                         handleFavourite={handleFavourite} 
                         handleDelete={handleDelete} 
@@ -82,31 +85,6 @@ const Messages = () => {
             </div>
         </>
     )
-};
-
-const stylesMessages = {
-    background: {
-        alignItems: "center",
-        backgroundColor: colors.yellow,
-        display: "flex",
-        height: "100vh",
-        justifyContent: "center",
-        width: "100vw"
-    },
-    messageList: {
-        listStyle: "none",
-        width: "100vw",
-        backgroundColor: colors.lightgreyLowAlpha,
-        height: "75vh",
-        overflowY: "auto"
-    },
-    messageContainer: {
-        marginTop: 10,
-        marginBottom: 10,
-        padding: 10,
-        height: "10vh",
-        backgroundColor: colors.lightYellow
-    },
 };
 
 export default Messages;

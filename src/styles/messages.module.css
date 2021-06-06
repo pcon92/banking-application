@@ -1,0 +1,20 @@
+
+.background {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+}
+.messageList {
+    list-style: none;
+    width: 100vw;
+    height: 75vh;
+    overflow-Y: auto;
+}
+.messageContainer {
+    margin-top: 10;
+    margin-bottom: 10;
+    padding: 10;
+    height: 10vh;
+}

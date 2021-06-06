@@ -1,0 +1,21 @@
+
+.background {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.accountsList {
+    height: 50vh;
+    width: 50vw;
+    padding: 30;
+    overflow-Y: auto;
+}
+
+.listItem {
+    list-style: none;
+    margin-bottom: 10vh;
+}

@@ -2,6 +2,8 @@ import React from 'react';
 
 // import components
 import Navbar from './Navbar';
+
+import themedStyles from '../styles/themes.module.css';
 import styles from '../styles/home.module.css';
 
 const Home = ({theme, accounts}) => {
@@ -13,12 +15,12 @@ const Home = ({theme, accounts}) => {
     return (
         <>
             <Navbar/>
-            <div className={`${styles.background} ${styles[theme[0]]}`}>
-                <div className={`${styles.contentBox} ${styles[theme[0]]}`}>
-                    <div className={`${styles.welcome} ${styles[theme[1]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+                <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
+                    <div className={`${styles.welcome} ${themedStyles[theme[1]]}`}>
                         Welcome {dummyUserInfo.name}
                     </div>
-                    <div className={`${styles.accountInfoBox} ${styles[theme[2]]}`}>
+                    <div className={`${styles.accountInfoBox} ${themedStyles[theme[2]]}`}>
                         <div className={`${styles.accountNameDiv}`}>
                             <div className={`${styles.accountName}`}>Account Name:</div> 
                             <div className={`${styles.accountNameValue}`}>{accounts[0].name}</div>
