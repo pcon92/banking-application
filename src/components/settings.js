@@ -9,10 +9,7 @@ import styles from '../styles/settings.module.css';
 const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => {
 
     const changeFontSize = (val) => {
-        setFontSize([`${val*0.8}rem`, 
-            `${val}rem`, 
-            `${val*1.2}rem`,
-            `${val*1.8}rem`])
+        setFontSize([`${val*0.8}rem`, `${val}rem`, `${val*1.2}rem`,`${val*1.8}rem`])
     };
     
     const changeTheme = (val) => {
@@ -37,24 +34,24 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
                         </div>
                         <div className={styles.optionBox}>
                             <button type="button" onClick={() => changeFontSize(0.8)}
-                            className={styles.optionButton}
-                            style={fontSize[1] === '0.8rem' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Small</button>
+                                className={styles.optionButton}
+                                style={fontSize[1] === '0.8rem' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Small</button>
                         </div>
                         <div className={styles.optionBox}>
-                        <button type="button" onClick={() => changeFontSize(1)}
-                            className={styles.optionButton}
-                            style={fontSize[1] === '1rem' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Medium</button>
+                            <button type="button" onClick={() => changeFontSize(1)}
+                                className={styles.optionButton}
+                                style={fontSize[1] === '1rem' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Medium</button>
                         </div>
                         <div className={styles.optionBox}>
-                        <button type="button" onClick={() => changeFontSize(1.2)}
-                            className={styles.optionButton}
-                            style={fontSize[1] === '1.2rem' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7,  fontSize: `${fontSizeMed.fontSize}`}}>Large</button>
+                            <button type="button" onClick={() => changeFontSize(1.2)}
+                                className={styles.optionButton}
+                                style={fontSize[1] === '1.2rem' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7,  fontSize: `${fontSizeMed.fontSize}`}}>Large</button>
                         </div>
                     </div>
                     <div className={styles.themeContainer}
@@ -63,25 +60,25 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
                             <h4 style={fontSizeLge}>Theme:</h4>
                         </div>
                         <div className={styles.optionBox}>
-                        <button type="button" onClick={() => changeTheme('yellow')}
-                            className={styles.optionButton}
-                            style={theme[0] === 'yellow0' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Yellow</button>
+                            <button type="button" onClick={() => changeTheme('yellow')}
+                                className={styles.optionButton}
+                                style={theme[0] === 'yellow0' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Yellow</button>
                         </div>
                         <div className={styles.optionBox}>
-                        <button type="button" onClick={() => changeTheme('blue')}
-                        className={styles.optionButton}
-                            style={theme[0] === 'blue0' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Blue</button>
+                            <button type="button" onClick={() => changeTheme('blue')}
+                                className={styles.optionButton}
+                                style={theme[0] === 'blue0' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Blue</button>
                         </div>
                         <div className={styles.optionBox}>
-                        <button type="button" onClick={() => changeTheme('orange')}
-                        className={styles.optionButton}
-                            style={theme[0] === 'orange0' 
-                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
-                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Orange</button>
+                            <button type="button" onClick={() => changeTheme('orange')}
+                                className={styles.optionButton}
+                                style={theme[0] === 'orange0' 
+                                ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                                : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Orange</button>
                         </div>
                     </div>
                 </div>

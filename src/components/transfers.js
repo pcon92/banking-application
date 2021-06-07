@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 
 // import components
 import Navbar from './Navbar';
@@ -7,32 +7,18 @@ import TransferForm from './TransferForm';
 
 import styles from '../styles/transfers.module.css';
 import themedStyles from '../styles/themes.module.css';
-import Messages from './Messages';
 
-const Transfers = ({fontSize, theme, accounts, messages, setMessages, unreadMessages}) => {
-
-    const [transferTo, setTransferTo] = useState('');
-    const [transferAmount, setTransferAmount] = useState(0);
-
-    useEffect(()=> {
-        transferAmount !== 0 
-        ? setMessages([...messages, 
-            {   
-                id: Date.now(), // to give unique ID
-                read: false,
-                favourite: false,
-                message: `You transferred $${transferAmount} to ${transferTo}`
-            }])
-        : setMessages([...messages])
-    }, [transferAmount]);
-
+const Transfers = ({fontSize, theme, 
+    accounts, unreadMessages, 
+    transferTo, setTransferTo, 
+    transferAmount, setTransferAmount}) => {
 
     return (
         <>
             <Navbar
-            fontSize={fontSize}
-            theme={theme}
-            unreadMessages={unreadMessages}/>
+                fontSize={fontSize}
+                theme={theme}
+                unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.innerContainer} ${themedStyles[theme[2]]}`}>
                     <AddressBook

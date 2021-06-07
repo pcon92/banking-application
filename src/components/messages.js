@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
 // import components
@@ -8,27 +8,9 @@ import SingleMessage from './SingleMessage';
 import themedStyles from '../styles/themes.module.css'
 import styles from '../styles/messages.module.css';
 
-const Messages = ({fontSize, theme, messages, setMessages, unreadMessages}) => {
-
-    const handleRead = (pickedId) => {
-        const isSelected = messages.findIndex(messages => messages.id === pickedId);
-        const messagesCopy = [...messages];
-        messagesCopy[isSelected].read = !messagesCopy[isSelected].read;
-        setMessages(messagesCopy);
-    };
-
-    const handleFavourite = (pickedId) => {
-        const isSelected = messages.findIndex(messages => messages.id === pickedId);
-        const messagesCopy = [...messages];
-        messagesCopy[isSelected].favourite = !messagesCopy[isSelected].favourite;
-        setMessages(messagesCopy);
-    };
-
-    const handleDelete = (pickedId) => {
-        setMessages(messages.filter(messages => messages.id !== pickedId));
-        console.log(messages)
-    };
-
+const Messages = ({fontSize, theme, 
+    messages, unreadMessages, 
+    handleRead, handleFavourite, handleDelete}) => {
 
     return (
         <>
@@ -54,7 +36,7 @@ const Messages = ({fontSize, theme, messages, setMessages, unreadMessages}) => {
                         read={message.read}
                         favourite={message.favourite}/>
                     </li>
-                    )} 
+                )} 
                 </ul>
             </div>
         </>
