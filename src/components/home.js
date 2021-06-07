@@ -15,6 +15,7 @@ const Home = ({fontSize, theme, accounts}) => {
     // font sizes used in this component
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
+    const fontSizeXL = {fontSize: `${fontSize[3]}`};
 
     return (
         <>
@@ -24,19 +25,23 @@ const Home = ({fontSize, theme, accounts}) => {
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
                     <div className={`${styles.welcome} ${themedStyles[theme[1]]}`}
-                        style={fontSizeLge}>
+                        style={fontSizeXL}>
                         Welcome {dummyUserInfo.name}
                     </div>
                     <div className={`${styles.accountInfoBox} ${themedStyles[theme[2]]}`}>
                         <div className={`${styles.accountNameDiv}`}>
                             <div className={`${styles.accountName}`}
-                            style={fontSizeMed}>Account Name:</div> 
-                            <div className={`${styles.accountNameValue}`}>{accounts[0].name}</div>
+                            style={fontSizeLge}>Account Name:</div> 
+                            <div className={`${styles.accountNameValue}`}
+                            style={fontSizeMed}>
+                                {accounts[0].name}</div>
                         </div>
                         <div className={`${styles.accountTotalDiv}`}>
                             <div className={`${styles.accountTotal}`}
-                            style={fontSizeMed}>Total:</div> 
-                            <div className={`${styles.accountTotalValue}`}>{accounts[0].total}</div>
+                            style={fontSizeLge}>Total:</div> 
+                            <div className={`${styles.accountTotalValue}`}
+                            style={fontSizeMed}>
+                                {accounts[0].total}</div>
                         </div>
                     </div>
                 </div>

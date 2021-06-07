@@ -30,7 +30,7 @@ function App() {
     ]);
 
     const [theme, setTheme] = useState(['yellow0', 'yellow1', 'yellow2']);
-    const [fontSize, setFontSize] = useState(['0.8rem', '1.0rem', '1.2rem']);
+    const [fontSize, setFontSize] = useState(['0.8rem', '1.0rem', '1.2rem', '1.8rem']);
 
 
     return (
