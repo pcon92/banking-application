@@ -15,7 +15,7 @@ const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
         const INPUT_AMOUNT = document.getElementById('amount');
 
         if (INPUT_AMOUNT.value === '') {
-            setNoVal({color: "red", visibility: "visible"})
+            setNoVal({color: "red", visibility: "visible", fontSize: `${fontSize[1]}`})
         } else {
             setNoVal({color: "red", visibility: "hidden"})
             setTransferAmount(INPUT_AMOUNT.value)
@@ -23,7 +23,7 @@ const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
         }
 
         if (transferTo === '') {
-            setNoContact({color: "red", visibility: "visible"})
+            setNoContact({color: "red", visibility: "visible", fontSize: `${fontSize[1]}`})
         } else {
             setNoContact({color: "red", visibility: "hidden"})
         }
@@ -48,6 +48,3 @@ const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
 };
 
 export default TransferForm;
-
-
-// still need to organize font sizes and colors for error messages

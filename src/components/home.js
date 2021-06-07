@@ -31,7 +31,7 @@ const Home = ({fontSize, theme, accounts}) => {
                     <div className={`${styles.accountInfoBox} ${themedStyles[theme[2]]}`}>
                         <div className={`${styles.accountNameDiv}`}>
                             <div className={`${styles.accountName}`}
-                            style={fontSizeLge}>Account Name:</div> 
+                            style={fontSizeLge}>Primary Account:</div> 
                             <div className={`${styles.accountNameValue}`}
                             style={fontSizeMed}>
                                 {accounts[0].name}</div>

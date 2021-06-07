@@ -2,6 +2,8 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import React, {useState, useEffect} from 'react';
 
+import {loremIpsum} from "lorem-ipsum";
+
 // Import components
 import Login from './components/Login';
 import Register from './components/Register';
@@ -16,7 +18,7 @@ function App() {
     const [accounts, setAccounts] = useState([ 
         {
             id: 0,
-            name: "Primary Account",
+            name: "Everyday Spending",
             accountNumber: 123456,
             BSB: 123456,
             total: 1000
@@ -28,6 +30,26 @@ function App() {
             total: 10000
         }
     ]);
+
+    const [messages, setMessages] = useState([
+        {
+            id: 0,
+            read: false,
+            favourite: false,
+            message: loremIpsum()
+        }, {
+            id: 1,
+            read: false,
+            favourite: false,
+            message: loremIpsum()
+        }, {
+            id: 2,
+            read: false,
+            favourite: false,
+            message: loremIpsum()
+        }
+    ]);
+
 
     // checks local storage to see if user on same browser has set font/theme already
    const [fontSize, setFontSize] = useState(
@@ -61,7 +83,9 @@ function App() {
                     <Route path="/messages-page">
                         <Messages
                             fontSize={fontSize}
-                            theme={theme}/>
+                            theme={theme}
+                            messages={messages}
+                            setMessages={setMessages}/>
                     </Route>
                     <Route path="/accounts-page">
                         <Accounts 
@@ -72,7 +96,10 @@ function App() {
                     <Route path="/transfers-page">
                         <Transfers
                             fontSize={fontSize}
-                            theme={theme}/>
+                            theme={theme}
+                            accounts={accounts}
+                            messages={messages}
+                            setMessages={setMessages}/>
                     </Route>
                     <Route path="/settings-page">
                         <Settings

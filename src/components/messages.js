@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {loremIpsum} from "lorem-ipsum";
+
 
 // import components
 import Navbar from './Navbar';
@@ -8,37 +8,7 @@ import SingleMessage from './SingleMessage';
 import themedStyles from '../styles/themes.module.css'
 import styles from '../styles/messages.module.css';
 
-const Messages = ({fontSize, theme}) => {
-
-    const [messages, setMessages] = useState([
-        {
-            id: 0,
-            read: false,
-            favourite: false,
-            message: loremIpsum()
-        }, {
-            id: 1,
-            read: false,
-            favourite: false,
-            message: loremIpsum()
-        }, {
-            id: 2,
-            read: false,
-            favourite: false,
-            message: loremIpsum()
-        }, {
-            id: 3,
-            read: false,
-            favourite: false,
-            message: loremIpsum()
-        }, {
-            id: 4,
-            read: false,
-            favourite: false,
-            message: loremIpsum()
-        }
-    ]);
-
+const Messages = ({fontSize, theme, messages, setMessages}) => {
 
     const handleRead = (pickedId) => {
         const isSelected = messages.findIndex(messages => messages.id === pickedId);

@@ -3,19 +3,14 @@ import React, {useState, useEffect} from 'react';
 // import components
 import AddressBookContact from './AddressBookContact';
 
-const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
+const AddressBook = ({fontSize, accounts, setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
 
     // font sizes used in this component
     const fontSizeXL = {fontSize: `${fontSize[3]}`};
 
     const [contacts, setContact] = useState([
-        {
-            id: 1,
-            name: 'My Account',
-            accountNum: '1111-1111',
-            BSB: '111-111',
-            total: 1000
-        }, {
+            accounts[0],
+         {
             id: 2,
             name: 'Bob Smith',
             accountNum: '2222-3333',
@@ -31,13 +26,13 @@ const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTr
     ]);
 
 
-    const checkID = () => {
+    const checkName = () => {
 
-        if (parseInt(transferTo) === 2) {
+        if (transferTo === contacts[1].name) {
             contacts[1].total += parseInt(transferAmount)
             contacts[0].total -= parseInt(transferAmount)
             setContact([...contacts])
-        } else if (parseInt(transferTo) === 3) {
+        } else if (transferTo === contacts[2].name) {
             contacts[2].total += parseInt(transferAmount)
             contacts[0].total -= parseInt(transferAmount)
             setContact([...contacts])
@@ -46,7 +41,7 @@ const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTr
     }
 
     useEffect(() => {
-        checkID()
+        checkName()
     }, [transferAmount]);
 
     useEffect(() => {
