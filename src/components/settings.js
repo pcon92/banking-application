@@ -8,15 +8,15 @@ import styles from '../styles/settings.module.css';
 
 const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => {
 
-    const onChangeFontSize = (e) => {
-        setFontSize([`${e.target.value*0.8}rem`, 
-            `${e.target.value}rem`, 
-            `${e.target.value*1.2}rem`,
-            `${e.target.value*1.8}rem`])
+    const changeFontSize = (val) => {
+        setFontSize([`${val*0.8}rem`, 
+            `${val}rem`, 
+            `${val*1.2}rem`,
+            `${val*1.8}rem`])
     };
     
-    const onChangeTheme = (e) => {
-        setTheme([`${e.target.value}0`, `${e.target.value}1`, `${e.target.value}2`])
+    const changeTheme = (val) => {
+        setTheme([`${val}0`, `${val}1`, `${val}2`])
     };
 
     // font sizes used in this component
@@ -31,31 +31,58 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
             unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.settingsBox} ${themedStyles[theme[2]]}`}>
-                    <div className={styles.fontSizeContainer}
-                    onChange={onChangeFontSize}>
-                        <h4 style={fontSizeLge}>Font Size:</h4>
-                        <label htmlFor="small" style={fontSizeMed}> Small </label>
-                        <input type="radio" id="small" value="0.8" name="fontSize" 
-                        defaultChecked={fontSize[1] === '0.8rem' ? true : false} />
-                        <label htmlFor="medium" style={fontSizeMed}> Medium </label>
-                        <input type="radio" id="medium" value="1" name="fontSize" 
-                        defaultChecked={fontSize[1] === '1rem' ? true : false} />
-                        <label htmlFor="large" style={fontSizeMed}> Large </label>
-                        <input type="radio" id="large" value="1.2" name="fontSize"
-                        defaultChecked={fontSize[1] === '1.2rem' ? true : false} />
+                    <div className={styles.fontSizeContainer}>
+                        <div className={styles.optionBox}>
+                            <h4 style={fontSizeLge}>Font Size:</h4>
+                        </div>
+                        <div className={styles.optionBox}>
+                            <button type="button" onClick={() => changeFontSize(0.8)}
+                            className={styles.optionButton}
+                            style={fontSize[1] === '0.8rem' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Small</button>
+                        </div>
+                        <div className={styles.optionBox}>
+                        <button type="button" onClick={() => changeFontSize(1)}
+                            className={styles.optionButton}
+                            style={fontSize[1] === '1rem' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Medium</button>
+                        </div>
+                        <div className={styles.optionBox}>
+                        <button type="button" onClick={() => changeFontSize(1.2)}
+                            className={styles.optionButton}
+                            style={fontSize[1] === '1.2rem' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7,  fontSize: `${fontSizeMed.fontSize}`}}>Large</button>
+                        </div>
                     </div>
                     <div className={styles.themeContainer}
-                    onChange={onChangeTheme}>
-                        <h4 style={fontSizeLge}>Theme:</h4>
-                        <label htmlFor="yellow" style={fontSizeMed}> Yellow </label>
-                        <input type="radio" id="yellow" value="yellow" name="theme" 
-                        defaultChecked={theme[0] === 'yellow0' ? true : false} />
-                        <label htmlFor="blue" style={fontSizeMed}> Blue </label>
-                        <input type="radio" id="blue" value="blue" name="theme" 
-                        defaultChecked={theme[0] === 'blue0' ? true : false}/>
-                        <label htmlFor="orange" style={fontSizeMed}> Orange </label>
-                        <input type="radio" id="orange" value="orange" name="theme" 
-                        defaultChecked={theme[0] === 'orange0' ? true : false}/>
+                    >
+                        <div className={styles.optionBox}>
+                            <h4 style={fontSizeLge}>Theme:</h4>
+                        </div>
+                        <div className={styles.optionBox}>
+                        <button type="button" onClick={() => changeTheme('yellow')}
+                            className={styles.optionButton}
+                            style={theme[0] === 'yellow0' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Yellow</button>
+                        </div>
+                        <div className={styles.optionBox}>
+                        <button type="button" onClick={() => changeTheme('blue')}
+                        className={styles.optionButton}
+                            style={theme[0] === 'blue0' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Blue</button>
+                        </div>
+                        <div className={styles.optionBox}>
+                        <button type="button" onClick={() => changeTheme('orange')}
+                        className={styles.optionButton}
+                            style={theme[0] === 'orange0' 
+                            ? {opacity: 1, textDecoration: "underline", fontSize: `${fontSizeMed.fontSize}`} 
+                            : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Orange</button>
+                        </div>
                     </div>
                 </div>
             </div>

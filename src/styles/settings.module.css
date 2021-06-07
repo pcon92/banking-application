@@ -31,3 +31,22 @@
     border: 1px solid black;
 }
 
+.optionBox {
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+    flex: 1;
+}
+
+.optionButton {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+}
