@@ -8,7 +8,7 @@ import SingleMessage from './SingleMessage';
 import themedStyles from '../styles/themes.module.css'
 import styles from '../styles/messages.module.css';
 
-const Messages = ({fontSize, theme, messages, setMessages}) => {
+const Messages = ({fontSize, theme, messages, setMessages, unreadMessages}) => {
 
     const handleRead = (pickedId) => {
         const isSelected = messages.findIndex(messages => messages.id === pickedId);
@@ -34,7 +34,8 @@ const Messages = ({fontSize, theme, messages, setMessages}) => {
         <>
             <Navbar
             fontSize={fontSize}
-            theme={theme}/> 
+            theme={theme}
+            unreadMessages={unreadMessages}/> 
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <ul className={`${styles.messageList} ${themedStyles[theme[1]]}`}>
                 {messages.map(message => 

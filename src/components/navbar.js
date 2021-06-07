@@ -4,9 +4,10 @@ import {Link} from "react-router-dom";
 import styles from '../styles/navbar.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const Navbar = ({fontSize, theme}) => {
+const Navbar = ({fontSize, theme, unreadMessages}) => {
 
     // font sizes used in this component
+    const fontSizeSml = {fontSize: `${fontSize[0]}`};
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
@@ -25,6 +26,10 @@ const Navbar = ({fontSize, theme}) => {
                     <Link to="/messages-page" 
                     className={`${styles.transferLink}`}
                     style={fontSizeMed}>Messages</Link>
+                    {unreadMessages > 0 
+                    ? <div className={styles.unreadMessagesNav}
+                      style={fontSizeSml}>{unreadMessages}</div>
+                    : null}
                 </li>
                 <li className={`${styles.linkList}`}>
                     <Link to="/accounts-page" 

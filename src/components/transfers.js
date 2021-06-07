@@ -9,7 +9,7 @@ import styles from '../styles/transfers.module.css';
 import themedStyles from '../styles/themes.module.css';
 import Messages from './Messages';
 
-const Transfers = ({fontSize, theme, accounts, messages, setMessages}) => {
+const Transfers = ({fontSize, theme, accounts, messages, setMessages, unreadMessages}) => {
 
     const [transferTo, setTransferTo] = useState('');
     const [transferAmount, setTransferAmount] = useState(0);
@@ -31,7 +31,8 @@ const Transfers = ({fontSize, theme, accounts, messages, setMessages}) => {
         <>
             <Navbar
             fontSize={fontSize}
-            theme={theme}/>
+            theme={theme}
+            unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.innerContainer} ${themedStyles[theme[2]]}`}>
                     <AddressBook

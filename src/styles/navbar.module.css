@@ -23,3 +23,17 @@
     text-decoration: none;
     color: black;
 }
+
+.unreadMessagesNav {
+    border: 1px solid white;
+    background-color: red;
+    padding: 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+    left: 3px;
+    color: white;
+    font-weight: bold;
+}

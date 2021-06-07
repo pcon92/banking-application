@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import themedStyles from '../styles/themes.module.css';
 import styles from '../styles/home.module.css';
 
-const Home = ({fontSize, theme, accounts}) => {
+const Home = ({fontSize, theme, accounts, unreadMessages}) => {
 
     const dummyUserInfo = {
         name: 'User 1',
@@ -21,7 +21,8 @@ const Home = ({fontSize, theme, accounts}) => {
         <>
             <Navbar
             fontSize={fontSize}
-            theme={theme}/>
+            theme={theme}
+            unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
                     <div className={`${styles.welcome} ${themedStyles[theme[1]]}`}

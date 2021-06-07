@@ -50,6 +50,16 @@ function App() {
         }
     ]);
 
+    // tally unread messages
+    const findUnreadMessages = () => {
+        return messages.filter(message => message.read === false).length
+    }
+    const [unreadMessages,setUnreadMessages] = useState(
+        findUnreadMessages()
+    );
+    useEffect(() => {
+        setUnreadMessages(findUnreadMessages())
+    }, [messages]);
 
     // checks local storage to see if user on same browser has set font/theme already
    const [fontSize, setFontSize] = useState(
@@ -78,20 +88,23 @@ function App() {
                         <Home 
                             fontSize={fontSize}
                             theme={theme}
-                            accounts={accounts}/>
+                            accounts={accounts}
+                            unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/messages-page">
                         <Messages
                             fontSize={fontSize}
                             theme={theme}
                             messages={messages}
-                            setMessages={setMessages}/>
+                            setMessages={setMessages}
+                            unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/accounts-page">
                         <Accounts 
                             fontSize={fontSize}
                             theme={theme}
-                            accounts={accounts}/>
+                            accounts={accounts}
+                            unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers
@@ -99,14 +112,16 @@ function App() {
                             theme={theme}
                             accounts={accounts}
                             messages={messages}
-                            setMessages={setMessages}/>
+                            setMessages={setMessages}
+                            unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/settings-page">
                         <Settings
                         fontSize={fontSize}
                         setFontSize={setFontSize}
                         theme={theme}
-                        setTheme={setTheme}/>
+                        setTheme={setTheme}
+                        unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/register-page">
                         <Register/>

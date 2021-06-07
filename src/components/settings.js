@@ -6,7 +6,7 @@ import Navbar from './Navbar';
 import themedStyles from '../styles/themes.module.css';
 import styles from '../styles/settings.module.css';
 
-const Settings = ( {fontSize, setFontSize, theme, setTheme}) => {
+const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => {
 
     const onChangeFontSize = (e) => {
         setFontSize([`${e.target.value*0.8}rem`, 
@@ -27,7 +27,8 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme}) => {
         <>
             <Navbar
             theme={theme}
-            fontSize={fontSize}/>
+            fontSize={fontSize}
+            unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <div className={`${styles.settingsBox} ${themedStyles[theme[2]]}`}>
                     <div className={styles.fontSizeContainer}
