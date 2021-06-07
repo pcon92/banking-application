@@ -1,64 +1,54 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+import styles from '../styles/navbar.module.css';
+import themedStyles from '../styles/themes.module.css';
 
-import colors from '../config/defaultStyles';
+const Navbar = ({fontSize, theme}) => {
 
-const Navbar = () => {
+    // font sizes used in this component
+    const fontSizeMed = {fontSize: `${fontSize[1]}`};
+    const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
     return (
         <div>
-            <ul style={styles.navList}>
-                <li style={styles.logoList}>
+            <ul className={`${styles.navList} ${themedStyles[theme[2]]}`}>
+                <li className={`${styles.linkList} ${themedStyles[theme[2]]}`}>
                 <img alt="logo"></img>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/home-page" style={styles.transferLink}>Home</Link>
+                <li className={styles.linkList}>
+                    <Link to="/home-page" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeLge}>Home</Link>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/messages-page" style={styles.transferLink}>Messages</Link>
+                <li className={`${styles.linkList}`}>
+                    <Link to="/messages-page" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeMed}>Messages</Link>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/accounts-page" style={styles.transferLink}>View Accounts</Link>
+                <li className={`${styles.linkList}`}>
+                    <Link to="/accounts-page" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeMed}>Accounts</Link>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/transfers-page" style={styles.transferLink}>Transfers</Link>
+                <li className={`${styles.linkList}`}>
+                    <Link to="/transfers-page" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeMed}>Transfers</Link>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/settings-page" style={styles.transferLink}>Settings</Link>
+                <li className={`${styles.linkList}`}>
+                    <Link to="/settings-page" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeMed}>Settings</Link>
                 </li>
-                <li style={styles.linkList}>
-                    <Link to="/" style={styles.transferLink}>Logout</Link>
+                <li className={`${styles.linkList}`}>
+                    <Link to="/" 
+                    className={`${styles.transferLink}`}
+                    style={fontSizeMed}>Logout</Link>
                 </li>
             </ul>
         </div>
     )
 };
-
-const styles = {
-    navList: {
-        position: "absolute",
-        display: "flex",
-        justifyContent: "space-evenly",
-        alignItems: "center",
-        height: "5%",
-        width: "100%",
-        backgroundColor: colors.lightgreyLowAlpha,
-        listStyle: "none"
-    },
-    linkList: {
-        fontSize: 16,    
-        borderLeft: "1px solid black",
-        paddingLeft: 10,
-        height: "100%",
-        width: "10%",
-        display: "flex",
-        alignItems: "center"
-    },
-    transferLink: {
-        textDecoration: "none",
-        color: colors.black
-    }
-}
 
 export default Navbar;

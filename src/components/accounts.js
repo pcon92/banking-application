@@ -7,11 +7,13 @@ import SingleAccount from './SingleAccount';
 import styles from '../styles/accounts.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const Accounts = ( {theme, accounts}) => {
+const Accounts = ( {fontSize, theme, accounts}) => {
 
     return (
         <>
-            <Navbar/>
+            <Navbar
+                fontSize={fontSize}
+                theme={theme}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <ul className={`${styles.accountsList} ${themedStyles[theme[2]]}`}>
                 {accounts.map(account => 
@@ -20,6 +22,7 @@ const Accounts = ( {theme, accounts}) => {
                         key={account.id}
                     >
                     <SingleAccount 
+                        fontSize={fontSize}
                         name={account.name}
                         accountNumber={account.accountNumber}
                         BSB={account.BSB}

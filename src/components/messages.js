@@ -8,7 +8,7 @@ import SingleMessage from './SingleMessage';
 import themedStyles from '../styles/themes.module.css'
 import styles from '../styles/messages.module.css';
 
-const Messages = ({theme}) => {
+const Messages = ({fontSize, theme}) => {
 
     const [messages, setMessages] = useState([
         {
@@ -62,7 +62,9 @@ const Messages = ({theme}) => {
 
     return (
         <>
-            <Navbar/> 
+            <Navbar
+            fontSize={fontSize}
+            theme={theme}/> 
             <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
                 <ul className={`${styles.messageList} ${themedStyles[theme[1]]}`}>
                 {messages.map(message => 
@@ -71,6 +73,7 @@ const Messages = ({theme}) => {
                         className={`${styles.messageContainer} ${themedStyles[theme[2]]}`}
                     >
                     <SingleMessage 
+                        fontSize={fontSize}
                         theme={theme}
                         handleRead={handleRead} 
                         handleFavourite={handleFavourite} 

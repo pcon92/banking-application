@@ -1,7 +1,12 @@
 import React from 'react';
 
 
-const AddressBookContact = ({setTransferTo, id, name, accountNum, BSB, total}) => {
+const AddressBookContact = ({fontSize, setTransferTo, id, name, accountNum, BSB, total}) => {
+
+    // font sizes used in this component
+    const fontSizeSml = {fontSize: `${fontSize[0]}`};
+    const fontSizeMed = {fontSize: `${fontSize[1]}`};
+    const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
     const chooseTransfer = () => {
         setTransferTo(id)
@@ -10,11 +15,13 @@ const AddressBookContact = ({setTransferTo, id, name, accountNum, BSB, total}) =
     return (
         <div>
             <div style={styleAddressBookContact.contact}>
-                <h4>Name: {name} </h4>
-                <h6>Account Number: {accountNum}</h6>
-                <h6>BSB: {BSB} </h6>
-                <h6>Total: {total}</h6>
-                <button style={styleAddressBookContact.transferButton} onClick={chooseTransfer}>Transfer to this person</button>
+                <h4 style={fontSizeLge}>Name: {name} </h4>
+                <h6 style={fontSizeSml}>Account Number: {accountNum}</h6>
+                <h6 style={fontSizeSml}>BSB: {BSB} </h6>
+                <h6 style={fontSizeMed}>Total: {total}</h6>
+                <button style={styleAddressBookContact.transferButton} 
+                style={fontSizeMed}
+                onClick={chooseTransfer}>Transfer to this person</button>
             </div>
         </div>
     )

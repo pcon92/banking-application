@@ -3,7 +3,10 @@ import React, {useState, useEffect} from 'react';
 // import components
 import AddressBookContact from './AddressBookContact';
 
-const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
+const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
+
+    // font sizes used in this component
+    const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
     const [contacts, setContact] = useState([
         {
@@ -54,10 +57,11 @@ const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmou
     return (
         <>
             <div>
-                <h1>Address Book</h1>
+                <h1 style={fontSizeLge}>Address Book</h1>
                     <div>
                         {contacts.map(contact => 
                             <AddressBookContact 
+                                fontSize={fontSize}
                                 setTransferTo={setTransferTo}
                                 key={contact.id}
                                 id={contact.id}
@@ -72,7 +76,5 @@ const AddressBook = ({setTransferTo, transferAmount, transferTo, setTransferAmou
     )
 };
 
-const stylesAddressBook = {
-};
 
 export default AddressBook;

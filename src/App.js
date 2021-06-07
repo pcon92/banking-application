@@ -13,7 +13,7 @@ import Settings from './components/Settings';
 
 function App() {
 
-    const [accounts, setAccounts] = useState([
+    const [accounts, setAccounts] = useState([ 
         {
             id: 0,
             name: "Primary Account",
@@ -30,6 +30,8 @@ function App() {
     ]);
 
     const [theme, setTheme] = useState(['yellow0', 'yellow1', 'yellow2']);
+    const [fontSize, setFontSize] = useState(['0.8rem', '1.0rem', '1.2rem']);
+
 
     return (
         <Router>
@@ -37,24 +39,30 @@ function App() {
                 <Switch>
                     <Route path="/home-page">
                         <Home 
+                            fontSize={fontSize}
                             theme={theme}
                             accounts={accounts}/>
                     </Route>
                     <Route path="/messages-page">
                         <Messages
+                            fontSize={fontSize}
                             theme={theme}/>
                     </Route>
                     <Route path="/accounts-page">
                         <Accounts 
+                            fontSize={fontSize}
                             theme={theme}
                             accounts={accounts}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers
+                            fontSize={fontSize}
                             theme={theme}/>
                     </Route>
                     <Route path="/settings-page">
                         <Settings
+                        fontSize={fontSize}
+                        setFontSize={setFontSize}
                         theme={theme}
                         setTheme={setTheme}/>
                     </Route>

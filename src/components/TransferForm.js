@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 
 
-const TransferForm = ({transferTo, setTransferAmount}) => {
+const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
+
+    // font sizes used in this component
+    const fontSizeMed = {fontSize: `${fontSize[1]}`};
+    const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
     const [noVal, setNoVal] = useState({color: "red", visibility: "hidden"});
     const [noContact, setNoContact] = useState({color: "red", visibility: "hidden"});
@@ -29,11 +33,14 @@ const TransferForm = ({transferTo, setTransferAmount}) => {
 
     return (
         <div>
-            <h3>To: {transferTo}</h3>
+            <h3 style={fontSizeLge}>To: {transferTo}</h3>
             <p style={noContact}>Error: No contact selected to transfer to</p>
-            <label htmlFor="amount">Amount</label>
+            <label 
+            style={fontSizeMed}
+            htmlFor="amount">Amount</label>
             <input type="text" id="amount"></input>
             <button value="Send Transfer"
+                style={fontSizeMed}
                 onClick={submitTransferAmount}>Send Transfer</button>
             <p style={noVal}>Error: no transfer value entered</p>
         </div>
@@ -41,3 +48,6 @@ const TransferForm = ({transferTo, setTransferAmount}) => {
 };
 
 export default TransferForm;
+
+
+// still need to organize font sizes and colors for error messages
