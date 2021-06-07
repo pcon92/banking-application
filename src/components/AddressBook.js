@@ -6,7 +6,7 @@ import AddressBookContact from './AddressBookContact';
 const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTransferAmount}) => {
 
     // font sizes used in this component
-    const fontSizeLge = {fontSize: `${fontSize[2]}`};
+    const fontSizeXL = {fontSize: `${fontSize[3]}`};
 
     const [contacts, setContact] = useState([
         {
@@ -57,7 +57,7 @@ const AddressBook = ({fontSize, setTransferTo, transferAmount, transferTo, setTr
     return (
         <>
             <div>
-                <h1 style={fontSizeLge}>Address Book</h1>
+                <h1 style={fontSizeXL}>Address Book</h1>
                     <div>
                         {contacts.map(contact => 
                             <AddressBookContact 

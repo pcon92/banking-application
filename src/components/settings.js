@@ -38,7 +38,7 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme}) => {
                         defaultChecked={fontSize[1] === '0.8rem' ? true : false} />
                         <label for="medium" style={fontSizeMed}> Medium </label>
                         <input type="radio" id="medium" value="1" name="fontSize" 
-                        defaultChecked={fontSize[1] === '1.0rem' ? true : false} />
+                        defaultChecked={fontSize[1] === '1rem' ? true : false} />
                         <label for="large" style={fontSizeMed}> Large </label>
                         <input type="radio" id="large" value="1.2" name="fontSize"
                         defaultChecked={fontSize[1] === '1.2rem' ? true : false} />

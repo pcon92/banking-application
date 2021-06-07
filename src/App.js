@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 // Import components
 import Login from './components/Login';
@@ -29,8 +29,23 @@ function App() {
         }
     ]);
 
-    const [theme, setTheme] = useState(['yellow0', 'yellow1', 'yellow2']);
-    const [fontSize, setFontSize] = useState(['0.8rem', '1.0rem', '1.2rem', '1.8rem']);
+    // checks local storage to see if user on same browser has set font/theme already
+   const [fontSize, setFontSize] = useState(
+       localStorage.getItem('fontSize')
+       ? localStorage.getItem('fontSize').split(',')
+       : ['0.8rem', '1rem', '1.2rem', '1.8rem']);
+    const [theme, setTheme] = useState(
+        localStorage.getItem('theme')
+        ? localStorage.getItem('theme').split(',')
+        : ['yellow0', 'yellow1', 'yellow2']);
+        
+    useEffect(() => {
+        localStorage.setItem('fontSize', fontSize)
+    }, [fontSize]);
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+    }, [theme]);
 
 
     return (
