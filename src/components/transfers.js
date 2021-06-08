@@ -9,9 +9,10 @@ import styles from '../styles/transfers.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 const Transfers = ({fontSize, theme, 
-    accounts, unreadMessages, 
+    unreadMessages, 
     transferTo, setTransferTo, 
-    transferAmount, setTransferAmount}) => {
+    setTransferAmount,
+    contacts}) => {
 
     return (
         <>
@@ -24,10 +25,7 @@ const Transfers = ({fontSize, theme,
                     <AddressBook
                         fontSize={fontSize}
                         setTransferTo={setTransferTo}
-                        transferTo={transferTo}
-                        transferAmount={transferAmount}
-                        setTransferAmount={setTransferAmount}
-                        accounts={accounts}/>
+                        contacts={contacts}/>
                     <TransferForm 
                         transferTo={transferTo}
                         fontSize={fontSize}

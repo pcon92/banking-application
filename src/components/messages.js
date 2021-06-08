@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 // import components
 import Navbar from './Navbar';
 import SingleMessage from './SingleMessage';
