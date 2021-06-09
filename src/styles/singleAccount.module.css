@@ -1,7 +1,8 @@
 .accountBox {
     display: flex;
-    justify-content: space-evenly;
-    height: 10vh;
+    border: 1px solid black;
+    height: 15vh;
+    padding: 10px;
 }
 
 .accountInfo {
@@ -9,10 +10,12 @@
     flex-direction: column;
     justify-content: space-between;
     width: 40%;
+    padding: 10px;
 }
 
 .accountValues {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    padding: 10px;
 }

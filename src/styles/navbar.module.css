@@ -7,21 +7,27 @@
     height: 5%;
     width: 100%;
     list-style: none;
+    border-bottom: 1px solid black;
+}
+
+.logoLink {
+    width: 10%;
 }
 
 .linkList {
-    border-left: 1px solid black;
     font-size: 0.9rem;
-    padding-left: 10px;
     height: 100%;
-    width: 10%;
     display: flex;
+    flex: 1;
     align-items: center;
-}
-
-.transferLink {
+    justify-content: center;
     text-decoration: none;
     color: black;
+}
+
+.linkList:hover {
+    box-shadow: 1px 1px 15px 2px rgba(0, 0, 0, 0.1);
+    transform: scale(1..05);
 }
 
 .unreadMessagesNav {

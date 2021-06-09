@@ -23,15 +23,15 @@ function App() {
             : [{
                 id: 0,
                 name: "Everyday Spending",
-                accountNumber: 123456,
+                accountNum: 1235235456,
                 BSB: 123456,
                 total: 1000
                 }, {
                 id: 1,
                 name: "Savings Account",
-                accountNumber: 234567,
+                accountNum: 2345612447,
                 BSB: 234567,
-                total: 10000
+                total: 53912
                 }
             ]
     };
@@ -62,20 +62,19 @@ function App() {
     useEffect(() => {
         localStorage.setItem('accounts', JSON.stringify(accounts))
     }, [accounts])
-    useEffect(() => {
-        localStorage.setItem('contacts', JSON.stringify(contacts))
-    }, [contacts])
 
     // need to fix modifying state directly here
     const checkName = () => {
         if (transferTo === contacts[1].name) {
             contacts[1].total += parseInt(transferAmount)
             accounts[0].total -= parseInt(transferAmount)
+            contacts[0].total -= parseInt(transferAmount)
             setAccounts([...accounts])
             setContacts([...contacts])
         } else if (transferTo === contacts[2].name) {
             contacts[2].total += parseInt(transferAmount)
             accounts[0].total -= parseInt(transferAmount)
+            contacts[0].total -= parseInt(transferAmount)
             setAccounts([...accounts])
             setContacts([...contacts])
         }
@@ -86,6 +85,7 @@ function App() {
     }, [transferAmount]);
 
     useEffect(() => {
+        localStorage.setItem('contacts', JSON.stringify(contacts))
         setTransferTo('');
         setTransferAmount(0);
     }, [contacts]);
@@ -156,7 +156,7 @@ function App() {
                 favourite: false,
                 message: `You transferred $${transferAmount} to ${transferTo}`
             }])
-            : setMessages([...messages])
+        : setMessages([...messages])
     }, [transferAmount]);
 
 
@@ -165,7 +165,7 @@ function App() {
     const checkIfThemeStored = () => {
         return localStorage.getItem('theme')
             ? localStorage.getItem('theme').split(',')
-            : ['yellow0', 'yellow1', 'yellow2']
+            : ['yellow0', 'yellow1', 'yellow2', 'yellow3']
     };
 
     const checkIfFontSizeStored = () => {
@@ -193,7 +193,8 @@ function App() {
                         <Home 
                             fontSize={fontSize}
                             theme={theme}
-                            accounts={accounts}
+                            total={accounts[0].total}
+                            name={accounts[0].name}
                             unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/messages-page">

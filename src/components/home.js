@@ -3,10 +3,12 @@ import React from 'react';
 // import components
 import Navbar from './Navbar';
 
+import showTotalAusDollar from '../functions/showTotalAusDollar.js';
+
 import themedStyles from '../styles/themes.module.css';
 import styles from '../styles/home.module.css';
 
-const Home = ({fontSize, theme, accounts, unreadMessages}) => {
+const Home = ({fontSize, theme, unreadMessages, total, name}) => {
 
     const dummyUserInfo = {
         name: 'User 1',
@@ -23,7 +25,7 @@ const Home = ({fontSize, theme, accounts, unreadMessages}) => {
             fontSize={fontSize}
             theme={theme}
             unreadMessages={unreadMessages}/>
-            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
                     <div className={`${styles.welcome} ${themedStyles[theme[1]]}`}
                         style={fontSizeXL}>
@@ -35,14 +37,14 @@ const Home = ({fontSize, theme, accounts, unreadMessages}) => {
                             style={fontSizeLge}>Primary Account:</div> 
                             <div className={`${styles.accountNameValue}`}
                             style={fontSizeMed}>
-                                {accounts[0].name}</div>
+                                {name}</div>
                         </div>
                         <div className={`${styles.accountTotalDiv}`}>
                             <div className={`${styles.accountTotal}`}
                             style={fontSizeLge}>Total:</div> 
                             <div className={`${styles.accountTotalValue}`}
                             style={fontSizeMed}>
-                                {accounts[0].total}</div>
+                                {showTotalAusDollar({total})}</div>
                         </div>
                     </div>
                 </div>

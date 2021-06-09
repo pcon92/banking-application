@@ -20,7 +20,7 @@ const Transfers = ({fontSize, theme,
                 fontSize={fontSize}
                 theme={theme}
                 unreadMessages={unreadMessages}/>
-            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.innerContainer} ${themedStyles[theme[2]]}`}>
                     <AddressBook
                         fontSize={fontSize}

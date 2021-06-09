@@ -1,5 +1,6 @@
 import React from 'react';
 
+import showTotalAusDollar from '../functions/showTotalAusDollar.js';
 
 import styles from '../styles/addressBookContact.module.css';
 
@@ -13,7 +14,7 @@ const AddressBookContact = ({fontSize,
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
     const chooseTransfer = () => {
-        setTransferTo(name)
+        setTransferTo(name);
     };
 
     return (
@@ -22,7 +23,7 @@ const AddressBookContact = ({fontSize,
                 <h4 style={fontSizeLge}>Name: {name} </h4>
                 <h6 style={fontSizeSml}>Account Number: {accountNum}</h6>
                 <h6 style={fontSizeSml}>BSB: {BSB} </h6>
-                <h6 style={fontSizeMed}>Total: {total}</h6>
+                <h6 style={fontSizeMed}>Total: {showTotalAusDollar({total})}</h6>
                 {name !== "Everyday Spending" 
                 ? <button className={styles.transferButton} 
                   style={fontSizeMed}

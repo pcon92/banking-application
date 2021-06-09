@@ -2,33 +2,45 @@
 /* For different themes as selected in settings */
 
 .yellow0 {
-    background-color: var(--yellow);
+    background-color: var(--yellow1);
 }
 .yellow1 {
-    background-color: var(--lightYellow);
+    background-color: var(--yellow2);
 }
 .yellow2 {
-    background-color: var(--lightgreyLowAlpha);
+    background-color: var(--yellow3);
+}
+.yellow3 {
+    border-left: 100px solid var(--yellow4);
+    border-right: 100px solid var(--yellow4);
 }
 
 
 .blue0 {
-    background-color:var(--blue);
+    background-color:var(--blue1);
 }
 .blue1 {
-    background-color:var(--lightBlue);
+    background-color:var(--blue2);
 }
 .blue2 {
-    background-color:var(--greyBlue);
+    background-color:var(--blue3);
+}
+.blue3 {
+    border-left: 100px solid var(--blue4);
+    border-right: 100px solid var(--blue4);
 }
 
 
 .orange0 {
-    background-color: var(--orange);
+    background-color: var(--orange1);
 }
 .orange1 {
-    background-color: var(--lightOrange);
+    background-color: var(--orange2);
 }
 .orange2 {
-    background-color: var(--greyOrange);
+    background-color: var(--orange3);
+}
+.orange3 {
+    border-left: 100px solid var(--orange4);
+    border-right: 100px solid var(--orange4);
 }

@@ -13,7 +13,7 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
     };
     
     const changeTheme = (val) => {
-        setTheme([`${val}0`, `${val}1`, `${val}2`])
+        setTheme([`${val}0`, `${val}1`, `${val}2`, `${val}3`])
     };
 
     // font sizes used in this component
@@ -26,10 +26,10 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
             theme={theme}
             fontSize={fontSize}
             unreadMessages={unreadMessages}/>
-            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.settingsBox} ${themedStyles[theme[2]]}`}>
                     <div className={styles.fontSizeContainer}>
-                        <div className={styles.optionBox}>
+                        <div className={styles.optionBoxTitle}>
                             <h4 style={fontSizeLge}>Font Size:</h4>
                         </div>
                         <div className={styles.optionBox}>
@@ -56,7 +56,7 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
                     </div>
                     <div className={styles.themeContainer}
                     >
-                        <div className={styles.optionBox}>
+                        <div className={styles.optionBoxTitle}>
                             <h4 style={fontSizeLge}>Theme:</h4>
                         </div>
                         <div className={styles.optionBox}>

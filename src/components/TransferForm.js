@@ -37,7 +37,7 @@ const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
             <p style={noContact}>Error: No contact selected to transfer to</p>
             <label 
             style={fontSizeMed}
-            htmlFor="amount">Amount</label>
+            htmlFor="amount">Amount: </label>
             <input type="text" id="amount"></input>
             <button value="Send Transfer"
                 style={fontSizeMed}

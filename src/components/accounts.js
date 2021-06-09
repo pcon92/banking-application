@@ -15,7 +15,7 @@ const Accounts = ( {fontSize, theme, accounts, unreadMessages}) => {
                 fontSize={fontSize}
                 theme={theme}
                 unreadMessages={unreadMessages}/>
-            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <ul className={`${styles.accountsList} ${themedStyles[theme[2]]}`}>
                 {accounts.map(account => 
                     <li 
@@ -25,7 +25,7 @@ const Accounts = ( {fontSize, theme, accounts, unreadMessages}) => {
                     <SingleAccount 
                         fontSize={fontSize}
                         name={account.name}
-                        accountNumber={account.accountNumber}
+                        accountNum={account.accountNum}
                         BSB={account.BSB}
                         total={account.total}
                     />

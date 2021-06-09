@@ -13,44 +13,38 @@ const Navbar = ({fontSize, theme, unreadMessages}) => {
 
     return (
         <div>
-            <ul className={`${styles.navList} ${themedStyles[theme[2]]}`}>
-                <li className={`${styles.linkList} ${themedStyles[theme[2]]}`}>
+            <ul className={`${styles.navList} ${themedStyles[theme[2]]} ${themedStyles[theme[3]]}`}>
+                <li className={`${styles.logoLink} ${themedStyles[theme[2]]}`}>
                 <img alt="logo"></img>
                 </li>
-                <li className={styles.linkList}>
-                    <Link to="/home-page" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeLge}>Home</Link>
-                </li>
-                <li className={`${styles.linkList}`}>
-                    <Link to="/messages-page" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeMed}>Messages</Link>
+                <Link to="/home-page" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeLge}>Home
+                </Link>
+                <Link to="/messages-page" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeMed}>Messages
                     {unreadMessages > 0 
                     ? <div className={styles.unreadMessagesNav}
                       style={fontSizeSml}>{unreadMessages}</div>
                     : null}
-                </li>
-                <li className={`${styles.linkList}`}>
-                    <Link to="/accounts-page" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeMed}>Accounts</Link>
-                </li>
-                <li className={`${styles.linkList}`}>
-                    <Link to="/transfers-page" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeMed}>Transfers</Link>
-                </li>
-                <li className={`${styles.linkList}`}>
-                    <Link to="/settings-page" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeMed}>Settings</Link>
-                </li>
-                <li className={`${styles.linkList}`}>
-                    <Link to="/" 
-                    className={`${styles.transferLink}`}
-                    style={fontSizeMed}>Logout</Link>
-                </li>
+                </Link>
+                <Link to="/accounts-page" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeMed}>Accounts
+                </Link>
+                <Link to="/transfers-page" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeMed}>Transfers
+                </Link>
+                <Link to="/settings-page" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeMed}>Settings
+                </Link>
+                <Link to="/" 
+                    className={`${styles.linkList}`}
+                    style={fontSizeMed}>Logout
+                </Link>
             </ul>
         </div>
     )

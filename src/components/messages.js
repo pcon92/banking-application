@@ -17,7 +17,7 @@ const Messages = ({fontSize, theme,
             fontSize={fontSize}
             theme={theme}
             unreadMessages={unreadMessages}/> 
-            <div className={`${styles.background} ${themedStyles[theme[0]]}`}>
+            <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <ul className={`${styles.messageList} ${themedStyles[theme[1]]}`}>
                 {messages.map(message => 
                     <li 
