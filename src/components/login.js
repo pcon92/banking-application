@@ -1,33 +1,31 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
+import styles from '../styles/login.module.css';
+
 const Login = () => {
 
     return (
-        <div>
-            <ul>
-                <div>
-                    <label htmlFor="email">
-                        Email Address
-                    </label>
-                    <input type="text" id="email" placeholder="Enter email here"/>
-                    <br/>
-                    <label htmlFor="password">
-                        Password
-                    </label>
-                    <input type="password" id="password" placeholder="Enter password here"/>
-                    <br/>
-                    <button value="Login">Login</button>
-                    <Link to="/home-page">Login</Link>
+        <>
+            <div className={`${styles.background}`}>
+                <div className={`${styles.outerContainer}`}>
+                    <h1 className={`${styles.heading}`}>Banking Application</h1>
+                    <div className={`${styles.innerContainer}`}>
+                        <div className={`${styles.emailAndPasswordDiv}`}>
+                            <label htmlFor="email">Email Address: </label>
+                            <input type="text" id="email" autoFocus/>
+                        </div>
+                        <div className={`${styles.emailAndPasswordDiv}`}>
+                            <label htmlFor="password">Password: </label>
+                            <input type="password" id="password"/>
+                        </div>
+                        <Link to="/home-page" className={`${styles.loginButton}`}>Login</Link>
+                    </div>
+                    <p className={`${styles.signUpText}`}>Don't have an account?
+                    <Link to="/register-page" className={`${styles.signUpLink}`}>Sign up</Link></p>
                 </div>
-                <li>
-                    <h6>Don't have an account?
-                        <Link to="/register-page">Register</Link>
-                        here</h6>
-
-                </li>
-            </ul>
-        </div>
+            </div>
+        </>
     )
 };
 

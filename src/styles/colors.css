@@ -1,7 +1,10 @@
 
 :root {
-    --shadow: rgba(0, 0, 0, 0.2);
+    --shadow2: rgba(0, 0, 0, 0.2);
+    --shadow1: rgba(0, 0, 0, 0.1);
     --black: rgb(0, 0, 0);
+    --greyLight: rgba(0, 0, 0, 0.3);
+    --creamWhite: rgba(255, 253, 242, 0.9);
     
 
     --yellow1: rgba(247, 202, 24, 1); /* kournikova from http://www.flatuicolorpicker.com/yellow-rgba-color-model/ */

@@ -1,0 +1,33 @@
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--creamWhite);
+}
+
+.heading {
+    font-size: 36px;
+    position: relative;
+    top: 1vh;
+    color: white;
+}
+
+.outerContainer {
+    border: 1px solid black;
+    border-radius: 30px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--greyLight);
+}
+
+.loginLink {
+    color: white;
+    margin-left: 10px;
+}

@@ -5,6 +5,7 @@ import React, {useState, useEffect} from 'react';
 // Import components
 import Login from './components/Login';
 import Register from './components/Register';
+import ConfirmRegistration from './components/ConfirmRegistration';
 import Home from './components/Home';
 import Messages from './components/Messages';
 import Accounts from './components/Accounts';
@@ -233,6 +234,9 @@ function App() {
                         theme={theme}
                         setTheme={setTheme}
                         unreadMessages={unreadMessages}/>
+                    </Route>
+                    <Route path="/confirm-registration-page">
+                        <ConfirmRegistration/>
                     </Route>
                     <Route path="/register-page">
                         <Register/>
