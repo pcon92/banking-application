@@ -2,6 +2,7 @@
 :root {
     --shadow2: rgba(0, 0, 0, 0.2);
     --shadow1: rgba(0, 0, 0, 0.1);
+    --shadowText: rgba(0, 0, 0, 0.5);
     --black: rgb(0, 0, 0);
     --greyLight: rgba(0, 0, 0, 0.3);
     --creamWhite: rgba(255, 253, 242, 0.9);

@@ -9,10 +9,11 @@
 }
 
 .heading {
-    font-size: 36px;
+    font-size: 44px;
     position: relative;
     top: 1vh;
     color: white;
+    text-shadow: 1px 1px 5px var(--shadowText);
 }
 
 .outerContainer {
@@ -23,8 +24,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: var(--greyLight);
+    box-shadow: 5px 15px 15px 3px var(--shadow2);
 }
 
 .loginLink {
