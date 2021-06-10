@@ -35,3 +35,12 @@ app.post('/register-user', (req, res) => {
         });
     
 });
+
+app.post('/find-user', (req, res) => {
+    database.find({email: req.body.email, password: req.body.password}, (err, docs) => {
+        if (err) {
+        res.send(err);
+        } 
+        res.send(docs);
+    });
+});

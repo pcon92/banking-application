@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 import styles from '../styles/register.module.css';
 
-const Register = () => {
+const Register = ({setErrorFromServer}) => {
 
     const [validInfo, setValidInfo] = useState(false);
     const [invalidEmail, setInvalidEmail] = useState(false);
@@ -22,7 +22,6 @@ const Register = () => {
             setInvalidEmail(false)
             setInvalidPassword(true)
             setValidInfo(false)
-            console.log(PASSWORD.value)
         } else if (PASSWORD.value !== CONFIRM_PASSWORD.value) {
             setInvalidEmail(false)
             setInvalidPassword(false)
@@ -54,6 +53,10 @@ const Register = () => {
 
         const response = await fetch('/register-user', fetchOptions);
         const json = await response.json();
+
+        json.status === "error"
+        ? setErrorFromServer(true)
+        : setErrorFromServer(false);
         console.log(json);
     };
 

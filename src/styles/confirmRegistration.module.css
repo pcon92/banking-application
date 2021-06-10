@@ -14,6 +14,7 @@
     top: 1vh;
     color: white;
     text-shadow: 1px 1px 5px var(--shadowText);
+    text-align: center;
 }
 
 .outerContainer {
@@ -24,7 +25,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     background-color: var(--greyLight);
     box-shadow: 5px 15px 15px 3px var(--shadow2);
 }

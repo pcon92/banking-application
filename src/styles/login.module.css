@@ -59,6 +59,10 @@
     border: 2px outset rgb(133, 133, 133);
 }
 
+.loginButton:hover {
+    cursor: pointer;
+}
+
 .signUpText {
     color: white;
 }
@@ -66,4 +70,10 @@
 .signUpLink {
     color: white;
     margin-left: 10px;
+}
+
+.noUserFoundText {
+    text-align: center;
+    color: red;
+    font-size: 12px;
 }

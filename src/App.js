@@ -14,6 +14,8 @@ import Settings from './components/Settings';
 
 function App() {
 
+    const [errorFromServer, setErrorFromServer] = useState(false);
+
     // ACCOUNTS AND TRANSFERS
     const [transferTo, setTransferTo] = useState('');
     const [transferAmount, setTransferAmount] = useState(0);
@@ -236,10 +238,13 @@ function App() {
                         unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/confirm-registration-page">
-                        <ConfirmRegistration/>
+                        <ConfirmRegistration
+                            errorFromServer={errorFromServer}
+                            setErrorFromServer={setErrorFromServer}/>
                     </Route>
                     <Route path="/register-page">
-                        <Register/>
+                        <Register
+                        setErrorFromServer={setErrorFromServer}/>
                     </Route>
                     <Route path="/">
                         <Login/>

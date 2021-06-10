@@ -3,14 +3,16 @@ import {Link} from "react-router-dom";
 
 import styles from '../styles/confirmRegistration.module.css';
 
-const ConfirmRegistration = () => {
+const ConfirmRegistration = ({errorFromServer}) => {
 
     return (
         <>
             <div className={`${styles.background}`}>
                 <div className={`${styles.outerContainer}`}>
-                    <h1 className={`${styles.heading}`}>Thank you for registering!</h1>
-                    <Link to="/login" className={`${styles.loginLink}`}>Login</Link>
+                    {errorFromServer 
+                    ? <div className={`${styles.heading}`}>There was an error. Please try again.</div>
+                    : <div className={`${styles.heading}`}>Account creation successful!</div>}
+                    <Link to="/login" className={`${styles.loginLink}`}>Back to Login page</Link>
                 </div>
             </div>
         </>
