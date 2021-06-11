@@ -8,6 +8,8 @@ const Login = () => {
     const [authorized, setAuthorized] = useState(false);
     const [noUserFound, setNoUserFound] = useState(false);
 
+
+
     const checkUser = async () => {
 
         const EMAIL = document.getElementById('email');

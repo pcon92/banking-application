@@ -3,6 +3,7 @@ const express = require('express');
 const app = express();
 const Datastore = require('nedb');
 const Joi = require('joi');
+const bcrypt = require('bcrypt');
 
 const PORT = process.env.port || 5000;
 app.listen(PORT, () => {console.log(`Listening on Port ${PORT}`)})
@@ -23,24 +24,35 @@ app.post('/register-user', (req, res) => {
     
     const {error} = schema.validate(req.body);
 
+    const saltRounds = 10;
+    const plainTextPassword = req.body.password;
+
     error !== undefined 
     ? res.json({status: "error", error})
-    :   database.insert({
-            email: req.body.email,
-            password: req.body.password,
-            repeat_password: req.body.repeat_password
+    :   bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
+            database.insert({
+                email: req.body.email,
+                password: hash
+            })
         });
         res.json({
             result: 'User added to database',
         });
-    
+
 });
 
+
 app.post('/find-user', (req, res) => {
-    database.find({email: req.body.email, password: req.body.password}, (err, docs) => {
-        if (err) {
-        res.send(err);
+    database.find({email: req.body.email}, (errNoEmail, docs) => {
+        if (errNoEmail) {
+            res.send(errNoEmail);
         } 
-        res.send(docs);
+        bcrypt.compare(req.body.password, docs[0].password, (errWrongPassword, result) => {
+            if (result === true) {
+                res.send(docs);
+            } else {
+                res.send([]);
+            }
+        });
     });
 });
