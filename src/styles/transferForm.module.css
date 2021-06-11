@@ -4,6 +4,15 @@
     box-shadow: 0px 3px 10px 0px var(--shadow2);
     border-radius: 10px;
     padding: 20px;
+    margin: 20px;
+}
+
+.transferToDiv {
+    display: flex;
+}
+
+.transferTo {
+    margin-left: 15px;
 }
 
 .bottomHalf {

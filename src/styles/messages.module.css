@@ -6,15 +6,18 @@
     justify-content: center;
     width: 100vw;
 }
+
 .messageList {
     list-style: none;
-    width: 100vw;
-    height: 75vh;
+    height: 800px;
+    width: 700px;
     overflow-Y: auto;
+    border-radius: 30px;
 }
+
 .messageContainer {
     margin-top: 10;
     margin-bottom: 10;
-    padding: 10;
+    padding: 10px;
     height: 10vh;
 }

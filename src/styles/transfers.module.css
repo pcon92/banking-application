@@ -6,10 +6,15 @@
     height: 100vh;
     justify-content: center;
     width: 100vw;
+
 }
 
 .innerContainer {
-    height: 70vh;
-    width: 50vw;
-    padding: 20px;
+    height: 800px;
+    width: 700px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
 }

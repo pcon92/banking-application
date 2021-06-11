@@ -26,7 +26,7 @@
     left: -15%;
     z-index: 1;
     box-shadow: 5px 5px 10px 2px var(--shadow2);
-    
+    background-color: var(--almostWhite);
 }
 
 .accountInfoBox {

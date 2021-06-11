@@ -9,12 +9,13 @@
 }
 
 .accountsList {
-    height: 50vh;
-    width: 50vw;
+    height: 800px;
+    width: 700px;
     overflow-Y: auto;
     display: flex;
     flex-direction: column;
     padding: 30px;
+    border-radius: 30px;
 }
 
 .listItem {

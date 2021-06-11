@@ -1,4 +1,15 @@
 
+.heading {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+    border: 1px dotted white;
+}
+
 .ownAccountDiv {
     margin: 20px;
     opacity: 0.8;

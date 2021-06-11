@@ -27,11 +27,11 @@ const Home = ({fontSize, theme, unreadMessages, total, name}) => {
             unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
-                    <div className={`${styles.welcome} ${themedStyles[theme[1]]}`}
+                    <div className={`${styles.welcome}`}
                         style={fontSizeXL}>
                         Welcome {dummyUserInfo.name}
                     </div>
-                    <div className={`${styles.accountInfoBox} ${themedStyles[theme[2]]}`}>
+                    <div className={`${styles.accountInfoBox} ${themedStyles[theme[1]]}`}>
                         <div className={`${styles.accountNameDiv}`}>
                             <div className={`${styles.accountName}`}
                             style={fontSizeLge}>Primary Account:</div> 

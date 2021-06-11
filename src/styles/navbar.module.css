@@ -26,8 +26,8 @@
 }
 
 .linkList:hover {
-    box-shadow: 1px 1px 15px 2px var(--shadow1);
-    transform: scale(1..05);
+    box-shadow: 1px 1px 10px 3px var(--shadow1);
+    transform: scale(1.05);
 }
 
 .unreadMessagesNav {

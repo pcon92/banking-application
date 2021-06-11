@@ -4,33 +4,33 @@
     --shadow1: rgba(0, 0, 0, 0.1);
     --shadowText: rgba(0, 0, 0, 0.5);
     --black: rgb(0, 0, 0);
-    --greyLight: rgba(0, 0, 0, 0.3);
-    --creamWhite: rgba(255, 253, 242, 0.9);
     --greyText: rgba(0, 0, 0, 0.5);
+    --greyLight: rgba(0, 0, 0, 0.3);
+    --headingBackground: rgba(0, 0, 0, 0.8);
+
+    --creamWhite: rgba(255, 253, 242, 0.9);
+    --almostWhite: rgba(245, 245, 245, 1);
+    --favouriteFlag: rgba(255, 0, 0, 0.75);
+    --redHover: rgba(255, 0, 0, 0.9);
 
     --yellow1: rgba(247, 202, 24, 0.8); /* kournikova from http://www.flatuicolorpicker.com/yellow-rgba-color-model/ */
-    --yellow2: rgba(245, 243, 242, 0.9); 
+    --yellow2: rgba(245, 243, 242, 0.8); 
     --yellow3: rgba(242, 217, 132, 0.8); /* buff */
     --yellow4: rgba(254, 250, 212, 0.8); /* moon glow */
     
     --blue1: rgba(19, 93, 216, 1); /* police blue from https://colorcodes.io/blue/ */
-    --blue2: rgba(0, 138, 216, 1); /* azure */
+    --blue2: rgba(245, 243, 242, 0.9); 
     --blue3: rgba(153, 186, 221, 1); /* caroline  */
     --blue4: rgba(228, 241, 254, 1); /* from http://www.flatuicolorpicker.com/blue-rgba-color-model/*/
 
-    --orange1: rgba(245, 171, 53, 1); /* lightning yellow from http://www.flatuicolorpicker.com/orange-rgba-color-model/ */
-    --orange2: rgba(250, 190, 88, 1); /* saffron mango */
+    --orange1: rgba(245, 161, 53, 1); /* based off lightning yellow from http://www.flatuicolorpicker.com/orange-rgba-color-model/ */
+    --orange2: rgba(245, 243, 242, 0.9); 
     --orange3: rgba(252, 214, 112, 1); /* goldenrod */
     --orange4: rgba(253, 227, 167, 1); /* cape honey */
 
-    --favouriteFlag: rgba(255, 0, 0, 0.75);
-    --redHover: rgba(255, 0, 0, 0.9);
-
-    --headingBackground: rgba(0, 0, 0, 0.8);
-
 }
 
-/* 
+/*  old values 
 
 
     --yellow1: rgba(247, 202, 24, 0.8); /* kournikova from http://www.flatuicolorpicker.com/yellow-rgba-color-model/

@@ -36,10 +36,12 @@ const TransferForm = ({theme, fontSize, transferTo, setTransferAmount}) => {
 
     return (
         <div className={`${styles.background} ${themedStyles[theme[1]]}`}>
-            <div>
-                <h3 style={fontSizeLge}>Transferring to: {transferTo}</h3>
-                <p style={noContact}>Error: No contact selected to transfer to</p>
+            <div className={styles.transferToDiv}>
+                <p style={fontSizeLge}>Transferring to: </p>
+                <h3 className = {styles.transferTo}
+                style={fontSizeLge}> {transferTo} </h3>
             </div>
+                <p style={noContact}>Error: No contact selected to transfer to</p>
             <div className={styles.bottomHalf}>
                 <div className={styles.amountDiv}>
                     <label style={fontSizeMed} htmlFor="amount">Amount: </label>

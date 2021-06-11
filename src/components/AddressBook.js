@@ -4,6 +4,7 @@ import React from 'react';
 import AddressBookContact from './AddressBookContact';
 
 import styles from '../styles/addressBook.module.css';
+import themedStyles from '../styles/themes.module.css';
 
 const AddressBook = ({theme, fontSize, 
     setTransferTo, contacts}) => {
@@ -18,7 +19,8 @@ const AddressBook = ({theme, fontSize,
     return (
         <>
             <div>
-                <h1 style={fontSizeXL}>Address Book</h1>
+                <div style={fontSizeXL}
+                className={`${styles.heading} ${themedStyles[theme[2]]}`}>Address Book</div>
                     <div>
                         {contacts.map(contact => 
                             <div className={contact.name === "Everyday Spending"
