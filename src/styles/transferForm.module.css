@@ -1,0 +1,49 @@
+
+.background {
+    height: 10vh;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.bottomHalf {
+    display: flex;
+}
+
+    .amountDiv {
+        display: flex;
+        width: 60%;
+        height: 20px;
+    }
+
+        .dollarDiv {
+            margin-left: 10px;
+        }
+
+        .inputBox {
+            background-color: var(--creamWhite);
+            padding: 3px;
+            border-radius: 10px;
+            border: none;
+            user-select: none;
+            outline: none;
+            margin-left: 5px;
+        }
+    
+    .buttonDiv {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+    }
+
+        .transferFundsButton {
+            color: white;
+            background-color: var(--headingBackground);
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        .transferFundsButton:hover {
+            cursor: pointer;
+            color: var(--redHover);
+        }

@@ -3,8 +3,9 @@ import React from 'react';
 import showTotalAusDollar from '../functions/showTotalAusDollar.js';
 
 import styles from '../styles/singleAccount.module.css';
+import themedStyles from '../styles/themes.module.css';
 
-const SingleAccount = ( { fontSize, name, accountNum, BSB, total }) => {
+const SingleAccount = ( { theme, fontSize, name, accountNum, BSB, total }) => {
 
     // font sizes used in this component
     const fontSizeSml = {fontSize: `${fontSize[0]}`};
@@ -13,18 +14,20 @@ const SingleAccount = ( { fontSize, name, accountNum, BSB, total }) => {
 
     return (
         <>
-            <div className={styles.accountBox}>
-                <div className={styles.accountInfo}>
-                    <h3 style={fontSizeLge}> Account Name: </h3>
-                    <h6 style={fontSizeMed}> Account Number: </h6>
-                    <h6 style={fontSizeMed}> BSB: </h6>
-                    <h6 style={fontSizeMed}> Total Funds: </h6>
+            <div className={`${styles.accountBox} ${themedStyles[theme[1]]}`}>
+                <div className={styles.accountName}>
+                    <h3 style={fontSizeLge}>Account Name: </h3>
+                    <p>{name}</p>
                 </div>
-                <div className={styles.accountValues}>
-                    <p style={fontSizeMed}>{name}</p>
-                    <p style={fontSizeSml}>{accountNum}</p>
-                    <p style={fontSizeSml}>{BSB}</p>
-                    <p style={fontSizeMed}>{showTotalAusDollar({total})}</p>
+                <div className={styles.bottomHalf}>
+                    <div className={styles.accountDetails}>
+                        <p style={fontSizeMed} className={styles.BSB}> BSB: {BSB}</p>
+                        <p style={fontSizeMed} className={styles.accountNum}> Acc. Number: {accountNum}</p>
+                    </div>
+                    <div className={styles.accountTotal}>
+                        <h6 style={fontSizeLge}> Total Funds: </h6>
+                        <p style={fontSizeLge}>{showTotalAusDollar({total})}</p>
+                    </div>
                 </div>
             </div>
         </>

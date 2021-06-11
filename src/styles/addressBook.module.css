@@ -1,0 +1,15 @@
+
+.ownAccountDiv {
+    margin: 20px;
+    opacity: 0.8;
+}
+
+.contactDiv {
+    margin: 20px;
+}
+
+.contactDiv:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0px 3px 20px 0px var(--shadow2);
+}

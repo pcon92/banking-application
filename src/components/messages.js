@@ -22,7 +22,7 @@ const Messages = ({fontSize, theme,
                 {messages.map(message => 
                     <li 
                         key={message.id}
-                        className={`${styles.messageContainer} ${themedStyles[theme[2]]}`}
+                        className={`${styles.messageContainer} ${themedStyles[theme[1]]}`}
                     >
                     <SingleMessage 
                         fontSize={fontSize}

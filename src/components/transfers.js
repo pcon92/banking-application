@@ -21,12 +21,14 @@ const Transfers = ({fontSize, theme,
                 theme={theme}
                 unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
-                <div className={`${styles.innerContainer} ${themedStyles[theme[2]]}`}>
+                <div className={`${styles.innerContainer} ${themedStyles[theme[1]]}`}>
                     <AddressBook
+                        theme={theme}
                         fontSize={fontSize}
                         setTransferTo={setTransferTo}
                         contacts={contacts}/>
                     <TransferForm 
+                        theme={theme}
                         transferTo={transferTo}
                         fontSize={fontSize}
                         setTransferAmount={setTransferAmount}/>

@@ -27,7 +27,7 @@ const Settings = ( {fontSize, setFontSize, theme, setTheme, unreadMessages}) => 
             fontSize={fontSize}
             unreadMessages={unreadMessages}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
-                <div className={`${styles.settingsBox} ${themedStyles[theme[2]]}`}>
+                <div className={`${styles.settingsBox} ${themedStyles[theme[1]]}`}>
                     <div className={styles.fontSizeContainer}>
                         <div className={styles.optionBoxTitle}>
                             <h4 style={fontSizeLge}>Font Size:</h4>

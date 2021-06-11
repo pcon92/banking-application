@@ -1,7 +1,10 @@
 import React, {useState} from 'react';
 
+import styles from '../styles/transferForm.module.css';
+import themedStyles from '../styles/themes.module.css';
 
-const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
+
+const TransferForm = ({theme, fontSize, transferTo, setTransferAmount}) => {
 
     // font sizes used in this component
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
@@ -32,16 +35,25 @@ const TransferForm = ({fontSize, transferTo, setTransferAmount}) => {
 
 
     return (
-        <div>
-            <h3 style={fontSizeLge}>To: {transferTo}</h3>
-            <p style={noContact}>Error: No contact selected to transfer to</p>
-            <label 
-            style={fontSizeMed}
-            htmlFor="amount">Amount: </label>
-            <input type="text" id="amount"></input>
-            <button value="Send Transfer"
-                style={fontSizeMed}
-                onClick={submitTransferAmount}>Send Transfer</button>
+        <div className={`${styles.background} ${themedStyles[theme[1]]}`}>
+            <div>
+                <h3 style={fontSizeLge}>Transferring to: {transferTo}</h3>
+                <p style={noContact}>Error: No contact selected to transfer to</p>
+            </div>
+            <div className={styles.bottomHalf}>
+                <div className={styles.amountDiv}>
+                    <label style={fontSizeMed} htmlFor="amount">Amount: </label>
+                    <div className={styles.dollarDiv}>
+                        $<input className={styles.inputBox} type="text" id="amount"/>
+                    </div>
+                </div>
+                <div className={styles.buttonDiv}>
+                    <button value="Send Transfer"
+                        className={styles.transferFundsButton}
+                        style={fontSizeMed}
+                        onClick={submitTransferAmount}>Transfer Funds</button>
+                </div>
+            </div>
             <p style={noVal}>Error: no transfer value entered</p>
         </div>
     )

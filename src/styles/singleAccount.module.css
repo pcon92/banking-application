@@ -1,21 +1,47 @@
 .accountBox {
     display: flex;
-    border: 1px solid black;
+    flex-direction: column;
     height: 15vh;
-    padding: 10px;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+    border-radius: 10px;
 }
 
-.accountInfo {
+.accountName {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    width: 40%;
-    padding: 10px;
+    align-items: center;
+    padding: 1vh 1vw 0.5vh 1vw;
+    background-color: var(--headingBackground);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: white;
+    height: 30%;
 }
 
-.accountValues {
+.bottomHalf {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 10px;
+    justify-content: space-evenly;
+    flex: 1;
 }
+
+    .accountDetails {
+        display: flex;
+        padding: 1vh 1vw 0.5vh 1vw;
+    }
+
+        .BSB {
+            color: var(--greyText);
+            margin-right: 3vw;
+        }
+
+        .accountNum {
+            color: var(--greyText);
+        }
+
+
+    .accountTotal {
+        display: flex;
+        justify-content: space-between;
+        padding: 1vh 1vw 0.5vh 1vw;
+    }

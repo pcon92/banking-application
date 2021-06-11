@@ -11,3 +11,7 @@ STILL TO DO :
 - Create token/cookie to check if user still logged in throughout use
 - funds on database
 - save user theme and font size based on login info
+- section for total funds under accounts
+
+BUGS:
+- creating new message when no transfer target selected
