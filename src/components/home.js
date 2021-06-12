@@ -24,7 +24,8 @@ const Home = ({fontSize, theme, unreadMessages, total, name}) => {
             <Navbar
             fontSize={fontSize}
             theme={theme}
-            unreadMessages={unreadMessages}/>
+            unreadMessages={unreadMessages}
+            currentPage={"home-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.contentBox} ${themedStyles[theme[0]]}`}>
                     <div className={`${styles.welcome}`}

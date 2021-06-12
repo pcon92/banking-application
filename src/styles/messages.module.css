@@ -7,17 +7,30 @@
     width: 100vw;
 }
 
+.heading {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+    border: 1px dotted white;
+    color: var(--titleText)
+}
+
 .messageList {
     list-style: none;
     height: 800px;
     width: 700px;
     overflow-Y: auto;
     border-radius: 30px;
+    border: 10px solid white;
 }
 
 .messageContainer {
     margin-top: 10;
     margin-bottom: 10;
     padding: 10px;
-    height: 10vh;
+    height: 12vh;
 }

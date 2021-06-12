@@ -25,9 +25,22 @@
     color: black;
 }
 
+.linkListPicked {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    height: 100%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    border-bottom: 3px solid black;
+}
+
 .linkList:hover {
-    box-shadow: 1px 1px 10px 3px var(--shadow1);
-    transform: scale(1.05);
+    transform: scale(1.1);
+    font-weight: bold;
 }
 
 .unreadMessagesNav {

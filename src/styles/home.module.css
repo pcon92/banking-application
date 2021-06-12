@@ -27,6 +27,7 @@
     z-index: 1;
     box-shadow: 5px 5px 10px 2px var(--shadow2);
     background-color: var(--almostWhite);
+    border: 10px solid white;
 }
 
 .accountInfoBox {
@@ -42,7 +43,7 @@
     width: 100%;
     padding-left: 15%;
     box-shadow: 5px 5px 7px 1px var(--shadow2);
-
+    border: 10px solid white;
 }
 
 .accountNameDiv {

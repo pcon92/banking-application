@@ -7,45 +7,35 @@
     --greyText: rgba(0, 0, 0, 0.5);
     --greyLight: rgba(0, 0, 0, 0.3);
     --headingBackground: rgba(0, 0, 0, 0.8);
+    --titleText: rgba(0, 0, 0, 0.75);
 
     --creamWhite: rgba(255, 253, 242, 0.9);
     --almostWhite: rgba(245, 245, 245, 1);
     --favouriteFlag: rgba(255, 0, 0, 0.75);
     --redHover: rgba(255, 0, 0, 0.9);
 
-    --yellow1: rgba(247, 202, 24, 0.8); /* kournikova from http://www.flatuicolorpicker.com/yellow-rgba-color-model/ */
+    --yellow1: rgba(255, 204, 0, 0.9);
     --yellow2: rgba(245, 243, 242, 0.8); 
-    --yellow3: rgba(242, 217, 132, 0.8); /* buff */
-    --yellow4: rgba(254, 250, 212, 0.8); /* moon glow */
+    --yellow3: rgba(242, 217, 132, 0.8); 
+    --yellow4: rgba(254, 250, 212, 0.8); 
     
-    --blue1: rgba(19, 93, 216, 1); /* police blue from https://colorcodes.io/blue/ */
+    --blue1: rgba(0, 75, 150, 1); 
     --blue2: rgba(245, 243, 242, 0.9); 
-    --blue3: rgba(153, 186, 221, 1); /* caroline  */
-    --blue4: rgba(228, 241, 254, 1); /* from http://www.flatuicolorpicker.com/blue-rgba-color-model/*/
+    --blue3: rgba(153, 186, 221, 1); 
+    --blue4: rgba(228, 241, 254, 1);
 
-    --orange1: rgba(245, 161, 53, 1); /* based off lightning yellow from http://www.flatuicolorpicker.com/orange-rgba-color-model/ */
+    --orange1: rgba(245, 141, 53, 1); 
     --orange2: rgba(245, 243, 242, 0.9); 
-    --orange3: rgba(252, 214, 112, 1); /* goldenrod */
-    --orange4: rgba(253, 227, 167, 1); /* cape honey */
+    --orange3: rgba(252, 214, 112, 1); 
+    --orange4: rgba(253, 227, 167, 1); 
 
 }
 
-/*  old values 
+/*
+anz 1 rgba(0, 125, 186, 1);
+anz 2 rgba(0, 65, 101, 1);
 
-
-    --yellow1: rgba(247, 202, 24, 0.8); /* kournikova from http://www.flatuicolorpicker.com/yellow-rgba-color-model/
-    --yellow2: rgba(245, 229, 27, 0.8); /* turbo 
-    --yellow3: rgba(242, 217, 132, 0.8); /* buff 
-    --yellow4: rgba(254, 250, 212, 0.8); /* moon glow 
-    
-    --blue1: rgba(19, 93, 216, 1); /* police blue from https://colorcodes.io/blue/ 
-    --blue2: rgba(0, 138, 216, 1); /* azure 
-    --blue3: rgba(153, 186, 221, 1); /* caroline  
-    --blue4: rgba(228, 241, 254, 1); /* from http://www.flatuicolorpicker.com/blue-rgba-color-model/
-
-    --orange1: rgba(245, 171, 53, 1); /* lightning yellow from http://www.flatuicolorpicker.com/orange-rgba-color-model/ 
-    --orange2: rgba(250, 190, 88, 1); /* saffron mango 
-    --orange3: rgba(252, 214, 112, 1); /* goldenrod 
-    --orange4: rgba(253, 227, 167, 1); /* cape honey 
+ing 1 rgba(0, 0, 102, 1)
+ing 2 rgba(255, 98, 0, 1)
 
 */

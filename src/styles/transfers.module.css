@@ -17,4 +17,5 @@
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
+    border: 10px solid white;
 }

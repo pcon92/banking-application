@@ -9,14 +9,22 @@ import themedStyles from '../styles/themes.module.css';
 
 const Accounts = ( {fontSize, theme, accounts, unreadMessages}) => {
 
+
+    // font sizes used in this component
+    const fontSizeXL = {fontSize: `${fontSize[3]}`};
+
+
     return (
         <>
             <Navbar
                 fontSize={fontSize}
                 theme={theme}
-                unreadMessages={unreadMessages}/>
+                unreadMessages={unreadMessages}
+                currentPage={"accounts-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <ul className={`${styles.accountsList} ${themedStyles[theme[1]]}`}>
+                    <div style={fontSizeXL}
+                    className={`${styles.heading} ${themedStyles[theme[2]]}`}>Accounts</div>
                 {accounts.map(account => 
                     <li 
                     className={styles.listItem}

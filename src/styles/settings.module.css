@@ -8,14 +8,26 @@
     width: 100vw;
 }
 
+.heading {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-weight: bold;
+    border: 1px dotted white;
+    color: var(--titleText)
+}
+
 .settingsBox {
     height: 800px;
     width: 700px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding: 3vh;
+    justify-content: flex-start;
     border-radius: 30px;
+    border: 10px solid white;
 }
 
 .fontSizeContainer {
@@ -36,16 +48,16 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+    margin: 10px;
 }
 
 .optionBox {
     display: flex;
     height: 100px;
     align-items: center;
-    border: 1px solid black;
     justify-content: center;
     flex: 1;
-    box-shadow: 1px 1px 5px 2px var(--shadow1);
+    margin: 10px;
 }
 
 .optionBox:hover {

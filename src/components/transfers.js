@@ -19,7 +19,8 @@ const Transfers = ({fontSize, theme,
             <Navbar
                 fontSize={fontSize}
                 theme={theme}
-                unreadMessages={unreadMessages}/>
+                unreadMessages={unreadMessages}
+                currentPage={"transfers-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <div className={`${styles.innerContainer} ${themedStyles[theme[1]]}`}>
                     <AddressBook

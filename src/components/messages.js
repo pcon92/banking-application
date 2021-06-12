@@ -11,14 +11,20 @@ const Messages = ({fontSize, theme,
     messages, unreadMessages, 
     handleRead, handleFavourite, handleDelete}) => {
 
+    // font sizes used in this component
+    const fontSizeXL = {fontSize: `${fontSize[3]}`};
+
     return (
         <>
             <Navbar
             fontSize={fontSize}
             theme={theme}
-            unreadMessages={unreadMessages}/> 
+            unreadMessages={unreadMessages}
+            currentPage={"messages-page"}/> 
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
                 <ul className={`${styles.messageList} ${themedStyles[theme[1]]}`}>
+                <div style={fontSizeXL}
+                            className={`${styles.heading} ${themedStyles[theme[2]]}`}>Messages</div>
                 {messages.map(message => 
                     <li 
                         key={message.id}
