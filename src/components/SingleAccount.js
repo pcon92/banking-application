@@ -26,7 +26,7 @@ const SingleAccount = ( { theme, fontSize, name, accountNum, BSB, total }) => {
                     </div>
                     <div className={styles.accountTotal}>
                         <h6 style={fontSizeLge}> Total Funds: </h6>
-                        <p style={fontSizeLge}>{showTotalAusDollar({total})}</p>
+                        <p style={fontSizeLge}>{showTotalAusDollar(total)}</p>
                     </div>
                 </div>
             </div>

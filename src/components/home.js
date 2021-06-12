@@ -45,7 +45,7 @@ const Home = ({fontSize, theme, unreadMessages, total, name}) => {
                             style={fontSizeLge}>Total:</div> 
                             <div className={`${styles.accountTotalValue}`}
                             style={fontSizeMed}>
-                                {showTotalAusDollar({total})}</div>
+                                {showTotalAusDollar(total)}</div>
                         </div>
                     </div>
                 </div>

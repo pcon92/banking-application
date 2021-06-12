@@ -36,3 +36,24 @@
     list-style: none;
     padding: 20px;
 }
+
+.totalFundsDiv {
+    display: flex;
+    flex: 1;
+    align-items: flex-end;
+}
+
+.totalBox {
+    height: 7vh;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: var(--headingBackground);
+    border: 3px solid var(--almostWhite);
+}
