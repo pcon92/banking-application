@@ -80,6 +80,18 @@ function App() {
             contacts[0].total -= parseInt(transferAmount)
             setAccounts([...accounts])
             setContacts([...contacts])
+        } else if (transferTo === accounts[1].name) {
+            accounts[1].total += parseInt(transferAmount)
+            accounts[0].total -= parseInt(transferAmount)
+            contacts[0].total -= parseInt(transferAmount)
+            setAccounts([...accounts])
+            setContacts([...contacts])
+        } else if (transferTo === accounts[0].name) {
+            accounts[0].total += parseInt(transferAmount)
+            accounts[1].total -= parseInt(transferAmount)
+            contacts[0].total += parseInt(transferAmount)
+            setAccounts([...accounts])
+            setContacts([...contacts])
         }
     }
 
@@ -216,7 +228,10 @@ function App() {
                             fontSize={fontSize}
                             theme={theme}
                             accounts={accounts}
-                            unreadMessages={unreadMessages}/>
+                            unreadMessages={unreadMessages}
+                            transferTo={transferTo}
+                            setTransferTo={setTransferTo}
+                            setTransferAmount={setTransferAmount}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers

@@ -34,13 +34,20 @@
 
 .listItem {
     list-style: none;
-    padding: 20px;
+    margin: 20px;
+}
+
+.listItem:hover {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0px 3px 20px 0px var(--shadow2);
 }
 
 .totalFundsDiv {
     display: flex;
     flex: 1;
-    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .totalBox {
@@ -49,7 +56,6 @@
     border-radius: 10px;
     padding: 20px;
     margin: 20px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;

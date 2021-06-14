@@ -13,6 +13,7 @@ STILL TO DO :
 - save user theme and font size based on login info
 - add animations to home screen 'welcome' bubble and login screen button color cycle
 - make responsive for mobiles
+- optional: after transfer show transfer receipt on screen
 
 BUGS:
 - creating new message when no transfer target selected
