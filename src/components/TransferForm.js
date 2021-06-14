@@ -4,7 +4,8 @@ import styles from '../styles/transferForm.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 
-const TransferForm = ({theme, fontSize, transferTo, setTransferAmount}) => {
+const TransferForm = ({theme, fontSize, transferTo, setTransferAmount,
+    insufficientFunds}) => {
 
     // font sizes used in this component
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
@@ -18,9 +19,9 @@ const TransferForm = ({theme, fontSize, transferTo, setTransferAmount}) => {
         const INPUT_AMOUNT = document.getElementById('amount');
 
         if (INPUT_AMOUNT.value === '') {
-            setNoVal({color: "red", visibility: "visible", fontSize: `${fontSize[1]}`})
+            setNoVal({color: "red", display: "block", fontSize: `${fontSize[1]}`})
         } else {
-            setNoVal({color: "red", visibility: "hidden"})
+            setNoVal({color: "red", display: "none"})
             setTransferAmount(INPUT_AMOUNT.value)
             INPUT_AMOUNT.value = '';
         }
@@ -57,6 +58,9 @@ const TransferForm = ({theme, fontSize, transferTo, setTransferAmount}) => {
                 </div>
             </div>
             <p style={noVal}>Error: no transfer value entered</p>
+            {insufficientFunds 
+            ? <p style={{color: "red", fontSize: `${fontSize[1]}`}}>Error: Insufficient Funds for transfer</p>
+            : <p style={{display: "none"}}>Error: Insufficient Funds for transfer</p>}
         </div>
     )
 };

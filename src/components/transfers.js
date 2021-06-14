@@ -12,7 +12,8 @@ const Transfers = ({fontSize, theme,
     unreadMessages, 
     transferTo, setTransferTo, 
     setTransferAmount,
-    contacts}) => {
+    contacts,
+    insufficientFunds}) => {
 
     return (
         <>
@@ -32,7 +33,8 @@ const Transfers = ({fontSize, theme,
                         theme={theme}
                         transferTo={transferTo}
                         fontSize={fontSize}
-                        setTransferAmount={setTransferAmount}/>
+                        setTransferAmount={setTransferAmount}
+                        insufficientFunds={insufficientFunds}/>
                 </div>
             </div>
         </>

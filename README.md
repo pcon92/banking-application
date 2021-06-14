@@ -16,5 +16,4 @@ STILL TO DO :
 - optional: after transfer show transfer receipt on screen
 
 BUGS:
-- can go into negative total with transfers
 - long message large overflows

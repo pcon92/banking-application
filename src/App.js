@@ -19,6 +19,7 @@ function App() {
     // ACCOUNTS AND TRANSFERS
     const [transferTo, setTransferTo] = useState('');
     const [transferAmount, setTransferAmount] = useState(0);
+    const [insufficientFunds, setInsufficientFunds] = useState(false);
 
     const checkIfAccountsStored = () => {
         return localStorage.getItem('accounts')
@@ -68,36 +69,53 @@ function App() {
 
     // need to fix modifying state directly here
     const checkName = () => {
+
         if (transferTo === contacts[1].name) {
-            contacts[1].total += parseInt(transferAmount)
-            accounts[0].total -= parseInt(transferAmount)
-            contacts[0].total -= parseInt(transferAmount)
-            setAccounts([...accounts])
-            setContacts([...contacts])
+            if (accounts[0].total - parseInt(transferAmount) >= 0) {
+                setInsufficientFunds(false)
+                contacts[1].total += parseInt(transferAmount)
+                accounts[0].total -= parseInt(transferAmount)
+                contacts[0].total -= parseInt(transferAmount)
+                setAccounts([...accounts])
+                setContacts([...contacts])
+            } else {
+                setInsufficientFunds(true);
+            }
         } else if (transferTo === contacts[2].name) {
-            contacts[2].total += parseInt(transferAmount)
-            accounts[0].total -= parseInt(transferAmount)
-            contacts[0].total -= parseInt(transferAmount)
-            setAccounts([...accounts])
-            setContacts([...contacts])
+            if (accounts[0].total - parseInt(transferAmount) >= 0) {
+                setInsufficientFunds(false)
+                contacts[2].total += parseInt(transferAmount)
+                accounts[0].total -= parseInt(transferAmount)
+                contacts[0].total -= parseInt(transferAmount)
+                setAccounts([...accounts])
+                setContacts([...contacts])
+            } else {
+                setInsufficientFunds(true);
+            }
         } else if (transferTo === accounts[1].name) {
-            accounts[1].total += parseInt(transferAmount)
-            accounts[0].total -= parseInt(transferAmount)
-            contacts[0].total -= parseInt(transferAmount)
-            setAccounts([...accounts])
-            setContacts([...contacts])
+            if (accounts[0].total - parseInt(transferAmount) >= 0) {
+                setInsufficientFunds(false)
+                accounts[1].total += parseInt(transferAmount)
+                accounts[0].total -= parseInt(transferAmount)
+                contacts[0].total -= parseInt(transferAmount)
+                setAccounts([...accounts])
+                setContacts([...contacts])
+            } else {
+                setInsufficientFunds(true)
+            }
         } else if (transferTo === accounts[0].name) {
-            accounts[0].total += parseInt(transferAmount)
-            accounts[1].total -= parseInt(transferAmount)
-            contacts[0].total += parseInt(transferAmount)
-            setAccounts([...accounts])
-            setContacts([...contacts])
+            if (accounts[1].total - parseInt(transferAmount) >= 0) {
+                setInsufficientFunds(false)
+                accounts[0].total += parseInt(transferAmount)
+                accounts[1].total -= parseInt(transferAmount)
+                contacts[0].total += parseInt(transferAmount)
+                setAccounts([...accounts])
+                setContacts([...contacts])
+            } else {
+                setInsufficientFunds(true)
+            }
         }
     }
-
-    useEffect(() => {
-        checkName()
-    }, [transferAmount]);
 
     useEffect(() => {
         localStorage.setItem('contacts', JSON.stringify(contacts))
@@ -163,7 +181,12 @@ function App() {
     }, [messages]);
 
     useEffect(()=> {
-        (transferAmount !== 0 && transferTo !== '')
+        setInsufficientFunds('');
+        checkName();
+    }, [transferAmount]);
+
+    useEffect(() => {
+        (transferAmount !== 0 && transferTo !== '' && insufficientFunds === false)
         ? setMessages([...messages, 
             {   
                 id: Date.now(), // to give unique ID
@@ -172,7 +195,8 @@ function App() {
                 message: `You transferred $${transferAmount} to ${transferTo}`
             }])
         : setMessages([...messages])
-    }, [transferAmount]);
+    }, [insufficientFunds])
+
 
 
 
@@ -231,7 +255,8 @@ function App() {
                             unreadMessages={unreadMessages}
                             transferTo={transferTo}
                             setTransferTo={setTransferTo}
-                            setTransferAmount={setTransferAmount}/>
+                            setTransferAmount={setTransferAmount}
+                            insufficientFunds={insufficientFunds}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers
@@ -242,6 +267,7 @@ function App() {
                             setTransferTo={setTransferTo}
                             setTransferAmount={setTransferAmount}
                             contacts={contacts}
+                            insufficientFunds={insufficientFunds}
                             />
                     </Route>
                     <Route path="/settings-page">
