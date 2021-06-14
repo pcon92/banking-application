@@ -163,7 +163,7 @@ function App() {
     }, [messages]);
 
     useEffect(()=> {
-        transferAmount !== 0 
+        (transferAmount !== 0 && transferTo !== '')
         ? setMessages([...messages, 
             {   
                 id: Date.now(), // to give unique ID
