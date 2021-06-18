@@ -13,8 +13,10 @@ import themedStyles from '../styles/themes.module.css';
 const Accounts = ( {fontSize, theme, 
     accounts, unreadMessages,
     transferTo, setTransferTo, 
-    setTransferAmount,
-    insufficientFunds}) => {
+    transferAmount, setTransferAmount,
+    insufficientFunds,
+    transferReceipt,
+    handleCloseReceipt}) => {
 
 
     // font sizes used in this component
@@ -59,8 +61,11 @@ const Accounts = ( {fontSize, theme,
                                 theme={theme}
                                 transferTo={transferTo}
                                 fontSize={fontSize}
+                                transferAmount={transferAmount}
                                 setTransferAmount={setTransferAmount}
-                                insufficientFunds={insufficientFunds}/>
+                                insufficientFunds={insufficientFunds}
+                                transferReceipt={transferReceipt}
+                                handleCloseReceipt={handleCloseReceipt}/>
                         </div>
                         <div className={`${styles.totalBox} ${themedStyles[theme[1]]}`}>
                             <p style={fontSizeXL}>Total Funds: </p>

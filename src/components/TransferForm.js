@@ -1,11 +1,17 @@
 import React, {useState} from 'react';
 
+import TransferReceipt from './TransferReceipt';
+
 import styles from '../styles/transferForm.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 
-const TransferForm = ({theme, fontSize, transferTo, setTransferAmount,
-    insufficientFunds}) => {
+const TransferForm = ({theme, fontSize, transferTo, 
+    transferAmount, setTransferAmount,
+    insufficientFunds,
+    transferReceipt,
+    handleCloseReceipt
+    }) => {
 
     // font sizes used in this component
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
@@ -61,6 +67,12 @@ const TransferForm = ({theme, fontSize, transferTo, setTransferAmount,
             {insufficientFunds 
             ? <p style={{color: "red", fontSize: `${fontSize[1]}`}}>Error: Insufficient Funds for transfer</p>
             : <p style={{display: "none"}}>Error: Insufficient Funds for transfer</p>}
+            {transferReceipt && <TransferReceipt
+                fontSize={fontSize}
+                transferTo={transferTo}
+                transferAmount={transferAmount || 0}
+                handleCloseReceipt={handleCloseReceipt}/>
+            }
         </div>
     )
 };

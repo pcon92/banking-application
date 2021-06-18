@@ -11,9 +11,12 @@ import themedStyles from '../styles/themes.module.css';
 const Transfers = ({fontSize, theme, 
     unreadMessages, 
     transferTo, setTransferTo, 
-    setTransferAmount,
+    transferAmount, setTransferAmount,
     contacts,
-    insufficientFunds}) => {
+    insufficientFunds,
+    transferReceipt,
+    handleCloseReceipt
+    }) => {
 
     return (
         <>
@@ -33,8 +36,11 @@ const Transfers = ({fontSize, theme,
                         theme={theme}
                         transferTo={transferTo}
                         fontSize={fontSize}
+                        transferAmount={transferAmount}
                         setTransferAmount={setTransferAmount}
-                        insufficientFunds={insufficientFunds}/>
+                        insufficientFunds={insufficientFunds}
+                        transferReceipt={transferReceipt}
+                        handleCloseReceipt={handleCloseReceipt}/>
                 </div>
             </div>
         </>

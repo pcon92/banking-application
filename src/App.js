@@ -16,6 +16,11 @@ function App() {
 
     const [errorFromServer, setErrorFromServer] = useState(false);
 
+
+    const [transferReceipt, setTransferReceipt] = useState(false);
+
+
+
     // ACCOUNTS AND TRANSFERS
     const [transferTo, setTransferTo] = useState('');
     const [transferAmount, setTransferAmount] = useState(0);
@@ -78,6 +83,7 @@ function App() {
                 contacts[0].total -= parseInt(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
+                setTransferReceipt(true);
             } else {
                 setInsufficientFunds(true);
             }
@@ -89,6 +95,7 @@ function App() {
                 contacts[0].total -= parseInt(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
+                setTransferReceipt(true);
             } else {
                 setInsufficientFunds(true);
             }
@@ -100,6 +107,7 @@ function App() {
                 contacts[0].total -= parseInt(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
+                setTransferReceipt(true);
             } else {
                 setInsufficientFunds(true)
             }
@@ -111,6 +119,7 @@ function App() {
                 contacts[0].total += parseInt(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
+                setTransferReceipt(true);
             } else {
                 setInsufficientFunds(true)
             }
@@ -119,9 +128,14 @@ function App() {
 
     useEffect(() => {
         localStorage.setItem('contacts', JSON.stringify(contacts))
+    }, [contacts]);
+
+    const handleCloseReceipt = () => {
+        setTransferReceipt(false);
         setTransferTo('');
         setTransferAmount(0);
-    }, [contacts]);
+    };
+
 
 
 
@@ -255,8 +269,11 @@ function App() {
                             unreadMessages={unreadMessages}
                             transferTo={transferTo}
                             setTransferTo={setTransferTo}
+                            transferAmount={transferAmount}
                             setTransferAmount={setTransferAmount}
-                            insufficientFunds={insufficientFunds}/>
+                            insufficientFunds={insufficientFunds}
+                            transferReceipt={transferReceipt}
+                            handleCloseReceipt={handleCloseReceipt}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers
@@ -268,6 +285,10 @@ function App() {
                             setTransferAmount={setTransferAmount}
                             contacts={contacts}
                             insufficientFunds={insufficientFunds}
+                            transferAmount={transferAmount}
+                            transferReceipt={transferReceipt}
+                            setTransferReceipt={transferReceipt}
+                            handleCloseReceipt={handleCloseReceipt}
                             />
                     </Route>
                     <Route path="/settings-page">

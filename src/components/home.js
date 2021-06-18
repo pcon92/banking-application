@@ -15,7 +15,6 @@ const Home = ({fontSize, theme, unreadMessages, total, name}) => {
     };
 
     // font sizes used in this component
-    const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
     const fontSizeXL = {fontSize: `${fontSize[3]}`};
 
@@ -37,14 +36,14 @@ const Home = ({fontSize, theme, unreadMessages, total, name}) => {
                             <div className={`${styles.accountName}`}
                             style={fontSizeLge}>Account Name:</div> 
                             <div className={`${styles.accountNameValue}`}
-                            style={fontSizeMed}>
+                            style={fontSizeLge}>
                                 {name}</div>
                         </div>
                         <div className={`${styles.accountTotalDiv}`}>
                             <div className={`${styles.accountTotal}`}
                             style={fontSizeLge}>Total:</div> 
                             <div className={`${styles.accountTotalValue}`}
-                            style={fontSizeMed}>
+                            style={fontSizeLge}>
                                 {showTotalAusDollar(total)}</div>
                         </div>
                     </div>

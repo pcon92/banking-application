@@ -1,0 +1,49 @@
+
+.background {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--shadow2);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.outerContainer {
+    position: absolute;
+    top: 30vh;
+    left: 35vw;
+    height: 40vh;
+    width: 30vw;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: var(--almostWhite);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+.closeButton {
+    align-self: flex-end;
+    height: 40px;
+    width: 40px;
+    background-color: transparent;
+}
+
+.closeButton:hover {
+    background-color: var(--shadow1);
+    cursor: pointer;
+    color: red;
+}
+
+.innerContainer {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.transferredToName {
+    font-weight: bold;
+}
