@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import { motion } from 'framer-motion';
 
 import styles from '../styles/navbar.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const Navbar = ({fontSize, theme, unreadMessages, currentPage}) => {
+const Navbar = ({fontSize, theme, animations,
+    unreadMessages, currentPage}) => {
 
     // font sizes used in this component
     const fontSizeSml = {fontSize: `${fontSize[0]}`};
@@ -31,8 +33,14 @@ const Navbar = ({fontSize, theme, unreadMessages, currentPage}) => {
                         : `${styles.linkList}`}
                     style={fontSizeMed}>Messages
                     {unreadMessages > 0 
-                    ? <div className={styles.unreadMessagesNav}
-                      style={fontSizeSml}>{unreadMessages}</div>
+                    ? <motion.div 
+                        initial={animations ? { scale: 1 } : null}
+                        animate={animations ? {scale: 1.3 } : null}
+                        transition={animations ? { duration: 0.5, repeat: Infinity, repeatType: "reverse" } : null}
+                        className={styles.unreadMessagesNav}
+                        style={fontSizeSml}>
+                            {unreadMessages}
+                      </motion.div>
                     : null}
                 </Link>
                 <Link to="/accounts-page" 

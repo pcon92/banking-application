@@ -32,6 +32,7 @@ const Accounts = ( {fontSize, theme, animations,
             <Navbar
                 fontSize={fontSize}
                 theme={theme}
+                animations={animations}
                 unreadMessages={unreadMessages}
                 currentPage={"accounts-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>

@@ -34,6 +34,7 @@ const Messages = ({fontSize, theme, animations,
             <Navbar
             fontSize={fontSize}
             theme={theme}
+            animations={animations}
             unreadMessages={unreadMessages}
             currentPage={"messages-page"}/> 
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>

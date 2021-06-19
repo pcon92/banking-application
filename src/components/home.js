@@ -24,6 +24,7 @@ const Home = ({fontSize, theme, animations, unreadMessages, total, name}) => {
             <Navbar
             fontSize={fontSize}
             theme={theme}
+            animations={animations}
             unreadMessages={unreadMessages}
             currentPage={"home-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>

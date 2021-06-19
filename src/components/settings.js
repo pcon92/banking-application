@@ -35,6 +35,7 @@ const Settings = ( {fontSize, setFontSize,
             <Navbar
                 theme={theme}
                 fontSize={fontSize}
+                animations={animations ? true : false}
                 unreadMessages={unreadMessages}
                 currentPage={"settings-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>

@@ -24,6 +24,7 @@ const Transfers = ({fontSize, theme, animations,
             <Navbar
                 fontSize={fontSize}
                 theme={theme}
+                animations={animations}
                 unreadMessages={unreadMessages}
                 currentPage={"transfers-page"}/>
             <div className={`${styles.background} ${themedStyles[theme[0]]} ${themedStyles[theme[3]]}`}>
