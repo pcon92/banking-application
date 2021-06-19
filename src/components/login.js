@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
+import { motion } from "framer-motion";
 
 import styles from '../styles/login.module.css';
 
@@ -44,7 +45,6 @@ const Login = () => {
         LOGIN_BUTTON.click();
     };
     
-
     return (
         <>
             <div className={`${styles.background}`}>
@@ -63,9 +63,16 @@ const Login = () => {
                         ? <div className={`${styles.noUserFoundText}`}>
                           No user Found.  Please check your email and password or Sign Up.
                           </div> : null}
-                        <button 
-                        className={`${styles.loginButton}`} 
-                        onClick={checkUser}>Login</button>
+                        <motion.button
+                            animate={{ 
+                                backgroundColor: ["rgba(255, 204, 0, 0.9)" ,"rgba(0, 75, 150, 1)", "rgba(245, 141, 53, 1)"], 
+                                color: ["rgb(0, 0, 0)", "rgb(255, 255, 255)", "rgb(0, 0, 0)"]}}
+                                transition= {{ duration: 3, repeat: Infinity, repeatType: "reverse"}
+                            }
+                            className={`${styles.loginButton}`} 
+                            onClick={checkUser}>
+                            Login
+                        </motion.button>
                         <Link style={{display: "none"}}
                         to={authorized ? "/home-page" : "/login"}
                         id="login-button" />

@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // import components
 import Navbar from './Navbar';
@@ -10,7 +11,7 @@ import showTotalAusDollar from '../functions/showTotalAusDollar.js';
 import styles from '../styles/accounts.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const Accounts = ( {fontSize, theme, 
+const Accounts = ( {fontSize, theme, animations,
     accounts, unreadMessages,
     transferTo, setTransferTo, 
     transferAmount, setTransferAmount,
@@ -37,7 +38,12 @@ const Accounts = ( {fontSize, theme,
                 <ul className={`${styles.accountsList} ${themedStyles[theme[1]]}`}>
                     <div style={fontSizeXL}
                         className={`${styles.heading} ${themedStyles[theme[2]]}`}>Accounts</div>
-                    <div>
+                    <motion.div
+                        initial={animations ? {opacity: 0} : null}
+                        animate={animations ? {
+                            opacity: 1,
+                            transition: {duration: 0.5}
+                        } : null}>
                         {accounts.map(account => 
                             <li 
                             className={styles.listItem}
@@ -54,8 +60,14 @@ const Accounts = ( {fontSize, theme,
                             />
                             </li>
                             )} 
-                    </div>
-                    <div className={styles.totalFundsDiv}>
+                    </motion.div>
+                    <motion.div 
+                        initial={animations ? {opacity: 0} : null}
+                        animate={animations ? {
+                            opacity: 1,
+                            transition: {delay: 0.2, duration: 1}
+                        } : null}
+                        className={styles.totalFundsDiv}>
                         <div className={styles.transferFormDiv}>
                             <TransferForm 
                                 theme={theme}
@@ -74,7 +86,7 @@ const Accounts = ( {fontSize, theme,
                                 accountsTotal.total + currentVal.total)
                                 )}</p>
                         </div>
-                    </div>
+                    </motion.div>
                 </ul>
             </div>
         </>

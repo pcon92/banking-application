@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 // import components
 import Navbar from './Navbar';
@@ -8,7 +9,7 @@ import TransferForm from './TransferForm';
 import styles from '../styles/transfers.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const Transfers = ({fontSize, theme, 
+const Transfers = ({fontSize, theme, animations,
     unreadMessages, 
     transferTo, setTransferTo, 
     transferAmount, setTransferAmount,
@@ -30,17 +31,25 @@ const Transfers = ({fontSize, theme,
                     <AddressBook
                         theme={theme}
                         fontSize={fontSize}
+                        animations={animations}
                         setTransferTo={setTransferTo}
                         contacts={contacts}/>
-                    <TransferForm 
-                        theme={theme}
-                        transferTo={transferTo}
-                        fontSize={fontSize}
-                        transferAmount={transferAmount}
-                        setTransferAmount={setTransferAmount}
-                        insufficientFunds={insufficientFunds}
-                        transferReceipt={transferReceipt}
-                        handleCloseReceipt={handleCloseReceipt}/>
+                    <motion.div
+                        initial={animations ? {opacity: 0} : null}
+                        animate={animations ? {
+                            opacity: 1,
+                            transition: {delay: 0.2, duration: 1}
+                        } : null}>
+                        <TransferForm 
+                            theme={theme}
+                            transferTo={transferTo}
+                            fontSize={fontSize}
+                            transferAmount={transferAmount}
+                            setTransferAmount={setTransferAmount}
+                            insufficientFunds={insufficientFunds}
+                            transferReceipt={transferReceipt}
+                            handleCloseReceipt={handleCloseReceipt}/>
+                    </motion.div>
                 </div>
             </div>
         </>

@@ -42,6 +42,12 @@
     padding: 5;
 }
 
+.animationsContainer {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5;
+}
+
 .optionBoxTitle {
     display: flex;
     height: 100px;

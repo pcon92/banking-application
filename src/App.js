@@ -14,17 +14,14 @@ import Settings from './components/Settings';
 
 function App() {
 
+    // MISC
     const [errorFromServer, setErrorFromServer] = useState(false);
-
-
-    const [transferReceipt, setTransferReceipt] = useState(false);
-
-
 
     // ACCOUNTS AND TRANSFERS
     const [transferTo, setTransferTo] = useState('');
     const [transferAmount, setTransferAmount] = useState(0);
     const [insufficientFunds, setInsufficientFunds] = useState(false);
+    const [transferReceipt, setTransferReceipt] = useState(false);
 
     const checkIfAccountsStored = () => {
         return localStorage.getItem('accounts')
@@ -229,6 +226,7 @@ function App() {
         // checks local storage to see if user on same browser has set font/theme already  
     const [fontSize, setFontSize] = useState(checkIfFontSizeStored());
     const [theme, setTheme] = useState(checkIfThemeStored());
+    const [animations, setAnimations] = useState(true);
 
     useEffect(() => {
         localStorage.setItem('fontSize', fontSize)
@@ -246,6 +244,7 @@ function App() {
                         <Home 
                             fontSize={fontSize}
                             theme={theme}
+                            animations={animations}
                             total={accounts[0].total}
                             name={accounts[0].name}
                             unreadMessages={unreadMessages}/>
@@ -254,6 +253,7 @@ function App() {
                         <Messages
                             fontSize={fontSize}
                             theme={theme}
+                            animations={animations}
                             messages={messages}
                             setMessages={setMessages}
                             unreadMessages={unreadMessages}
@@ -265,6 +265,7 @@ function App() {
                         <Accounts 
                             fontSize={fontSize}
                             theme={theme}
+                            animations={animations}
                             accounts={accounts}
                             unreadMessages={unreadMessages}
                             transferTo={transferTo}
@@ -279,6 +280,7 @@ function App() {
                         <Transfers
                             fontSize={fontSize}
                             theme={theme}
+                            animations={animations}
                             unreadMessages={unreadMessages}
                             transferTo={transferTo}
                             setTransferTo={setTransferTo}
@@ -297,6 +299,8 @@ function App() {
                         setFontSize={setFontSize}
                         theme={theme}
                         setTheme={setTheme}
+                        animations={animations}
+                        setAnimations={setAnimations}
                         unreadMessages={unreadMessages}/>
                     </Route>
                     <Route path="/confirm-registration-page">

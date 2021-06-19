@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from "framer-motion";
 
 // import components
 import AddressBookContact from './AddressBookContact';
@@ -6,7 +7,7 @@ import AddressBookContact from './AddressBookContact';
 import styles from '../styles/addressBook.module.css';
 import themedStyles from '../styles/themes.module.css';
 
-const AddressBook = ({theme, fontSize, 
+const AddressBook = ({theme, fontSize, animations,
     setTransferTo, contacts}) => {
 
     // font sizes used in this component
@@ -21,7 +22,12 @@ const AddressBook = ({theme, fontSize,
             <div>
                 <div style={fontSizeXL}
                 className={`${styles.heading} ${themedStyles[theme[2]]}`}>Address Book</div>
-                    <div>
+                    <motion.div
+                        initial={animations ? {opacity: 0} : null}
+                        animate={animations ? {
+                            opacity: 1,
+                            transition: {duration: 0.5}
+                        } : null}>
                         {contacts.map(contact => 
                             <div className={contact.name === "Everyday Spending"
                                 ? styles.ownAccountDiv
@@ -40,7 +46,7 @@ const AddressBook = ({theme, fontSize,
                                     />
                             </div>)
                         }
-                    </div>
+                    </motion.div>
             </div>
         </>
     )

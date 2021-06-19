@@ -7,17 +7,17 @@ After experimenting with local storage on the browser I decided to look into lig
 
 Used JOI for data validation, BCrypt for passwords in database.
 
+React Spring animation library
+
 STILL TO DO : 
 - High priority:
     - create 'add contact' area to add new contacts
     - make responsive for mobiles
     - funds on database
 - Medium priority:
-    - add animations to home screen 'welcome' bubble and login button color cycle
     - save user theme and font size based on login info
     - Create token/cookie to check if user still logged in throughout use
 - Low priority:
-    - after transfer show transfer receipt on screen
     - unread messages box increase scale as animation on new unread message
 
 BUGS:
