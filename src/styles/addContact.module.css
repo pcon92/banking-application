@@ -1,0 +1,82 @@
+
+.backgroundOpen {
+    height: 20vh;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.backgroundClosed {
+    height: 5vh;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.topPanelOpen {
+    height: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1vw;
+    background-color: var(--headingBackground);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+}
+
+.topPanelClosed {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 1vw;
+    background-color: var(--headingBackground);
+    border-radius: 10px;
+    color: white;
+}
+
+.toggleButton {
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 3px;
+    border: 2px solid white;
+}
+
+.toggleButton:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.innerContainer {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 20px;
+    box-shadow: 0px 3px 10px 0px var(--shadow2);
+    border-radius: 10px;
+}
+
+.nameDiv, .BSBDiv, .accountNumberDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputBox {
+    background-color: var(--creamWhite);
+    padding: 2px 0px 2px 7px;
+    border-radius: 10px;
+    border: none;
+    user-select: none;
+    outline: none;
+    margin-left: 5px;
+}
+
+.addContactButton {
+    color: white;
+    background-color: var(--headingBackground);
+    border-radius: 10px;
+    width: 30%;
+}

@@ -71,32 +71,24 @@ function App() {
 
     // need to fix modifying state directly here
     const checkName = () => {
-
-        if (transferTo === contacts[1].name) {
-            if (accounts[0].total - parseInt(transferAmount) >= 0) {
-                setInsufficientFunds(false)
-                contacts[1].total += parseInt(transferAmount)
-                accounts[0].total -= parseInt(transferAmount)
-                contacts[0].total -= parseInt(transferAmount)
-                setAccounts([...accounts])
-                setContacts([...contacts])
-                setTransferReceipt(true);
-            } else {
-                setInsufficientFunds(true);
+        for (let i=1; i < contacts.length; i++) {
+            if (transferTo === contacts[i].name) {
+                console.log('identified')
+                if (accounts[0].total - parseInt(transferAmount) >= 0) {
+                    setInsufficientFunds(false)
+                    contacts[i].total += parseInt(transferAmount)
+                    accounts[0].total -= parseInt(transferAmount)
+                    contacts[0].total -= parseInt(transferAmount)
+                    setAccounts([...accounts])
+                    setContacts([...contacts])
+                    setTransferReceipt(true);
+                } else {
+                    setInsufficientFunds(true);
+                }
             }
-        } else if (transferTo === contacts[2].name) {
-            if (accounts[0].total - parseInt(transferAmount) >= 0) {
-                setInsufficientFunds(false)
-                contacts[2].total += parseInt(transferAmount)
-                accounts[0].total -= parseInt(transferAmount)
-                contacts[0].total -= parseInt(transferAmount)
-                setAccounts([...accounts])
-                setContacts([...contacts])
-                setTransferReceipt(true);
-            } else {
-                setInsufficientFunds(true);
-            }
-        } else if (transferTo === accounts[1].name) {
+        }
+        
+        if (transferTo === accounts[1].name) {
             if (accounts[0].total - parseInt(transferAmount) >= 0) {
                 setInsufficientFunds(false)
                 accounts[1].total += parseInt(transferAmount)
@@ -126,6 +118,16 @@ function App() {
     useEffect(() => {
         localStorage.setItem('contacts', JSON.stringify(contacts))
     }, [contacts]);
+
+    const handleAddContact = (contactInfo) => {
+        setContacts([...contacts, {
+            id: contactInfo.id, 
+            name: contactInfo.name,
+            accountNum: contactInfo.accountNum,
+            BSB: contactInfo.BSB,
+            total: contactInfo.total}
+        ])
+    };
 
     const handleCloseReceipt = () => {
         setTransferReceipt(false);
@@ -291,6 +293,7 @@ function App() {
                             transferReceipt={transferReceipt}
                             setTransferReceipt={transferReceipt}
                             handleCloseReceipt={handleCloseReceipt}
+                            handleAddContact={handleAddContact}
                             />
                     </Route>
                     <Route path="/settings-page">

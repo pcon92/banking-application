@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Navbar from './Navbar';
 import AddressBook from './AddressBook';
 import TransferForm from './TransferForm';
+import AddContact from './AddContact';
 
 import styles from '../styles/transfers.module.css';
 import themedStyles from '../styles/themes.module.css';
@@ -16,7 +17,8 @@ const Transfers = ({fontSize, theme, animations,
     contacts,
     insufficientFunds,
     transferReceipt,
-    handleCloseReceipt
+    handleCloseReceipt,
+    handleAddContact
     }) => {
 
     return (
@@ -41,6 +43,11 @@ const Transfers = ({fontSize, theme, animations,
                             opacity: 1,
                             transition: {delay: 0.2, duration: 1}
                         } : null}>
+                        <AddContact
+                            theme={theme}
+                            fontSize={fontSize}
+                            animations={animations}
+                            handleAddContact={handleAddContact} />
                         <TransferForm 
                             theme={theme}
                             transferTo={transferTo}
