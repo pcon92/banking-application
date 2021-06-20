@@ -71,7 +71,8 @@
 .buttonsContainer {
     width: 35%;
     height: 100%;
+    transform: scale(0.8);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center
 }

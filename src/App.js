@@ -135,7 +135,9 @@ function App() {
         setTransferAmount(0);
     };
 
-
+    const handleDeleteContact = (id) => {
+        setContacts(contacts.filter(contact => contact.id !== id));
+    };
 
 
     // MESSAGES
@@ -294,6 +296,7 @@ function App() {
                             setTransferReceipt={transferReceipt}
                             handleCloseReceipt={handleCloseReceipt}
                             handleAddContact={handleAddContact}
+                            handleDeleteContact={handleDeleteContact}
                             />
                     </Route>
                     <Route path="/settings-page">

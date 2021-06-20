@@ -42,8 +42,7 @@
     border: 2px solid white;
 }
 
-.toggleButton:hover {
-    color: red;
+.topPanelOpen:hover, .topPanelClosed:hover, .toggleButton:hover {
     cursor: pointer;
 }
 

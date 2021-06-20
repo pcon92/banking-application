@@ -41,11 +41,12 @@ const AddContact = ({theme, fontSize, animations,
         <div className={panelOpen 
                 ? `${styles.backgroundOpen}`
                 : `${styles.backgroundClosed} ${themedStyles[theme[1]]}`}>
-            <div className={panelOpen 
+            <div 
+                onClick={togglePanel}
+                className={panelOpen 
                 ? styles.topPanelOpen
                 : styles.topPanelClosed}>
                 <button 
-                    onClick={togglePanel}
                     className={styles.toggleButton}>{panelOpen 
                     ? <i class="fas fa-minus"></i>
                     : <i class="fas fa-plus"></i>}

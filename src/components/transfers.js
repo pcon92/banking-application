@@ -18,7 +18,8 @@ const Transfers = ({fontSize, theme, animations,
     insufficientFunds,
     transferReceipt,
     handleCloseReceipt,
-    handleAddContact
+    handleAddContact,
+    handleDeleteContact
     }) => {
 
     return (
@@ -36,7 +37,8 @@ const Transfers = ({fontSize, theme, animations,
                         fontSize={fontSize}
                         animations={animations}
                         setTransferTo={setTransferTo}
-                        contacts={contacts}/>
+                        contacts={contacts}
+                        handleDeleteContact={handleDeleteContact}/>
                     <motion.div
                         initial={animations ? {opacity: 0} : null}
                         animate={animations ? {

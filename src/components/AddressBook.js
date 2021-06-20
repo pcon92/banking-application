@@ -8,7 +8,8 @@ import styles from '../styles/addressBook.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 const AddressBook = ({theme, fontSize, animations,
-    setTransferTo, contacts}) => {
+    setTransferTo, contacts,
+    handleDeleteContact}) => {
 
     // font sizes used in this component
     const fontSizeXL = {fontSize: `${fontSize[3]}`};
@@ -39,10 +40,12 @@ const AddressBook = ({theme, fontSize, animations,
                                     theme={theme}
                                     fontSize={fontSize}
                                     key={contact.id}
+                                    id={contact.id}
                                     name={contact.name}
                                     accountNum={contact.accountNum}
                                     BSB={contact.BSB}
                                     total={contact.total}
+                                    handleDeleteContact={handleDeleteContact}
                                     />
                             </div>)
                         }
