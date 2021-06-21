@@ -38,6 +38,7 @@
 
 .messageContainer {
     width: 55%;
+    height: 100%;
     display: flex;
     align-items: center;
     padding: 1vw;

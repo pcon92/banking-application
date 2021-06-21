@@ -8,15 +8,14 @@ import styles from '../styles/addressBook.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 const AddressBook = ({theme, fontSize, animations,
-    setTransferTo, contacts,
-    handleDeleteContact}) => {
+    contacts,
+    handleDeleteContact,
+    handleSelectContact}) => {
 
     // font sizes used in this component
     const fontSizeXL = {fontSize: `${fontSize[3]}`};
 
-    const chooseTransfer = (name) => {
-        setTransferTo(name);
-    };
+
 
     return (
         <>
@@ -35,7 +34,7 @@ const AddressBook = ({theme, fontSize, animations,
                                 : styles.contactDiv} 
                                 onClick={contact.name === "Everyday Spending" 
                                 ? null
-                                : () => chooseTransfer(contact.name)}>
+                                : () => handleSelectContact(contact.name)}>
                                 <AddressBookContact 
                                     theme={theme}
                                     fontSize={fontSize}

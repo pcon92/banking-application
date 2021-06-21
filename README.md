@@ -28,9 +28,9 @@ STILL TO DO :
 
 BUGS:
 - High priority:
-    - transfers rounding to nearest int, need to fix for float
+    - 
 - Med priority:
     - double receipt from transfer if transfer to blank name
     - on delete contact sets name as transferring to
 - Low priority:  
-    - long message large overflows
+    - 

@@ -9,10 +9,9 @@ const SingleAccount = ( { theme, fontSize, id, name, accountNum, BSB, total,
     handleDeleteContact }) => {
 
     // font sizes used in this component
-    const fontSizeSml = {fontSize: `${fontSize[0]}`};
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
-
+    
     return (
         <>
             <div className={`${styles.accountBox} ${themedStyles[theme[1]]}`}>
@@ -27,11 +26,11 @@ const SingleAccount = ( { theme, fontSize, id, name, accountNum, BSB, total,
                             <p style={fontSizeMed} className={styles.accountNum}> Acc. Number: {accountNum}</p>
                         </div>
                         {name !== "Everyday Spending" && name !== "Savings Account"
-                        ? <button 
-                            onClick={() => handleDeleteContact(id)}
-                            className={styles.deleteButton}>
-                            <i class="fas fa-trash-alt fa-2x"></i>
-                        </button>
+                        ?   <button 
+                                onClick={() => handleDeleteContact(id)}
+                                className={styles.deleteButton}>
+                                <i class="fas fa-trash-alt fa-2x"></i>
+                            </button>
                         : null}
                     </div>
                     <div className={styles.accountTotal}>

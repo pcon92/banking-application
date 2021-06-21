@@ -73,12 +73,11 @@ function App() {
     const checkName = () => {
         for (let i=1; i < contacts.length; i++) {
             if (transferTo === contacts[i].name) {
-                console.log('identified')
-                if (accounts[0].total - parseInt(transferAmount) >= 0) {
+                if (accounts[0].total - parseFloat(transferAmount) >= 0) {
                     setInsufficientFunds(false)
-                    contacts[i].total += parseInt(transferAmount)
-                    accounts[0].total -= parseInt(transferAmount)
-                    contacts[0].total -= parseInt(transferAmount)
+                    contacts[i].total += parseFloat(transferAmount)
+                    accounts[0].total -= parseFloat(transferAmount)
+                    contacts[0].total -= parseFloat(transferAmount)
                     setAccounts([...accounts])
                     setContacts([...contacts])
                     setTransferReceipt(true);
@@ -89,11 +88,11 @@ function App() {
         }
         
         if (transferTo === accounts[1].name) {
-            if (accounts[0].total - parseInt(transferAmount) >= 0) {
+            if (accounts[0].total - parseFloat(transferAmount) >= 0) {
                 setInsufficientFunds(false)
-                accounts[1].total += parseInt(transferAmount)
-                accounts[0].total -= parseInt(transferAmount)
-                contacts[0].total -= parseInt(transferAmount)
+                accounts[1].total += parseFloat(transferAmount)
+                accounts[0].total -= parseFloat(transferAmount)
+                contacts[0].total -= parseFloat(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
                 setTransferReceipt(true);
@@ -101,11 +100,11 @@ function App() {
                 setInsufficientFunds(true)
             }
         } else if (transferTo === accounts[0].name) {
-            if (accounts[1].total - parseInt(transferAmount) >= 0) {
+            if (accounts[1].total - parseFloat(transferAmount) >= 0) {
                 setInsufficientFunds(false)
-                accounts[0].total += parseInt(transferAmount)
-                accounts[1].total -= parseInt(transferAmount)
-                contacts[0].total += parseInt(transferAmount)
+                accounts[0].total += parseFloat(transferAmount)
+                accounts[1].total -= parseFloat(transferAmount)
+                contacts[0].total += parseFloat(transferAmount)
                 setAccounts([...accounts])
                 setContacts([...contacts])
                 setTransferReceipt(true);
@@ -139,6 +138,10 @@ function App() {
         setContacts(contacts.filter(contact => contact.id !== id));
     };
 
+    const handleSelectContact = (name) => {
+        setTransferTo(name);
+    };
+
 
     // MESSAGES
     const [messages, setMessages] = useState(
@@ -158,12 +161,15 @@ function App() {
             id: 2,
             read: false,
             favourite: false,
-            message: "You can change the color theme and font size on the 'Settings' page."
+            message: `You can change the color theme, font size,
+                    and toggle animations on the 'Settings' page.`
         }, {
             id: 3,
             read: false,
             favourite: false,
-            message: "The persistent data is stored in the local storage of your browser.  If data is reset upon browser restart check if your browser is clearing stored files on close."
+            message: `Some data is stored in browser local storage.  
+                    If values are reset upon browser restart disable browser
+                    clearing stored files on close.`
         }
     ]);
         // tally unread messages
@@ -297,6 +303,7 @@ function App() {
                             handleCloseReceipt={handleCloseReceipt}
                             handleAddContact={handleAddContact}
                             handleDeleteContact={handleDeleteContact}
+                            handleSelectContact={handleSelectContact}
                             />
                     </Route>
                     <Route path="/settings-page">
