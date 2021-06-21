@@ -34,3 +34,64 @@
     padding: 10px;
     height: 13vh;
 }
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+ 
+    .background {
+        border-width: 15px;
+    }
+
+    .messageList {
+        height: 80vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .background {
+        border-width: 15px;
+    }
+
+    .messageList {
+        height: 80vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .background {
+        border-width: 100px;
+    }
+
+    .messageList {
+        height: 75vh;
+        width: 65vw;
+        border: 5px solid white;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .background {
+        border-width: 100px;
+    }
+
+    .messageList {
+        height: 800px;
+        width: 700px;
+        border: 10px solid white;
+    }
+
+}

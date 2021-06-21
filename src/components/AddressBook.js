@@ -34,11 +34,11 @@ const AddressBook = ({theme, fontSize, animations,
                                 : styles.contactDiv} 
                                 onClick={contact.name === "Everyday Spending" 
                                 ? null
-                                : () => handleSelectContact(contact.name)}>
+                                : () => handleSelectContact(contact.name)}
+                                key={Date.now()*Math.random(1)}>
                                 <AddressBookContact 
                                     theme={theme}
                                     fontSize={fontSize}
-                                    key={contact.id}
                                     id={contact.id}
                                     name={contact.name}
                                     accountNum={contact.accountNum}

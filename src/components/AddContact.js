@@ -48,8 +48,8 @@ const AddContact = ({theme, fontSize, animations,
                 : styles.topPanelClosed}>
                 <button 
                     className={styles.toggleButton}>{panelOpen 
-                    ? <i class="fas fa-minus"></i>
-                    : <i class="fas fa-plus"></i>}
+                    ? <i className="fas fa-minus"></i>
+                    : <i className="fas fa-plus"></i>}
                 </button>
                 <div style={fontSizeLge}>
                     Add a New Contact 

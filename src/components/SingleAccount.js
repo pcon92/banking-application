@@ -29,7 +29,7 @@ const SingleAccount = ( { theme, fontSize, id, name, accountNum, BSB, total,
                         ?   <button 
                                 onClick={() => handleDeleteContact(id)}
                                 className={styles.deleteButton}>
-                                <i class="fas fa-trash-alt fa-2x"></i>
+                                <i className="fas fa-trash-alt fa-2x"></i>
                             </button>
                         : null}
                     </div>

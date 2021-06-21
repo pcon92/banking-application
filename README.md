@@ -15,6 +15,7 @@ STILL TO DO :
 - High priority:
     - make responsive for mobiles
     - funds on database
+    - override stored font size setting based on device size
 - Medium priority:
     - save user theme and font size based on login info
     - Create token/cookie to check if user still logged in throughout use
@@ -32,5 +33,6 @@ BUGS:
 - Med priority:
     - double receipt from transfer if transfer to blank name
     - on delete contact sets name as transferring to
+    - change 'welcome user 1 to set username'
 - Low priority:  
     - 

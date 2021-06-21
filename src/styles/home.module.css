@@ -82,3 +82,102 @@
     font-size: 0.8rem;
     text-align: right;
 }
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+
+    .background {
+        border-width: 15px;
+    }
+
+    .contentBox {
+        height: 300px;
+        width: 200px;
+    }
+
+    .welcome {
+        width: 90%;
+        left: -10%;
+        border: 5px solid white;
+    }
+
+    .accountInfoBox {
+        border: 5px solid white;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .background {
+        border-width: 15px;
+    }
+
+    .contentBox {
+        height: 300px;
+        width: 250px;
+    }
+
+    .welcome {
+        width: 80%;
+        left: -5%;
+        border: 5px solid white;
+    }
+
+    .accountInfoBox {
+        border: 5px solid white;
+        left: 5%;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .background {
+        border-width: 100px;
+    }
+
+    .contentBox {
+        height: 500px;
+        width: 400px;
+    }
+
+    .welcome {
+        left: -10%;
+        border: 10px solid white;
+    }
+
+    .accountInfoBox {
+        border: 10px solid white;
+        left: 10%;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .background {
+        border-width: 100px;
+    }
+
+    .contentBox {
+        height: 600px;
+        width: 500px;
+    }
+
+    .welcome {
+        width: 60%;
+        left: -15%;
+        border: 10px solid white;
+    }
+
+    .accountInfoBox {
+        border: 10px solid white;
+    }
+
+}

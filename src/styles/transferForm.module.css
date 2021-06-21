@@ -56,3 +56,119 @@
             cursor: pointer;
             color: var(--redHover);
         }
+
+
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+    
+    .background {
+        height: 20vh;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .transferTo {
+        margin-left: 5px;
+    }
+
+    .bottomHalf {
+        flex-direction: column;
+    }
+
+    .amountDiv {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .inputBox {
+        width: 100px;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .background {
+        height: 25vh;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .transferTo {
+        margin-left: 5px;
+    }
+
+    .bottomHalf {
+        flex-direction: column;
+    }
+
+    .amountDiv {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .inputBox {
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .background {
+        height: 10vh;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .transferTo {
+        margin-left: 15px;
+    }
+    
+    .bottomHalf {
+        flex-direction: row;
+    }
+    
+    .amountDiv {
+        width: 60%;
+        margin-bottom: 0px;
+    }
+
+    .inputBox {
+        width: 150px;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .background {
+        height: 10vh;
+        padding: 20px;
+        margin: 20px;
+    }
+    
+    .transferTo {
+        margin-left: 15px;
+    }
+    
+    .bottomHalf {
+        flex-direction: row;
+    }
+    
+    .amountDiv {
+        width: 60%;
+        margin-bottom: 0px;
+    }
+
+    .inputBox {
+        width: 200px;
+    }
+
+}

@@ -63,3 +63,98 @@
     background-color: var(--headingBackground);
     border: 3px solid var(--almostWhite);
 }
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+    
+    .background {
+        border-width: 15px;
+    }
+
+
+    .heading {
+        height: 5vh;
+    }
+
+    .accountsList {
+        height: 70vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+
+    .listItem {
+        margin: 10px;
+    }
+
+    .totalBox {
+        height: 7vh;
+        margin: 10px;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .background {
+        border-width: 15px;
+    }
+
+    .accountsList {
+        height: 70vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+
+    .listItem {
+        margin: 10px;
+    }
+
+    .totalBox {
+        margin: 10px;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .background {
+        border-width: 100px;
+    }
+
+    .accountsList {
+        width: 65vw;
+        border: 10px solid white;
+    }
+
+    .listItem {
+        margin: 20px;
+    }
+
+    .totalBox {
+        margin: 20px;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .accountsList {
+        height: 800px;
+        width: 700px;
+        border: 5px solid white;
+    }
+
+    .listItem {
+        margin: 20px;
+    }
+
+    .totalBox {
+        margin: 20px;
+    }
+
+}

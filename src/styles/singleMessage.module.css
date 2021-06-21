@@ -77,3 +77,44 @@
     justify-content: space-between;
     align-items: center
 }
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+
+    .buttonsContainer {
+        width: 45%;
+        transform: scale(0.4);
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .buttonsContainer {
+        width: 45%;
+        transform: scale(0.4);
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .buttonsContainer {
+        width: 35%;
+        transform: scale(0.7);
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+    
+    .buttonsContainer {
+        transform: scale(0.8);
+    }
+
+}
