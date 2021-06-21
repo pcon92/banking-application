@@ -16,6 +16,7 @@ function App() {
 
     // MISC
     const [errorFromServer, setErrorFromServer] = useState(false);
+    const [deviceWidth, setDeviceWidth] = useState();
 
     // ACCOUNTS AND TRANSFERS
     const [transferTo, setTransferTo] = useState('');
@@ -218,8 +219,17 @@ function App() {
         : setMessages([...messages])
     }, [insufficientFunds])
 
-
-
+    // set font size based on device width
+    useEffect(() => {
+        setDeviceWidth(document.documentElement.clientWidth)
+        setFontSize(
+            deviceWidth < 320
+            ? ['-0.3rem', '0.5rem', '0.7rem', '0.8rem']
+            : deviceWidth >=320 && deviceWidth < 640
+            ? ['0.49999999999999994rem', '0.7rem', '1.0rem', '1.3rem']
+            : ['0.8rem', '1rem', '1.2rem', '1.8rem']
+        )
+    }, deviceWidth);
 
     // SETTINGS
     const checkIfThemeStored = () => {

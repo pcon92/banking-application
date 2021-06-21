@@ -33,19 +33,16 @@
 .fontSizeContainer {
     display: flex;
     justify-content: space-evenly;
-    padding: 5;
 }
 
 .themeContainer {
     display: flex;
     justify-content: space-evenly;
-    padding: 5;
 }
 
 .animationsContainer {
     display: flex;
     justify-content: space-evenly;
-    padding: 5;
 }
 
 .optionBoxTitle {
@@ -80,4 +77,75 @@
     background-color: transparent;
     cursor: pointer;
     border: none;
+}
+
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+    
+    .background {
+        border-width: 15px;
+    }
+    
+    .settingsBox {
+        height: 70vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+
+    .optionButton {
+        width: 20px;
+    }
+        
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+    
+    .background {
+        border-width: 15px;
+    }
+    
+    .settingsBox {
+        height: 70vh;
+        width: 80vw;
+        border: 5px solid white;
+    }
+    
+    .optionButton {
+        width: 20px;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .background {
+        border-width: 100px;
+    }
+    
+    .settingsBox {
+        height: 70vh;
+        width: 65vw;
+        border: 10px solid white;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .background {
+        border-width: 100px;
+    }
+    
+    .settingsBox {
+        height: 900px;
+        width: 700px;
+        border: 10px solid white;
+    }
+
 }

@@ -17,7 +17,7 @@ const SingleAccount = ( { theme, fontSize, id, name, accountNum, BSB, total,
             <div className={`${styles.accountBox} ${themedStyles[theme[1]]}`}>
                 <div className={styles.accountName}>
                     <h3 style={fontSizeLge}>Account Name: </h3>
-                    <p>{name}</p>
+                    <p style={fontSizeLge}>{name}</p>
                 </div>
                 <div className={styles.bottomHalf}>
                     <div className={styles.accountDetailsAndDeleteDiv}>

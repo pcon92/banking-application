@@ -77,5 +77,121 @@
     color: white;
     background-color: var(--headingBackground);
     border-radius: 10px;
-    width: 30%;
+    width: 150px;
+}
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+        
+    .backgroundOpen {
+        height: 20vh;
+        margin: 10px 10px 40px 10px;
+    }
+
+    .backgroundClosed {
+        margin: 10px;
+    }
+
+    .innerContainer {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inputBox {
+        width: 100px;    
+    }
+
+     .addContactButton {
+        width: 100%;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+    
+    .backgroundOpen {
+        height: 20vh;
+        margin: 10px 10px 40px 10px;
+    }
+
+    .backgroundClosed {
+        margin: 10px;
+    }
+
+    .innerContainer {
+        height: 100%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inputBox {
+        width: 100px;    
+    }
+
+     .addContactButton {
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .backgroundOpen {
+        height: 20vh;
+        margin: 20px;
+    }
+
+    .backgroundClosed {
+        margin: 20px;
+    }
+
+    .innerContainer {
+        height: 70%;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .inputBox {
+        width: 100px;    
+    }
+
+     .addContactButton {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .backgroundOpen {
+        height: 20vh;
+        margin: 20px;
+    }
+
+    .backgroundClosed {
+        margin: 20px;
+    }
+
+    .innerContainer {
+        height: 70%;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .inputBox {
+        width: 150px;
+        padding: 2px 0px 2px 7px;
+        margin-left: 5px;
+    }
+
+     .addContactButton {
+        width: 150px;
+    }
+
 }

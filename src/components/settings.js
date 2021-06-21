@@ -12,8 +12,23 @@ const Settings = ( {fontSize, setFontSize,
     animations, setAnimations, 
     unreadMessages}) => {
 
+    // modify sizes of fonts based on device width
+    const DEVICE_WIDTH = document.documentElement.clientWidth;
+
     const changeFontSize = (val) => {
-        setFontSize([`${val*0.8}rem`, `${val}rem`, `${val*1.2}rem`,`${val*1.8}rem`])
+        if (DEVICE_WIDTH < 320) {
+            let screenModifier = 0.5;
+            setFontSize([`${val*screenModifier-0.8}rem`, `${val*screenModifier}rem`, 
+            `${val*screenModifier+0.2}rem`,`${val*screenModifier+0.3}rem`])
+        } else if (DEVICE_WIDTH >= 320 && DEVICE_WIDTH < 640) {
+            let screenModifier = 0.7;
+            setFontSize([`${val*screenModifier-0.2}rem`, `${val*screenModifier}rem`, 
+            `${val*screenModifier+0.1}rem`,`${val*screenModifier+0.3}rem`])
+        } else {
+            let screenModifier = 1.0;
+            setFontSize([`${val*screenModifier-0.2}rem`, `${val*screenModifier}rem`, 
+            `${val*screenModifier+0.2}rem`,`${val*screenModifier+0.8}rem`])
+        }
     };
     
     const changeTheme = (val) => {
@@ -53,21 +68,21 @@ const Settings = ( {fontSize, setFontSize,
                             <div className={styles.optionBox}>
                                 <button type="button" onClick={() => changeFontSize(0.8)}
                                     className={styles.optionButton}
-                                    style={fontSize[1] === '0.8rem' 
+                                    style={fontSize[1] === '0.8rem' || fontSize[1] === '0.5599999999999999rem' || fontSize[1] === '0.4rem'
                                     ? {opacity: 1, fontWeight: "bold", fontSize: `${fontSizeMed.fontSize}`} 
                                     : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Small</button>
                             </div>
                             <div className={styles.optionBox}>
                                 <button type="button" onClick={() => changeFontSize(1)}
                                     className={styles.optionButton}
-                                    style={fontSize[1] === '1rem' 
+                                    style={fontSize[1] === '1rem' || fontSize[1] === '0.7rem' || fontSize[1] === '0.5rem' 
                                     ? {opacity: 1, fontWeight: "bold", fontSize: `${fontSizeMed.fontSize}`} 
                                     : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Medium</button>
                             </div>
                             <div className={styles.optionBox}>
                                 <button type="button" onClick={() => changeFontSize(1.2)}
                                     className={styles.optionButton}
-                                    style={fontSize[1] === '1.2rem' 
+                                    style={fontSize[1] === '1.2rem' || fontSize[1] === '0.84rem' || fontSize[1] === '0.6rem' 
                                     ? {opacity: 1, fontWeight: "bold", fontSize: `${fontSizeMed.fontSize}`} 
                                     : {opacity: 0.7,  fontSize: `${fontSizeMed.fontSize}`}}>Large</button>
                             </div>

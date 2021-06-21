@@ -13,9 +13,7 @@ Animations were performed with either basic CSS selectors or with the Framer Mot
 
 STILL TO DO : 
 - High priority:
-    - make responsive for mobiles
     - funds on database
-    - override stored font size setting based on device size
 - Medium priority:
     - save user theme and font size based on login info
     - Create token/cookie to check if user still logged in throughout use
@@ -26,10 +24,11 @@ STILL TO DO :
 - Low priority:
     - unread messages box increase scale as animation on new unread message
     - make animation settings persist through local storage
+    - tidy up styling on mobile devices
 
 BUGS:
 - High priority:
-    - 
+    - on small devices settings area doesn't know which font size selected
 - Med priority:
     - double receipt from transfer if transfer to blank name
     - on delete contact sets name as transferring to

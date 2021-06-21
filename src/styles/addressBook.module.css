@@ -25,3 +25,55 @@
     transform: scale(1.01);
     box-shadow: 0px 3px 20px 0px var(--shadow2);
 }
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+    
+    .ownAccountDiv {
+        margin: 10px;
+    }
+    
+    .contactDiv {
+        margin: 10px;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+    
+    .ownAccountDiv {
+        margin: 10px;
+    }
+    
+    .contactDiv {
+        margin: 10px;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .ownAccountDiv {
+        margin: 20px;
+    }
+    
+    .contactDiv {
+        margin: 20px;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .ownAccountDiv {
+        margin: 20px;
+    }
+    
+    .contactDiv {
+        margin: 20px;
+    }
+
+}
