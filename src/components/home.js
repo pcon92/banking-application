@@ -11,10 +11,6 @@ import styles from '../styles/home.module.css';
 
 const Home = ({fontSize, theme, animations, unreadMessages, total, name}) => {
 
-    const dummyUserInfo = {
-        name: 'User 1',
-    };
-
     // font sizes used in this component
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
     const fontSizeXL = {fontSize: `${fontSize[3]}`};
@@ -35,7 +31,7 @@ const Home = ({fontSize, theme, animations, unreadMessages, total, name}) => {
                         transition={{ duration: 0.35 }}
                         className={`${styles.welcome}`}
                         style={fontSizeXL}>
-                        Welcome {dummyUserInfo.name}
+                        Welcome
                     </motion.div>
                     <motion.div
                         initial={animations ? { scale: 0.6 } : null}

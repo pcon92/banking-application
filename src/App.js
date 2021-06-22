@@ -243,10 +243,17 @@ function App() {
             ? localStorage.getItem('fontSize').split(',')
             : ['0.8rem', '1rem', '1.2rem', '1.8rem']
     };
+
+    const checkIfAnimationsStored = () => {
+        return localStorage.getItem('animations')
+            ? JSON.parse(localStorage.getItem('animations'))
+            : true
+    };
+
         // checks local storage to see if user on same browser has set font/theme already  
     const [fontSize, setFontSize] = useState(checkIfFontSizeStored());
     const [theme, setTheme] = useState(checkIfThemeStored());
-    const [animations, setAnimations] = useState(true);
+    const [animations, setAnimations] = useState(checkIfAnimationsStored());
 
     useEffect(() => {
         localStorage.setItem('fontSize', fontSize)
@@ -254,6 +261,9 @@ function App() {
     useEffect(() => {
         localStorage.setItem('theme', theme)
         }, [theme]);
+    useEffect(() => {
+        localStorage.setItem('animations', animations)
+        }, [animations]);
     
 
     return (

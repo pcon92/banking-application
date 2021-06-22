@@ -9,7 +9,7 @@
 }
 
 .heading {
-    font-size: 48px;
+    font-size: 3.5rem;
     position: relative;
     top: 1vh;
     color: white;
@@ -72,6 +72,15 @@
     border: 2px outset rgb(133, 133, 133);
 }
 
+.inputBox {
+    width: 100%;
+}
+
+.labels {
+    font-size: 1rem;
+}
+
+
 .loginText {
     color: white;
 }
@@ -79,4 +88,103 @@
 .loginLink {
     color: white;
     margin-left: 10px;
+}
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+
+    .heading {
+        font-size: 1.8rem;
+    }
+
+    .outerContainer {
+        height: 60vh;
+        width: 95vw;
+    }
+
+    .innerContainer {
+        height: 40%;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .labels {
+        font-size: 0.8rem;
+    }
+
+    .inputBox {
+        width: 50%;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .heading {
+        font-size: 2rem;
+    }
+
+    .outerContainer {
+        height: 70vh;
+        width: 95vw;
+    }
+
+    .innerContainer {
+        height: 40%;
+        width: 90%;
+        padding: 10px;
+    }
+
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .labels {
+        font-size: 0.9rem;
+    }
+
+    .inputBox {
+        width: 45%;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .outerContainer {
+        height: 600px;
+        width: 600px;
+    }
+    
+    .innerContainer {
+        height: 40%;
+        width: 60%;
+        padding: 20px;
+    }
+    
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+    
+    .inputBox {
+        width: 50%;
+    }
+    
+    .labels {
+        font-size: 1rem;
+    }
+    
+
 }

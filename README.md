@@ -14,24 +14,22 @@ Animations were performed with either basic CSS selectors or with the Framer Mot
 STILL TO DO : 
 - High priority:
     - funds on database
+    - form validation for add contact form value
 - Medium priority:
-    - save user theme and font size based on login info
     - Create token/cookie to check if user still logged in throughout use
-    - form validation for add contact form values
-    - add 'are you sure you want to delete' alert on deleting contact
+    - add 'are you sure you want to delete' alert on deleting contact and 'are you sure you want to sign out' on logout
     - add new message for new contact created
     - add timestamp to new messages
 - Low priority:
     - unread messages box increase scale as animation on new unread message
-    - make animation settings persist through local storage
     - tidy up styling on mobile devices
+    - save user theme and font size based on login info
 
 BUGS:
 - High priority:
-    - on small devices settings area doesn't know which font size selected
+    - 
 - Med priority:
     - double receipt from transfer if transfer to blank name
     - on delete contact sets name as transferring to
-    - change 'welcome user 1 to set username'
 - Low priority:  
     - 

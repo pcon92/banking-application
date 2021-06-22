@@ -15,7 +15,15 @@
     height: 100%;
 }
 
+.bankIcon {
+    padding: 10px;
+    background-color: var(--headingBackground);
+    color: white;
+    height: 100%;
+}
+
 .logoLink {
+    height: 100%;
     width: 10%;
 }
 
@@ -63,8 +71,15 @@
         border-bottom: 1px solid black !important;
     }
 
+    .bankIcon {
+        padding: 2px;
+        height: 100%;
+        overflow: hidden;
+    }
+    
     .logoLink {
-        width: 5%;
+        height: 100%;
+        width: 15%;
     }
 
     .navList {
@@ -93,8 +108,15 @@
         border-bottom: 1px solid black !important;
     }
 
+    .bankIcon {
+        padding: 2px;
+        height: 100%;
+        overflow: hidden;
+    }
+    
     .logoLink {
-        width: 10%;
+        height: 100%;
+        width: 15%;
     }
     
     .navList {
@@ -120,6 +142,16 @@
     .navContainer {
         border-width: 100px !important;
         border-bottom: 1px solid black !important;
+    }
+
+    .bankIcon {
+        padding: 10px;
+        height: 100%;
+    }
+    
+    .logoLink {
+        height: 100%;
+        width: 10%;
     }
 
     .linkList {

@@ -9,7 +9,8 @@
 }
 
 .heading {
-    font-size: 56px;
+    text-align: center;
+    font-size: 3.5rem;
     position: relative;
     top: 1vh;
     color: white;
@@ -47,6 +48,10 @@
     justify-content: space-between;
 }
 
+.inputBox {
+    width: 100%;
+}
+
 .loginButton {
     height: 25px;
     width: 100px;
@@ -76,4 +81,124 @@
     text-align: center;
     color: red;
     font-size: 12px;
+}
+
+
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+    
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    .outerContainer {
+        height: 60vh;
+        width: 95vw;
+    }
+    
+    .innerContainer {
+        height: 50%;
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .inputBox {
+        width: 50%;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    .outerContainer {
+        height: 70vh;
+        width: 90vw;
+    }
+    
+    .innerContainer {
+        height: 50%;
+        width: 90%;
+        padding: 10px;
+    }
+    
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .inputBox {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+    
+    .heading {
+        text-align: center;
+        font-size: 3rem;
+    }
+    
+    .outerContainer {
+        height: 60vh;
+        width: 70vw;
+    }
+    
+    .innerContainer {
+        height: 40%;
+        width: 60%;
+        padding: 15px;
+    }
+    
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .inputBox {
+        width: 50%;
+    }
+
+}
+
+@media (min-width: 60rem) { /* > 960px */
+
+    .heading {
+        text-align: center;
+        font-size: 3.5rem;
+    }
+    
+    .outerContainer {
+        height: 600px;
+        width: 600px;
+    }
+    
+    .innerContainer {
+        height: 40%;
+        width: 60%;
+        padding: 20px;
+    }
+    
+    .emailAndPasswordDiv {
+        width: 100%;
+    }
+
+    .inputBox {
+        width: 50%;
+    }
+
 }

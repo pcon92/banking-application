@@ -36,7 +36,7 @@ const Settings = ( {fontSize, setFontSize,
     };
 
     const toggleAnimations = (val) => {
-        val === 'on' ? setAnimations(true) : setAnimations(false)
+        setAnimations(val)
     };
 
 
@@ -118,16 +118,16 @@ const Settings = ( {fontSize, setFontSize,
                                 <h4 style={fontSizeLge}>Animations:</h4>
                             </div>
                             <div className={styles.optionBox}>
-                                <button type="button" onClick={() => toggleAnimations('on')}
+                                <button type="button" onClick={() => toggleAnimations(true)}
                                     className={styles.optionButton}
-                                    style={animations
+                                    style={animations === true
                                     ? {opacity: 1, fontWeight: "bold", fontSize: `${fontSizeMed.fontSize}`} 
                                     : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>On</button>
                             </div>
                             <div className={styles.optionBox}>
-                                <button type="button" onClick={() => toggleAnimations('off')}
+                                <button type="button" onClick={() => toggleAnimations(false)}
                                     className={styles.optionButton}
-                                    style={!animations 
+                                    style={animations === false
                                     ? {opacity: 1, fontWeight: "bold", fontSize: `${fontSizeMed.fontSize}`} 
                                     : {opacity: 0.7, fontSize: `${fontSizeMed.fontSize}`}}>Off</button>
                             </div>

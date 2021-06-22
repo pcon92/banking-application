@@ -69,24 +69,31 @@ const Register = ({setErrorFromServer}) => {
                     <div className={`${styles.innerContainer}`}>
                         <div className={`${styles.emailAndPasswordDiv}`}
                         onChange={checkInfo}>
-                            <label htmlFor="email">Email Address: </label>
-                            <input type="text" id="email" autoFocus/>
+                            <label
+                                className={styles.labels} 
+                                htmlFor="email">Email Address: </label>
+                            <input className={styles.inputBox}
+                                type="text" id="email" autoFocus/>
                         </div>
                         {invalidEmail
                         ? <div>Please enter correct email address</div>
                         : null}
                         <div className={`${styles.emailAndPasswordDiv}`}
                         onChange={checkInfo}>
-                            <label htmlFor="password">Password: </label>
-                            <input type="password" id="password"/>
+                            <label className={styles.labels} 
+                                htmlFor="password">Password: </label>
+                            <input className={styles.inputBox}
+                                type="password" id="password"/>
                         </div>
                         {invalidPassword
                         ? <div>Password must be between 3 and 8 characters</div>
                         : null}
                         <div className={`${styles.emailAndPasswordDiv}`}
                         onChange={checkInfo}>
-                            <label htmlFor="confirm-password">Confirm Password: </label>
-                            <input type="password" id="confirm-password"/>
+                            <label className={styles.labels} 
+                                htmlFor="confirm-password">Confirm Password: </label>
+                            <input className={styles.inputBox} 
+                                type="password" id="confirm-password"/>
                         </div>
                         {invalidConfirmedPassword
                         ? <div>Passwords do not match</div>

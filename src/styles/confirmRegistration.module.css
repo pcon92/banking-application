@@ -9,7 +9,7 @@
 }
 
 .heading {
-    font-size: 44px;
+    font-size: 3.5rem;
     position: relative;
     top: 1vh;
     color: white;
@@ -33,4 +33,52 @@
 .loginLink {
     color: white;
     margin-left: 10px;
+}
+
+
+
+
+
+
+/* for different device sizes */
+
+@media (max-width: 20rem) { /* 320px */
+
+    .heading {
+        font-size: 2rem;
+    }
+    
+    .outerContainer {
+        height: 60vh;
+        width: 95vw;
+    }
+
+}
+
+
+@media (min-width: 20rem) { /* 320px */
+
+    .heading {
+        font-size: 2rem;
+    }
+    
+    .outerContainer {
+        height: 60vh;
+        width: 95vw;
+    }
+
+}
+
+@media (min-width: 40rem) { /* 640px */
+
+    .heading {
+        font-size: 3.5rem;
+    }
+    
+    .outerContainer {
+        height: 600px;
+        width: 600px;
+    }
+    
+
 }

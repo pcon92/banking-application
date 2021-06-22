@@ -17,7 +17,7 @@ const Navbar = ({fontSize, theme, animations,
         <div className={`${styles.navContainer} ${themedStyles[theme[2]]} ${themedStyles[theme[3]]}`}>
             <ul className={`${styles.navList}`}>
                 <li className={`${styles.logoLink} ${themedStyles[theme[2]]}`}>
-                <img alt="logo"></img>
+                     <i className={`fas fa-piggy-bank fa-2x ${styles.bankIcon}`}></i>
                 </li>
                 <Link to="/home-page" 
                     className={
