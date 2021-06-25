@@ -17,18 +17,12 @@ STILL TO DO :
     - form validation for add contact form value
 - Medium priority:
     - Create token/cookie to check if user still logged in throughout use
-    - add 'are you sure you want to delete' alert on deleting contact and 'are you sure you want to sign out' on logout
-    - add new message for new contact created
 - Low priority:
     - unread messages box increase scale as animation on new unread message
     - tidy up styling on mobile devices
     - save user theme and font size based on login info
 
 BUGS:
-- High priority:
-    - 
 - Med priority:
     - double receipt from transfer if transfer to blank name
     - on delete contact sets name as transferring to
-- Low priority:  
-    - 

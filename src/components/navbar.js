@@ -13,6 +13,12 @@ const Navbar = ({fontSize, theme, animations,
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
+    const doubleCheckSignOut = (e) => {
+        if (!window.confirm("Are you sure you want to sign out?")) {
+            e.preventDefault();
+        }
+    };
+
     return (
         <div className={`${styles.navContainer} ${themedStyles[theme[2]]} ${themedStyles[theme[3]]}`}>
             <ul className={`${styles.navList}`}>
@@ -64,7 +70,9 @@ const Navbar = ({fontSize, theme, animations,
                         : `${styles.linkList}`}
                     style={fontSizeMed}>Settings
                 </Link>
-                <Link to="/" 
+                <Link
+                    onClick={doubleCheckSignOut}
+                    to="/"
                     className={`${styles.linkList}`}
                     style={fontSizeMed}>Logout
                 </Link>

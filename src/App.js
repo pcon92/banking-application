@@ -146,7 +146,10 @@ function App() {
     };
 
     const handleDeleteContact = (id) => {
-        setContacts(contacts.filter(contact => contact.id !== id));
+        const doubleCheckDeleteContact = window.confirm("Are you sure you want to delete this contact from your address book?")
+        if (doubleCheckDeleteContact) {
+            setContacts(contacts.filter(contact => contact.id !== id)) 
+        }
     };
 
     const handleSelectContact = (name) => {
@@ -357,7 +360,7 @@ function App() {
                         setErrorFromServer={setErrorFromServer}/>
                     </Route>
                     <Route path="/">
-                        <Login/>
+                        <Login />
                     </Route>
                 </Switch>
             </div>
