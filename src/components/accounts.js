@@ -17,7 +17,8 @@ const Accounts = ( {fontSize, theme, animations,
     transferAmount, setTransferAmount,
     insufficientFunds,
     transferReceipt,
-    handleCloseReceipt}) => {
+    handleCloseReceipt,
+    handleSelectContact}) => {
 
 
     // font sizes used in this component
@@ -58,6 +59,7 @@ const Accounts = ( {fontSize, theme, animations,
                                 BSB={account.BSB}
                                 total={account.total}
                                 theme={theme}
+                                handleSelectContact={handleSelectContact}
                             />
                             </li>
                             )} 

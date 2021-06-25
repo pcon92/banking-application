@@ -322,7 +322,8 @@ function App() {
                             setTransferAmount={setTransferAmount}
                             insufficientFunds={insufficientFunds}
                             transferReceipt={transferReceipt}
-                            handleCloseReceipt={handleCloseReceipt}/>
+                            handleCloseReceipt={handleCloseReceipt}
+                            handleSelectContact={handleSelectContact}/>
                     </Route>
                     <Route path="/transfers-page">
                         <Transfers
