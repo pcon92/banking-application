@@ -32,9 +32,6 @@ const AddressBook = ({theme, fontSize, animations,
                             <div className={contact.name === "Everyday Spending"
                                 ? styles.ownAccountDiv
                                 : styles.contactDiv} 
-                                onClick={contact.name === "Everyday Spending" 
-                                ? null
-                                : () => handleSelectContact(contact.name)}
                                 key={Date.now()*Math.random(1)}>
                                 <AddressBookContact 
                                     theme={theme}
@@ -45,6 +42,7 @@ const AddressBook = ({theme, fontSize, animations,
                                     BSB={contact.BSB}
                                     total={contact.total}
                                     handleDeleteContact={handleDeleteContact}
+                                    handleSelectContact={handleSelectContact}
                                     />
                             </div>)
                         }

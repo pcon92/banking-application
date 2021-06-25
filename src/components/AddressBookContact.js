@@ -4,7 +4,8 @@ import SingleAccount from './SingleAccount.js';
 
 const AddressBookContact = ({theme, fontSize, 
     name, accountNum, BSB, total, id,
-    handleDeleteContact}) => {
+    handleDeleteContact,
+    handleSelectContact}) => {
 
     return (
         <div>
@@ -17,6 +18,7 @@ const AddressBookContact = ({theme, fontSize,
             total={total}
             fontSize={fontSize}
             handleDeleteContact={handleDeleteContact}
+            handleSelectContact={handleSelectContact}
             />
         </div>
     )

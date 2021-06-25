@@ -145,16 +145,20 @@ function App() {
         setTransferAmount(0);
     };
 
-    const handleDeleteContact = (id) => {
+    const handleSelectContact = (name) => {
+        setTransferTo(name);
+    };
+
+    const handleDeleteContact = (id, event) => {
         const doubleCheckDeleteContact = window.confirm("Are you sure you want to delete this contact from your address book?")
         if (doubleCheckDeleteContact) {
             setContacts(contacts.filter(contact => contact.id !== id)) 
         }
+        event.stopPropagation(); // stop from choosing clicked account as transfer name
+        setTransferTo(''); // clear transfer state
     };
 
-    const handleSelectContact = (name) => {
-        setTransferTo(name);
-    };
+
 
 
     // MESSAGES
