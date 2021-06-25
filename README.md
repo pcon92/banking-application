@@ -19,7 +19,6 @@ STILL TO DO :
     - Create token/cookie to check if user still logged in throughout use
     - add 'are you sure you want to delete' alert on deleting contact and 'are you sure you want to sign out' on logout
     - add new message for new contact created
-    - add timestamp to new messages
 - Low priority:
     - unread messages box increase scale as animation on new unread message
     - tidy up styling on mobile devices

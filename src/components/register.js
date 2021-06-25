@@ -57,7 +57,6 @@ const Register = ({setErrorFromServer}) => {
         json.status === "error"
         ? setErrorFromServer(true)
         : setErrorFromServer(false);
-        console.log(json);
     };
 
 

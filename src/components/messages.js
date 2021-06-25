@@ -60,7 +60,8 @@ const Messages = ({fontSize, theme, animations,
                             message={message.message}
                             id={message.id}
                             read={message.read}
-                            favourite={message.favourite}/>
+                            favourite={message.favourite}
+                            timestamp={message.timestamp}/>
                         </motion.li>
                     )} 
                 </motion.div>

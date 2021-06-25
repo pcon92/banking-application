@@ -12,6 +12,8 @@ import Accounts from './components/Accounts';
 import Transfers from './components/Transfers';
 import Settings from './components/Settings';
 
+import showCurrentTime from './functions/showCurrentTime';
+
 function App() {
 
     // MISC
@@ -214,7 +216,8 @@ function App() {
                 id: Date.now(), // to give unique ID
                 read: false,
                 favourite: false,
-                message: `You transferred $${transferAmount} to ${transferTo}`
+                message: `You transferred $${transferAmount} to ${transferTo}`,
+                timestamp: showCurrentTime()
             }])
         : setMessages([...messages])
     }, [insufficientFunds])

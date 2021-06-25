@@ -40,7 +40,8 @@
     width: 55%;
     height: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 1vw;
     overflow-Y: auto;
     font-weight: bold;
@@ -48,14 +49,16 @@
 .messageContainerRead {
     width: 55%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 1vw;
     overflow-Y: auto;
 }
 .messageContainerFavourited {
     width: 55%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 1vw;
     overflow-Y: auto;
     font-weight: bold;
@@ -63,7 +66,8 @@
 .messageContainerReadFavourited {
     width: 55%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     padding-left: 1vw;
     overflow-Y: auto;
 }
@@ -78,6 +82,9 @@
     align-items: center
 }
 
+.timestamp {
+    color: var(--greyText);
+}
 
 
 

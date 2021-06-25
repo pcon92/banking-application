@@ -46,13 +46,14 @@ app.post('/find-user', (req, res) => {
     database.find({email: req.body.email}, (errNoEmail, docs) => {
         if (errNoEmail) {
             res.send(errNoEmail);
-        } 
-        bcrypt.compare(req.body.password, docs[0].password, (errWrongPassword, result) => {
-            if (result === true) {
-                res.send(docs);
-            } else {
-                res.send([]);
-            }
-        });
+        } else {
+            bcrypt.compare(req.body.password, docs[0]?.password, (errWrongPassword, result) => {
+                if (result === true) {
+                    res.send(docs);
+                } else {
+                    res.send([]); 
+                }
+            });
+        }
     });
 });

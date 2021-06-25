@@ -4,9 +4,13 @@ import styles from '../styles/singleMessage.module.css';
 import themedStyles from '../styles/themes.module.css';
 
 
-const SingleMessage = ({fontSize, theme, id, handleRead, handleFavourite, handleDelete, read, favourite, message }) => {
+const SingleMessage = ({fontSize, theme, id, 
+    handleRead, handleFavourite, handleDelete, 
+    read, favourite, message,
+    timestamp }) => {
 
     // font sizes used in this component
+    const fontSizeSml = {fontSize: `${fontSize[0]}`};
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
 
     if (read && favourite) {
@@ -16,6 +20,9 @@ const SingleMessage = ({fontSize, theme, id, handleRead, handleFavourite, handle
                 <div className={styles.messageContainerReadFavourited}
                 style={fontSizeMed}>
                     {message}
+                    <div className={styles.timestamp} style={fontSizeSml}>
+                        {timestamp}
+                    </div>
                 </div>
                 <div className={styles.buttonsContainer}>
                     <i className="fab fa-readme fa-2x" style={{opacity: 0.5}} onClick={() => handleRead(id)}></i>
@@ -34,6 +41,9 @@ const SingleMessage = ({fontSize, theme, id, handleRead, handleFavourite, handle
                 <div className={styles.messageContainerRead}
                 style={fontSizeMed}>
                     {message}
+                    <div className={styles.timestamp} style={fontSizeSml}>
+                        {timestamp}
+                    </div>
                 </div>
                 <div className={styles.buttonsContainer}>
                     <i className="fab fa-readme fa-2x" style={{opacity: 0.5}} onClick={() => handleRead(id)}></i>
@@ -52,6 +62,9 @@ const SingleMessage = ({fontSize, theme, id, handleRead, handleFavourite, handle
                 <div className={styles.messageContainerFavourited}
                 style={fontSizeMed}>
                     {message}
+                    <div className={styles.timestamp} style={fontSizeSml}>
+                        {timestamp}
+                    </div>
                 </div>
                 <div className={styles.buttonsContainer}>
                     <i className="fab fa-readme fa-2x" onClick={() => handleRead(id)}></i>
@@ -69,6 +82,9 @@ const SingleMessage = ({fontSize, theme, id, handleRead, handleFavourite, handle
                 <div className={styles.messageContainer}
                 style={fontSizeMed}>
                     {message}
+                    <div className={styles.timestamp} style={fontSizeSml}>
+                        {timestamp}
+                    </div>
                 </div>
                 <div className={styles.buttonsContainer}>
                     <i className="fab fa-readme fa-2x" onClick={() => handleRead(id)}></i>
