@@ -128,7 +128,15 @@ function App() {
             accountNum: contactInfo.accountNum,
             BSB: contactInfo.BSB,
             total: contactInfo.total}
-        ])
+        ]);
+        setMessages([...messages, 
+            {   
+                id: Date.now(), // to give unique ID
+                read: false,
+                favourite: false,
+                message: `You added ${contactInfo.name} to your address book`,
+                timestamp: showCurrentTime()
+            }])
     };
 
     const handleCloseReceipt = () => {

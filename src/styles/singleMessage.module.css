@@ -84,6 +84,7 @@
 
 .timestamp {
     color: var(--greyText);
+    margin-top: 2px;
 }
 
 
