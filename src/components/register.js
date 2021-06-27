@@ -63,7 +63,7 @@ const Register = ({setErrorFromServer}) => {
                             validateOnMount>
                             {formik => {
                                 return(
-                                    <Form>
+                                    <Form className={styles.form}>
                                         <div className={`${styles.emailAndPasswordDiv}`}>
                                             <label
                                                 className={styles.labels} 
@@ -73,7 +73,8 @@ const Register = ({setErrorFromServer}) => {
                                         </div>
                                         <ErrorMessage name="email">
                                             { (errorMsg) => 
-                                            <div style={{color: "red"}}>
+                                            <div 
+                                                className={styles.errorMessage}>
                                                 {errorMsg}
                                             </div>}
                                         </ErrorMessage>
@@ -85,7 +86,8 @@ const Register = ({setErrorFromServer}) => {
                                         </div>
                                         <ErrorMessage name="password">
                                             { (errorMsg) => 
-                                            <div style={{color: "red"}}>
+                                            <div 
+                                                className={styles.errorMessage}>
                                                 {errorMsg}
                                             </div>}
                                         </ErrorMessage>
@@ -97,7 +99,8 @@ const Register = ({setErrorFromServer}) => {
                                         </div>
                                         <ErrorMessage name="confirmPassword">
                                             { (errorMsg) => 
-                                            <div style={{color: "red"}}>
+                                            <div 
+                                                className={styles.errorMessage}>
                                                 {errorMsg}
                                             </div>}
                                         </ErrorMessage>

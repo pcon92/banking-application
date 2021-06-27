@@ -11,6 +11,7 @@ const AddContact = ({theme, fontSize, animations,
     }) => {
 
     // font sizes used in this component
+    const fontSizeSml = {fontSize: `${fontSize[0]}`};
     const fontSizeMed = {fontSize: `${fontSize[1]}`};
     const fontSizeLge = {fontSize: `${fontSize[2]}`};
 
@@ -25,14 +26,17 @@ const AddContact = ({theme, fontSize, animations,
         contactName: yup.string()
         .required('Required')
         .min(2, 'Name must be at least 2 characters')
-        .max(20, 'Name is too long (max 20 characters)'),
+        .max(20, 'Name is too long (max 20 characters)')
+        .matches(/^[a-z\s]+$/, 'Must only contain letters A-Z'),
         BSB: yup.string()
         .required('Required')
-        .length(6, 'Must be 6 characters - do not include hyphon'),
+        .length(6, 'Must be 6 characters from 0-9 only')
+        .matches(/^[0-9]+$/, 'Must only include numbers 0-9'),
         accNum: yup.string()
         .required('Required')
-        .min(6, 'Must be at least 6 characters - do not include spaces')
-        .max(10, 'Must be at most 10 characters - do not include spaces')
+        .min(6, 'Min 6 characters from 0-9 only')
+        .max(10, 'Max 10 characters from 0-9 only')
+        .matches(/^[0-9]+$/, 'Must only include numbers 0-9')
     })
 
     const registerContact = (values, {resetForm}) => {
@@ -92,41 +96,47 @@ const AddContact = ({theme, fontSize, animations,
                             <div 
                                 className={styles.nameDiv}
                                 style={fontSizeMed}>
-                                <label htmlFor="contactName">Name</label>
-                                <Field type="text" name="contactName" id="contactName" 
-                                    className={styles.inputBox}/>
                                 <ErrorMessage name="contactName">
                                     { (errorMsg) => 
-                                    <div style={{color: "red"}}>
+                                    <div 
+                                        className={styles.errorMessage}
+                                        style={fontSizeSml}>
                                         {errorMsg}
                                     </div>}
                                 </ErrorMessage>
+                                <label htmlFor="contactName">Name: </label>
+                                <Field type="text" name="contactName" id="contactName" 
+                                    className={styles.inputBox}/>
                             </div>
                             <div 
                                 className={styles.BSBDiv}
                                 style={fontSizeMed}>
-                                <label htmlFor="BSB">BSB</label>
-                                <Field type="text" name="BSB" id="BSB" 
-                                    className={styles.inputBox}/>
                                 <ErrorMessage name="BSB">
                                     { (errorMsg) => 
-                                    <div style={{color: "red"}}>
+                                    <div 
+                                        className={styles.errorMessage}
+                                        style={fontSizeSml}>
                                         {errorMsg}
                                     </div>}
                                 </ErrorMessage>
+                                <label htmlFor="BSB">BSB: </label>
+                                <Field type="text" name="BSB" id="BSB" 
+                                    className={styles.inputBox}/>
                             </div>
                             <div 
                                 className={styles.accountNumberDiv}
                                 style={fontSizeMed}>
-                                <label htmlFor="accNum">Account Number</label>
-                                <Field type="text" name="accNum" id="accNum"
-                                    className={styles.inputBox}/>
                                 <ErrorMessage name="accNum">
                                     { (errorMsg) => 
-                                    <div style={{color: "red"}}>
+                                    <div 
+                                        className={styles.errorMessage}
+                                        style={fontSizeSml}>
                                         {errorMsg}
                                     </div>}
                                 </ErrorMessage>
+                                <label htmlFor="accNum">Account Number: </label>
+                                <Field type="text" name="accNum" id="accNum"
+                                    className={styles.inputBox}/>
                             </div>
                             <button
                                 className={styles.addContactButton} 

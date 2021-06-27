@@ -31,15 +31,15 @@ function App() {
             ? JSON.parse(localStorage.getItem('accounts'))
             : [{
                 id: 0,
-                name: "Everyday Spending",
-                accountNum: 1235235456,
-                BSB: 123456,
+                name: 'Everyday Spending',
+                accountNum: '1234-5678',
+                BSB: '123-456',
                 total: 1000
                 }, {
                 id: 1,
-                name: "Savings Account",
-                accountNum: 2345612447,
-                BSB: 234567,
+                name: 'Savings Account',
+                accountNum: '2345-6789',
+                BSB: '234-567',
                 total: 53912
                 }
             ]

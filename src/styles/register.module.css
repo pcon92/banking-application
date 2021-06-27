@@ -41,6 +41,15 @@
     background-color: var(--creamWhite);
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
 .emailAndPasswordDiv {
     display: flex;
     width: 100%;
@@ -90,6 +99,12 @@
     margin-left: 10px;
 }
 
+.errorMessage {
+    color: red;
+    width: 100%;
+    font-size: 0.8rem;
+}
+
 
 
 /* for different device sizes */
@@ -123,6 +138,11 @@
         width: 50%;
     }
 
+    .errorMessage {
+        font-size: 0.6rem;
+    }
+    
+
 }
 
 
@@ -155,6 +175,10 @@
         width: 45%;
     }
 
+    .errorMessage {
+        font-size: 0.6rem;
+    }
+
 }
 
 @media (min-width: 40rem) { /* 640px */
@@ -184,6 +208,10 @@
     
     .labels {
         font-size: 1rem;
+    }
+
+    .errorMessage {
+        font-size: 0.8rem;
     }
     
 

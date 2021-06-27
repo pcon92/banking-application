@@ -70,7 +70,7 @@
     border: none;
     user-select: none;
     outline: none;
-    margin-left: 5px;
+    margin: 0px 0px 5px 5px;
 }
 
 .addContactButton {
@@ -80,6 +80,15 @@
     width: 150px;
 }
 
+.addContactButton:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.errorMessage {
+    color: red;
+    margin-right: 10px;
+}
 
 
 
