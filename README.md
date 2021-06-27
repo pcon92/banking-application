@@ -9,18 +9,15 @@ On the back-end I decided to use the JOI library for data validation during acco
 
 Animations were performed with either basic CSS selectors or with the Framer Motion library depending on complexity.  
 
+
 ----------------------------------------------------------------------------------
 
 STILL TO DO : 
 - High priority:
     - funds on database
-    - input validation for transfer values
+    - input form validation with formik for register page
 - Medium priority:
     - Create token/cookie to check if user still logged in throughout use
 - Low priority:
     - tidy up styling on mobile devices
     - save user theme and font size based on login info
-
-BUGS:
-- Medium priority:
-    - double receipt from transfer if transfer to blank name

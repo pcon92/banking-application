@@ -24,7 +24,7 @@ const TransferForm = ({theme, fontSize, transferTo,
 
         const INPUT_AMOUNT = document.getElementById('amount');
 
-        if (INPUT_AMOUNT.value === '') {
+        if (INPUT_AMOUNT.value === '' || isNaN(INPUT_AMOUNT.value)) {
             setNoVal({color: "red", display: "block", fontSize: `${fontSize[1]}`})
         } else {
             setNoVal({color: "red", display: "none"})
@@ -63,7 +63,7 @@ const TransferForm = ({theme, fontSize, transferTo,
                         onClick={submitTransferAmount}>Transfer Funds</button>
                 </div>
             </div>
-            <p style={noVal}>Error: no transfer value entered</p>
+            <p style={noVal}>Error: Please enter valid transfer value</p>
             {insufficientFunds 
             ? <p style={{color: "red", fontSize: `${fontSize[1]}`}}>Error: Insufficient Funds for transfer</p>
             : <p style={{display: "none"}}>Error: Insufficient Funds for transfer</p>}
