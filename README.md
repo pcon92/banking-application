@@ -14,14 +14,13 @@ Animations were performed with either basic CSS selectors or with the Framer Mot
 STILL TO DO : 
 - High priority:
     - funds on database
-    - form validation for add contact form value
+    - input validation for transfer values
 - Medium priority:
     - Create token/cookie to check if user still logged in throughout use
 - Low priority:
-    - unread messages box increase scale as animation on new unread message
     - tidy up styling on mobile devices
     - save user theme and font size based on login info
 
 BUGS:
-- Med priority:
+- Medium priority:
     - double receipt from transfer if transfer to blank name
