@@ -9,13 +9,13 @@ On the back-end I decided to use the JOI library for data validation during acco
 
 Animations were performed with either basic CSS selectors or with the Framer Motion library depending on complexity.  
 
+I added the packages Formik and Yup initially to validate the information passed into the Add Contact component to prevent contacts being added with incorrect BSB/Account Numbers or no name value, and after discovering the benefits I decided to replace my client form validation on the Register page with Formik and Yup to ensure only appropriate information is sent to the database.
 
 ----------------------------------------------------------------------------------
 
 STILL TO DO : 
 - High priority:
     - funds on database
-    - input form validation with formik for register page
 - Medium priority:
     - Create token/cookie to check if user still logged in throughout use
 - Low priority:

@@ -27,9 +27,10 @@ app.post('/register-user', (req, res) => {
     const saltRounds = 10;
     const plainTextPassword = req.body.password;
 
-    error !== undefined 
-    ? res.json({status: "error", error})
-    :   bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
+    if (error !== undefined) {
+        return res.json({status: "error", error})
+    } else {
+        bcrypt.hash(plainTextPassword, saltRounds, (err, hash) => {
             database.insert({
                 email: req.body.email,
                 password: hash
@@ -38,6 +39,7 @@ app.post('/register-user', (req, res) => {
         res.json({
             result: 'User added to database',
         });
+    }
 
 });
 
