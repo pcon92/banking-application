@@ -27,7 +27,7 @@ const AddContact = ({theme, fontSize, animations,
         .required('Required')
         .min(2, 'Name must be at least 2 characters')
         .max(20, 'Name is too long (max 20 characters)')
-        .matches(/^[a-z\s]+$/, 'Must only contain letters A-Z'),
+        .matches(/^[A-Za-z\s]+$/, 'Must only contain letters A-Z'),
         BSB: yup.string()
         .required('Required')
         .length(6, 'Must be 6 characters from 0-9 only')
