@@ -11,13 +11,38 @@ Animations were performed with either basic CSS selectors or with the Framer Mot
 
 I added the packages Formik and Yup initially to validate the information passed into the Add Contact component to prevent contacts being added with incorrect BSB/Account Numbers or no name value, and after discovering the benefits I decided to replace my client form validation on the Register page with Formik and Yup to ensure only appropriate information is sent to the database.
 
-----------------------------------------------------------------------------------
+With more time other features could be added to the application such as moving the funds onto a database and creating a token or cookie to check if the user is logged in throughout use.
 
-STILL TO DO : 
-- High priority:
-    - funds on database
-- Medium priority:
-    - Create token/cookie to check if user still logged in throughout use
-- Low priority:
-    - tidy up styling on mobile devices
-    - save user theme and font size based on login info
+-----------------------------------------------------------------------------------
+
+YouTube Walkthrough link : https://www.youtube.com/watch?v=XT8FovgamGE
+
+-----------------------------------------------------------------------------------
+
+GIF Walkthrough:
+
+
+
+Register Account and Login:
+
+
+
+Different screens and Messages:
+
+
+
+Accounts:
+
+
+
+Transfers:
+
+
+Settings:
+
+
+Mobile Devices:
+
+
+
+-----------------------------------------------------------------------------------
