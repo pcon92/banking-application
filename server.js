@@ -4,12 +4,19 @@ const app = express();
 const Datastore = require('@seald-io/nedb');
 const Joi = require('joi');
 const bcrypt = require('bcrypt');
+const path = require('path');
+
 
 const PORT = process.env.port || 5000;
 app.listen(PORT, () => {console.log(`Listening on Port ${PORT}`)})
 
-app.use(express.static('public'));
 app.use(express.json({limit: '10mb'}));
+
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+})
 
 const database = new Datastore('database.db');
 database.loadDatabase();
