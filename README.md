@@ -19,30 +19,36 @@ YouTube Walkthrough link : https://www.youtube.com/watch?v=XT8FovgamGE
 
 -----------------------------------------------------------------------------------
 
-GIF Walkthrough:
-
-
+GIF Walkthrough
 
 Register Account and Login:
 
+![full-walkthrough-sign-up](https://user-images.githubusercontent.com/82207475/123563569-d926ec00-d7f8-11eb-84c3-937ca7d71833.gif)
 
 
 Different screens and Messages:
 
+![different-screens-messages](https://user-images.githubusercontent.com/82207475/123563573-e217bd80-d7f8-11eb-9be9-12d4054ada9c.gif)
 
 
 Accounts:
 
+![accounts](https://user-images.githubusercontent.com/82207475/123563583-eb088f00-d7f8-11eb-939d-a6521f7a48b0.gif)
 
 
 Transfers:
 
+![full-walkthrough](https://user-images.githubusercontent.com/82207475/123563590-f360ca00-d7f8-11eb-98c8-ef521cc39a70.gif)
+
 
 Settings:
+
+![full-walkthrough (1)](https://user-images.githubusercontent.com/82207475/123563629-299e4980-d7f9-11eb-93c7-ffd03fa4c42a.gif)
 
 
 Mobile Devices:
 
+![full-walkthrough (2)](https://user-images.githubusercontent.com/82207475/123563703-826de200-d7f9-11eb-8a44-f24ebd46cf27.gif)
 
 
 -----------------------------------------------------------------------------------
