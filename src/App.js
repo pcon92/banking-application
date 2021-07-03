@@ -185,9 +185,8 @@ function App() {
             id: 3,
             read: false,
             favourite: false,
-            message: `Some data is stored in browser local storage.  
-                    If values are reset upon browser restart disable browser
-                    clearing stored files on close.`
+            message: `Some data is stored in browser local storage and will
+                        be reset if local storage is cleared.`
         }
     ]);
         // tally unread messages
@@ -244,7 +243,7 @@ function App() {
             deviceWidth < 320
             ? ['-0.3rem', '0.5rem', '0.7rem', '0.8rem']
             : deviceWidth >=320 && deviceWidth < 640
-            ? ['0.49999999999999994rem', '0.7rem', '1.0rem', '1.3rem']
+            ? ['0.49999999999999994rem', '0.7rem', '1.0rem', '1.2rem']
             : ['0.8rem', '1rem', '1.2rem', '1.8rem']
         )
     }, deviceWidth);
